@@ -26,7 +26,11 @@ module mic_sampler #(
     parameter BUS_WIDTH     = 32,
     parameter MIC_NUM       = 100
 )(
+    (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
+    (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF m_axis, FREQ_HZ 100000000" *)
     input                       s_axis_aclk,
+    (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *)
+    (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input                       s_axis_aresetn,
     
     input                       m_axis_tready,
