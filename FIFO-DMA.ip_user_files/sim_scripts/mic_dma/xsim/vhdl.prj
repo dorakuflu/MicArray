@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/mic_dma/ip/mic_dma_dma_0/sim/mic_dma_dma_0.vhd" \
+"../../../bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_1/sim/bd_5a83_psr_aclk_0.vhd" \
+"../../../bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/sim/mic_dma_rst_ps7_0_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -87,9 +87,9 @@ module mic_sampler #(
     reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;
     
     integer i;
-    always @(*) begin // synthetic mic_data generation
+    always @(posedge s_axis_aclk) begin // synthetic mic_data generation
         for (i = 0; i < MIC_NUM; i = i+1) begin
-            mic_data[i*DATA_WIDTH +: DATA_WIDTH] = i;
+            mic_data[i*DATA_WIDTH +: DATA_WIDTH] <= i;
         end
     end
     
