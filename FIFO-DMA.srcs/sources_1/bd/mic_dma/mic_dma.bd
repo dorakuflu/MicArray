@@ -7,7 +7,8 @@
       "name": "mic_dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -1988,7 +1989,7 @@
       },
       "dma": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
-        "ip_revision": "35",
+        "ip_revision": "34",
         "xci_name": "mic_dma_dma_0",
         "xci_path": "ip\\mic_dma_dma_0\\mic_dma_dma_0.xci",
         "inst_hier_path": "dma",
@@ -2043,7 +2044,7 @@
       },
       "axi_smc": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
-        "ip_revision": "26",
+        "ip_revision": "25",
         "xci_name": "mic_dma_axi_smc_0",
         "xci_path": "ip\\mic_dma_axi_smc_0\\mic_dma_axi_smc_0.xci",
         "inst_hier_path": "axi_smc",
@@ -2223,7 +2224,7 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "35",
+                "ip_revision": "33",
                 "xci_name": "mic_dma_axi_mem_intercon_imp_auto_pc_0",
                 "xci_path": "ip\\mic_dma_axi_mem_intercon_imp_auto_pc_0\\mic_dma_axi_mem_intercon_imp_auto_pc_0.xci",
                 "inst_hier_path": "axi_mem_intercon/s00_couplers/auto_pc",
@@ -2437,7 +2438,7 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "35",
+                "ip_revision": "33",
                 "xci_name": "mic_dma_axi_mem_intercon_1_imp_auto_pc_0",
                 "xci_path": "ip\\mic_dma_axi_mem_intercon_1_imp_auto_pc_0\\mic_dma_axi_mem_intercon_1_imp_auto_pc_0.xci",
                 "inst_hier_path": "axi_mem_intercon_1/s00_couplers/auto_pc",
@@ -2461,7 +2462,7 @@
               },
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "35",
+                "ip_revision": "33",
                 "xci_name": "mic_dma_axi_mem_intercon_1_imp_auto_us_0",
                 "xci_path": "ip\\mic_dma_axi_mem_intercon_1_imp_auto_us_0\\mic_dma_axi_mem_intercon_1_imp_auto_us_0.xci",
                 "inst_hier_path": "axi_mem_intercon_1/s00_couplers/auto_us",
@@ -2565,22 +2566,19 @@
       },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "16",
+        "ip_revision": "15",
         "xci_name": "mic_dma_axis_data_fifo_0_0",
         "xci_path": "ip\\mic_dma_axis_data_fifo_0_0\\mic_dma_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
-            "value": "256"
+            "value": "1024"
           },
           "FIFO_MEMORY_TYPE": {
             "value": "auto"
           },
           "HAS_PROG_FULL": {
-            "value": "1"
-          },
-          "PROG_FULL_THRESH": {
-            "value": "202"
+            "value": "0"
           }
         },
         "interface_ports": {
@@ -2641,6 +2639,10 @@
               "HAS_TLAST": {
                 "value": "1",
                 "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "mic_dma_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
@@ -2681,6 +2683,10 @@
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "mic_dma_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
               }
             }
           },
@@ -2764,20 +2770,20 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "axi_smc/aclk",
-          "dma/s_axi_lite_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "dma/m_axi_mm2s_aclk",
-          "axi_mem_intercon/S00_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
-          "axi_mem_intercon/M00_ACLK",
-          "axi_mem_intercon/ACLK",
-          "dma/m_axi_s2mm_aclk",
-          "axi_mem_intercon_1/S00_ACLK",
           "processing_system7_0/S_AXI_HP2_ACLK",
-          "axi_mem_intercon_1/M00_ACLK",
+          "axi_mem_intercon/ACLK",
+          "axi_mem_intercon/S00_ACLK",
+          "axi_mem_intercon/M00_ACLK",
           "axi_mem_intercon_1/ACLK",
+          "axi_mem_intercon_1/S00_ACLK",
+          "axi_mem_intercon_1/M00_ACLK",
+          "axi_smc/aclk",
           "axis_data_fifo_0/s_axis_aclk",
+          "dma/s_axi_lite_aclk",
+          "dma/m_axi_mm2s_aclk",
+          "dma/m_axi_s2mm_aclk",
           "mic_sampler_0/s_axis_aclk"
         ]
       },
@@ -2790,15 +2796,15 @@
       "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
-          "dma/axi_resetn",
-          "axi_smc/aresetn",
+          "axi_mem_intercon/ARESETN",
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
-          "axi_mem_intercon/ARESETN",
+          "axi_mem_intercon_1/ARESETN",
           "axi_mem_intercon_1/S00_ARESETN",
           "axi_mem_intercon_1/M00_ARESETN",
-          "axi_mem_intercon_1/ARESETN",
+          "axi_smc/aresetn",
           "axis_data_fifo_0/s_axis_aresetn",
+          "dma/axi_resetn",
           "mic_sampler_0/s_axis_aresetn"
         ]
       }

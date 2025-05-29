@@ -4,7 +4,7 @@
     "xci_name": "mic_dma_dma_0",
     "cell_name": "dma",
     "component_reference": "xilinx.com:ip:axi_dma:7.1",
-    "ip_revision": "35",
+    "ip_revision": "34",
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0",
     "parameters": {
       "component_parameters": {
@@ -84,12 +84,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "35" } ],
+        "IPREVISION": [ { "value": "34" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2.2" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
