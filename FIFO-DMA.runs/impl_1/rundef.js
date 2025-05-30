@@ -2,7 +2,7 @@
 // Vivado(TM)
 // rundef.js: a Vivado-generated Runs Script for WSH 5.1/5.6
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
 
 var WshShell = new ActiveXObject( "WScript.Shell" );
@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
          "-log mic_dma_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mic_dma_wrapper.tcl -notrace" );
 

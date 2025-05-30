@@ -1,16 +1,16 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-//Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+//Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Thu May 29 13:29:56 2025
-//Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+//Date        : Fri May 30 17:12:15 2025
+//Host        : DK-SLS running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma.bd
 //Design      : mic_dma
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
+(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
 module mic_dma
    (DDR_addr,
     DDR_ba,
@@ -125,7 +125,7 @@ module mic_dma
   wire [31:0]axi_smc_M00_AXI_WDATA;
   wire axi_smc_M00_AXI_WREADY;
   wire axi_smc_M00_AXI_WVALID;
-  wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
+  wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
@@ -153,12 +153,12 @@ module mic_dma
   wire dma_M_AXI_S2MM_BREADY;
   wire [1:0]dma_M_AXI_S2MM_BRESP;
   wire dma_M_AXI_S2MM_BVALID;
-  wire [31:0]dma_M_AXI_S2MM_WDATA;
+  wire [63:0]dma_M_AXI_S2MM_WDATA;
   wire dma_M_AXI_S2MM_WLAST;
   wire dma_M_AXI_S2MM_WREADY;
-  wire [3:0]dma_M_AXI_S2MM_WSTRB;
+  wire [7:0]dma_M_AXI_S2MM_WSTRB;
   wire dma_M_AXI_S2MM_WVALID;
-  wire [31:0]mic_sampler_0_m_axis_TDATA;
+  wire [63:0]mic_sampler_0_m_axis_TDATA;
   wire mic_sampler_0_m_axis_TLAST;
   wire mic_sampler_0_m_axis_TREADY;
   wire mic_sampler_0_m_axis_TVALID;
@@ -400,7 +400,7 @@ module mic_dma
         .s_axi_lite_wready(axi_smc_M00_AXI_WREADY),
         .s_axi_lite_wvalid(axi_smc_M00_AXI_WVALID),
         .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
@@ -767,10 +767,10 @@ module mic_dma_axi_mem_intercon_1_0
   input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
   output S00_AXI_bvalid;
-  input [31:0]S00_AXI_wdata;
+  input [63:0]S00_AXI_wdata;
   input S00_AXI_wlast;
   output S00_AXI_wready;
-  input [3:0]S00_AXI_wstrb;
+  input [7:0]S00_AXI_wstrb;
   input S00_AXI_wvalid;
 
   wire M00_ACLK;
@@ -806,10 +806,10 @@ module mic_dma_axi_mem_intercon_1_0
   wire S00_AXI_bready;
   wire [1:0]S00_AXI_bresp;
   wire S00_AXI_bvalid;
-  wire [31:0]S00_AXI_wdata;
+  wire [63:0]S00_AXI_wdata;
   wire S00_AXI_wlast;
   wire S00_AXI_wready;
-  wire [3:0]S00_AXI_wstrb;
+  wire [7:0]S00_AXI_wstrb;
   wire S00_AXI_wvalid;
 
   s00_couplers_imp_KI4XS7 s00_couplers
@@ -1058,10 +1058,10 @@ module s00_couplers_imp_KI4XS7
   input S_AXI_bready;
   output [1:0]S_AXI_bresp;
   output S_AXI_bvalid;
-  input [31:0]S_AXI_wdata;
+  input [63:0]S_AXI_wdata;
   input S_AXI_wlast;
   output S_AXI_wready;
-  input [3:0]S_AXI_wstrb;
+  input [7:0]S_AXI_wstrb;
   input S_AXI_wvalid;
 
   wire [31:0]M_AXI_awaddr;
@@ -1095,51 +1095,33 @@ module s00_couplers_imp_KI4XS7
   wire S_AXI_bready;
   wire [1:0]S_AXI_bresp;
   wire S_AXI_bvalid;
-  wire [31:0]S_AXI_wdata;
+  wire [63:0]S_AXI_wdata;
   wire S_AXI_wlast;
   wire S_AXI_wready;
-  wire [3:0]S_AXI_wstrb;
+  wire [7:0]S_AXI_wstrb;
   wire S_AXI_wvalid;
-  wire [31:0]auto_pc_to_auto_us_AWADDR;
-  wire [1:0]auto_pc_to_auto_us_AWBURST;
-  wire [3:0]auto_pc_to_auto_us_AWCACHE;
-  wire [3:0]auto_pc_to_auto_us_AWLEN;
-  wire [1:0]auto_pc_to_auto_us_AWLOCK;
-  wire [2:0]auto_pc_to_auto_us_AWPROT;
-  wire [3:0]auto_pc_to_auto_us_AWQOS;
-  wire auto_pc_to_auto_us_AWREADY;
-  wire [2:0]auto_pc_to_auto_us_AWSIZE;
-  wire auto_pc_to_auto_us_AWVALID;
-  wire auto_pc_to_auto_us_BREADY;
-  wire [1:0]auto_pc_to_auto_us_BRESP;
-  wire auto_pc_to_auto_us_BVALID;
-  wire [31:0]auto_pc_to_auto_us_WDATA;
-  wire auto_pc_to_auto_us_WLAST;
-  wire auto_pc_to_auto_us_WREADY;
-  wire [3:0]auto_pc_to_auto_us_WSTRB;
-  wire auto_pc_to_auto_us_WVALID;
 
   mic_dma_axi_mem_intercon_1_imp_auto_pc_0 auto_pc
        (.aclk(S_ACLK),
         .aresetn(S_ARESETN),
-        .m_axi_awaddr(auto_pc_to_auto_us_AWADDR),
-        .m_axi_awburst(auto_pc_to_auto_us_AWBURST),
-        .m_axi_awcache(auto_pc_to_auto_us_AWCACHE),
-        .m_axi_awlen(auto_pc_to_auto_us_AWLEN),
-        .m_axi_awlock(auto_pc_to_auto_us_AWLOCK),
-        .m_axi_awprot(auto_pc_to_auto_us_AWPROT),
-        .m_axi_awqos(auto_pc_to_auto_us_AWQOS),
-        .m_axi_awready(auto_pc_to_auto_us_AWREADY),
-        .m_axi_awsize(auto_pc_to_auto_us_AWSIZE),
-        .m_axi_awvalid(auto_pc_to_auto_us_AWVALID),
-        .m_axi_bready(auto_pc_to_auto_us_BREADY),
-        .m_axi_bresp(auto_pc_to_auto_us_BRESP),
-        .m_axi_bvalid(auto_pc_to_auto_us_BVALID),
-        .m_axi_wdata(auto_pc_to_auto_us_WDATA),
-        .m_axi_wlast(auto_pc_to_auto_us_WLAST),
-        .m_axi_wready(auto_pc_to_auto_us_WREADY),
-        .m_axi_wstrb(auto_pc_to_auto_us_WSTRB),
-        .m_axi_wvalid(auto_pc_to_auto_us_WVALID),
+        .m_axi_awaddr(M_AXI_awaddr),
+        .m_axi_awburst(M_AXI_awburst),
+        .m_axi_awcache(M_AXI_awcache),
+        .m_axi_awlen(M_AXI_awlen),
+        .m_axi_awlock(M_AXI_awlock),
+        .m_axi_awprot(M_AXI_awprot),
+        .m_axi_awqos(M_AXI_awqos),
+        .m_axi_awready(M_AXI_awready),
+        .m_axi_awsize(M_AXI_awsize),
+        .m_axi_awvalid(M_AXI_awvalid),
+        .m_axi_bready(M_AXI_bready),
+        .m_axi_bresp(M_AXI_bresp),
+        .m_axi_bvalid(M_AXI_bvalid),
+        .m_axi_wdata(M_AXI_wdata),
+        .m_axi_wlast(M_AXI_wlast),
+        .m_axi_wready(M_AXI_wready),
+        .m_axi_wstrb(M_AXI_wstrb),
+        .m_axi_wvalid(M_AXI_wvalid),
         .s_axi_awaddr(S_AXI_awaddr),
         .s_axi_awburst(S_AXI_awburst),
         .s_axi_awcache(S_AXI_awcache),
@@ -1159,43 +1141,4 @@ module s00_couplers_imp_KI4XS7
         .s_axi_wready(S_AXI_wready),
         .s_axi_wstrb(S_AXI_wstrb),
         .s_axi_wvalid(S_AXI_wvalid));
-  mic_dma_axi_mem_intercon_1_imp_auto_us_0 auto_us
-       (.m_axi_awaddr(M_AXI_awaddr),
-        .m_axi_awburst(M_AXI_awburst),
-        .m_axi_awcache(M_AXI_awcache),
-        .m_axi_awlen(M_AXI_awlen),
-        .m_axi_awlock(M_AXI_awlock),
-        .m_axi_awprot(M_AXI_awprot),
-        .m_axi_awqos(M_AXI_awqos),
-        .m_axi_awready(M_AXI_awready),
-        .m_axi_awsize(M_AXI_awsize),
-        .m_axi_awvalid(M_AXI_awvalid),
-        .m_axi_bready(M_AXI_bready),
-        .m_axi_bresp(M_AXI_bresp),
-        .m_axi_bvalid(M_AXI_bvalid),
-        .m_axi_wdata(M_AXI_wdata),
-        .m_axi_wlast(M_AXI_wlast),
-        .m_axi_wready(M_AXI_wready),
-        .m_axi_wstrb(M_AXI_wstrb),
-        .m_axi_wvalid(M_AXI_wvalid),
-        .s_axi_aclk(S_ACLK),
-        .s_axi_aresetn(S_ARESETN),
-        .s_axi_awaddr(auto_pc_to_auto_us_AWADDR),
-        .s_axi_awburst(auto_pc_to_auto_us_AWBURST),
-        .s_axi_awcache(auto_pc_to_auto_us_AWCACHE),
-        .s_axi_awlen(auto_pc_to_auto_us_AWLEN),
-        .s_axi_awlock(auto_pc_to_auto_us_AWLOCK),
-        .s_axi_awprot(auto_pc_to_auto_us_AWPROT),
-        .s_axi_awqos(auto_pc_to_auto_us_AWQOS),
-        .s_axi_awready(auto_pc_to_auto_us_AWREADY),
-        .s_axi_awsize(auto_pc_to_auto_us_AWSIZE),
-        .s_axi_awvalid(auto_pc_to_auto_us_AWVALID),
-        .s_axi_bready(auto_pc_to_auto_us_BREADY),
-        .s_axi_bresp(auto_pc_to_auto_us_BRESP),
-        .s_axi_bvalid(auto_pc_to_auto_us_BVALID),
-        .s_axi_wdata(auto_pc_to_auto_us_WDATA),
-        .s_axi_wlast(auto_pc_to_auto_us_WLAST),
-        .s_axi_wready(auto_pc_to_auto_us_WREADY),
-        .s_axi_wstrb(auto_pc_to_auto_us_WSTRB),
-        .s_axi_wvalid(auto_pc_to_auto_us_WVALID));
 endmodule

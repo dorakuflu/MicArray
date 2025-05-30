@@ -173,10 +173,10 @@
 						"BREADY": { "actual": "S00_AXI_bready"},
 						"BRESP": { "actual": "S00_AXI_bresp[1:0]"},
 						"BVALID": { "actual": "S00_AXI_bvalid"},
-						"WDATA": { "actual": "S00_AXI_wdata[31:0]"},
+						"WDATA": { "actual": "S00_AXI_wdata[63:0]"},
 						"WLAST": { "actual": "S00_AXI_wlast"},
 						"WREADY": { "actual": "S00_AXI_wready"},
-						"WSTRB": { "actual": "S00_AXI_wstrb[3:0]"},
+						"WSTRB": { "actual": "S00_AXI_wstrb[7:0]"},
 						"WVALID": { "actual": "S00_AXI_wvalid"}
 					}
 				},
@@ -221,10 +221,10 @@
 						"BREADY": { "actual": "S_AXI_bready"},
 						"BRESP": { "actual": "S_AXI_bresp[1:0]"},
 						"BVALID": { "actual": "S_AXI_bvalid"},
-						"WDATA": { "actual": "S_AXI_wdata[31:0]"},
+						"WDATA": { "actual": "S_AXI_wdata[63:0]"},
 						"WLAST": { "actual": "S_AXI_wlast"},
 						"WREADY": { "actual": "S_AXI_wready"},
-						"WSTRB": { "actual": "S_AXI_wstrb[3:0]"},
+						"WSTRB": { "actual": "S_AXI_wstrb[7:0]"},
 						"WVALID": { "actual": "S_AXI_wvalid"}
 					}
 				},
@@ -246,10 +246,10 @@
 						"BREADY": { "actual": "m_axi_bready"},
 						"BRESP": { "actual": "m_axi_bresp[1:0]"},
 						"BVALID": { "actual": "m_axi_bvalid"},
-						"WDATA": { "actual": "m_axi_wdata[31:0]"},
+						"WDATA": { "actual": "m_axi_wdata[63:0]"},
 						"WLAST": { "actual": "m_axi_wlast"},
 						"WREADY": { "actual": "m_axi_wready"},
-						"WSTRB": { "actual": "m_axi_wstrb[3:0]"},
+						"WSTRB": { "actual": "m_axi_wstrb[7:0]"},
 						"WVALID": { "actual": "m_axi_wvalid"}
 					}
 				},
@@ -272,60 +272,10 @@
 						"BREADY": { "actual": "s_axi_bready"},
 						"BRESP": { "actual": "s_axi_bresp[1:0]"},
 						"BVALID": { "actual": "s_axi_bvalid"},
-						"WDATA": { "actual": "s_axi_wdata[31:0]"},
+						"WDATA": { "actual": "s_axi_wdata[63:0]"},
 						"WLAST": { "actual": "s_axi_wlast"},
 						"WREADY": { "actual": "s_axi_wready"},
-						"WSTRB": { "actual": "s_axi_wstrb[3:0]"},
-						"WVALID": { "actual": "s_axi_wvalid"}
-					}
-				},
-				"/axi_mem_intercon_1/s00_couplers/auto_us/M_AXI": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_axi_aclk"},
-						"ARESETN": { "actual": "s_axi_aresetn"},
-						"AWADDR": { "actual": "m_axi_awaddr[31:0]"},
-						"AWBURST": { "actual": "m_axi_awburst[1:0]"},
-						"AWCACHE": { "actual": "m_axi_awcache[3:0]"},
-						"AWLEN": { "actual": "m_axi_awlen[3:0]"},
-						"AWLOCK": { "actual": "m_axi_awlock[1:0]"},
-						"AWPROT": { "actual": "m_axi_awprot[2:0]"},
-						"AWQOS": { "actual": "m_axi_awqos[3:0]"},
-						"AWREADY": { "actual": "m_axi_awready"},
-						"AWSIZE": { "actual": "m_axi_awsize[2:0]"},
-						"AWVALID": { "actual": "m_axi_awvalid"},
-						"BREADY": { "actual": "m_axi_bready"},
-						"BRESP": { "actual": "m_axi_bresp[1:0]"},
-						"BVALID": { "actual": "m_axi_bvalid"},
-						"WDATA": { "actual": "m_axi_wdata[63:0]"},
-						"WLAST": { "actual": "m_axi_wlast"},
-						"WREADY": { "actual": "m_axi_wready"},
-						"WSTRB": { "actual": "m_axi_wstrb[7:0]"},
-						"WVALID": { "actual": "m_axi_wvalid"}
-					}
-				},
-				"/axi_mem_intercon_1/s00_couplers/auto_us/S_AXI": {
-					"interface": "xilinx.com:interface:aximm:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_axi_aclk"},
-						"ARESETN": { "actual": "s_axi_aresetn"},
-						"AWADDR": { "actual": "s_axi_awaddr[31:0]"},
-						"AWBURST": { "actual": "s_axi_awburst[1:0]"},
-						"AWCACHE": { "actual": "s_axi_awcache[3:0]"},
-						"AWLEN": { "actual": "s_axi_awlen[3:0]"},
-						"AWLOCK": { "actual": "s_axi_awlock[1:0]"},
-						"AWPROT": { "actual": "s_axi_awprot[2:0]"},
-						"AWQOS": { "actual": "s_axi_awqos[3:0]"},
-						"AWREADY": { "actual": "s_axi_awready"},
-						"AWSIZE": { "actual": "s_axi_awsize[2:0]"},
-						"AWVALID": { "actual": "s_axi_awvalid"},
-						"BREADY": { "actual": "s_axi_bready"},
-						"BRESP": { "actual": "s_axi_bresp[1:0]"},
-						"BVALID": { "actual": "s_axi_bvalid"},
-						"WDATA": { "actual": "s_axi_wdata[31:0]"},
-						"WLAST": { "actual": "s_axi_wlast"},
-						"WREADY": { "actual": "s_axi_wready"},
-						"WSTRB": { "actual": "s_axi_wstrb[3:0]"},
+						"WSTRB": { "actual": "s_axi_wstrb[7:0]"},
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
@@ -403,7 +353,7 @@
 					"ports": {
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
-						"TDATA": { "actual": "m_axis_tdata[31:0]"},
+						"TDATA": { "actual": "m_axis_tdata[63:0]"},
 						"TLAST": { "actual": "m_axis_tlast"},
 						"TREADY": { "actual": "m_axis_tready"},
 						"TVALID": { "actual": "m_axis_tvalid"}
@@ -414,7 +364,7 @@
 					"ports": {
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
-						"TDATA": { "actual": "s_axis_tdata[31:0]"},
+						"TDATA": { "actual": "s_axis_tdata[63:0]"},
 						"TLAST": { "actual": "s_axis_tlast"},
 						"TREADY": { "actual": "s_axis_tready"},
 						"TVALID": { "actual": "s_axis_tvalid"}
@@ -456,10 +406,10 @@
 						"BREADY": { "actual": "m_axi_s2mm_bready"},
 						"BRESP": { "actual": "m_axi_s2mm_bresp[1:0]"},
 						"BVALID": { "actual": "m_axi_s2mm_bvalid"},
-						"WDATA": { "actual": "m_axi_s2mm_wdata[31:0]"},
+						"WDATA": { "actual": "m_axi_s2mm_wdata[63:0]"},
 						"WLAST": { "actual": "m_axi_s2mm_wlast"},
 						"WREADY": { "actual": "m_axi_s2mm_wready"},
-						"WSTRB": { "actual": "m_axi_s2mm_wstrb[3:0]"},
+						"WSTRB": { "actual": "m_axi_s2mm_wstrb[7:0]"},
 						"WVALID": { "actual": "m_axi_s2mm_wvalid"}
 					}
 				},
@@ -468,8 +418,8 @@
 					"ports": {
 						"ACLK": { "actual": "m_axi_s2mm_aclk"},
 						"ARESETN": { "actual": "s2mm_prmry_reset_out_n"},
-						"TDATA": { "actual": "s_axis_s2mm_tdata[31:0]"},
-						"TKEEP": { "actual": "s_axis_s2mm_tkeep[3:0]"},
+						"TDATA": { "actual": "s_axis_s2mm_tdata[63:0]"},
+						"TKEEP": { "actual": "s_axis_s2mm_tkeep[7:0]"},
 						"TLAST": { "actual": "s_axis_s2mm_tlast"},
 						"TREADY": { "actual": "s_axis_s2mm_tready"},
 						"TVALID": { "actual": "s_axis_s2mm_tvalid"}
@@ -503,7 +453,7 @@
 					"ports": {
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
-						"TDATA": { "actual": "m_axis_tdata[31:0]"},
+						"TDATA": { "actual": "m_axis_tdata[63:0]"},
 						"TLAST": { "actual": "m_axis_tlast"},
 						"TREADY": { "actual": "m_axis_tready"},
 						"TVALID": { "actual": "m_axis_tvalid"}

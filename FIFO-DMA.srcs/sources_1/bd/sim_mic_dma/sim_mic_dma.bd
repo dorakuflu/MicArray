@@ -7,7 +7,8 @@
       "name": "sim_mic_dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2.2",
+      "validated": "true"
     },
     "design_tree": {
       "axis_data_fifo_0": "",
@@ -16,14 +17,44 @@
     "ports": {
       "rstn": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "clk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rstn",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "sim_mic_dma_clk",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
@@ -34,7 +65,7 @@
     "components": {
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "15",
+        "ip_revision": "16",
         "xci_name": "sim_mic_dma_axis_data_fifo_0_0",
         "xci_path": "ip\\sim_mic_dma_axis_data_fifo_0_0\\sim_mic_dma_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
@@ -83,7 +114,7 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
-                "value": "4",
+                "value": "8",
                 "value_src": "auto"
               },
               "TDEST_WIDTH": {
@@ -113,13 +144,17 @@
               "HAS_TLAST": {
                 "value": "1",
                 "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "sim_mic_dma_clk",
+                "value_src": "default_prop"
               }
             },
             "port_maps": {
               "TDATA": {
                 "physical_name": "m_axis_tdata",
                 "direction": "O",
-                "left": "31",
+                "left": "63",
                 "right": "0"
               },
               "TLAST": {
@@ -153,6 +188,10 @@
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "sim_mic_dma_clk",
+                "value_src": "default_prop"
               }
             }
           },

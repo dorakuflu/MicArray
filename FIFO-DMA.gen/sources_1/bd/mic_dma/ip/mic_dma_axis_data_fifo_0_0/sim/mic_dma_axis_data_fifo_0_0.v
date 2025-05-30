@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 15
+// IP Revision: 16
 
 `timescale 1ns/1ps
 
@@ -76,33 +76,33 @@ input wire s_axis_aresetn;
 input wire s_axis_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TVALID" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire s_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TREADY" *)
 output wire s_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TDATA" *)
-input wire [31 : 0] s_axis_tdata;
+input wire [63 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
 input wire s_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
 input wire m_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
-output wire [31 : 0] m_axis_tdata;
+output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
 
-  axis_data_fifo_v2_0_15_top #(
+  axis_data_fifo_v2_0_16_top #(
     .C_FAMILY("zynq"),
-    .C_AXIS_TDATA_WIDTH(32),
+    .C_AXIS_TDATA_WIDTH(64),
     .C_AXIS_TID_WIDTH(1),
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_SIGNAL_SET(32'B00000000000000000000000000010011),
-    .C_FIFO_DEPTH(1024),
+    .C_FIFO_DEPTH(16384),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(0),
     .C_SYNCHRONIZER_STAGE(3),
@@ -111,7 +111,7 @@ output wire m_axis_tlast;
     .C_FIFO_MEMORY_TYPE("auto"),
     .C_USE_ADV_FEATURES(825241648),
     .C_PROG_EMPTY_THRESH(5),
-    .C_PROG_FULL_THRESH(202)
+    .C_PROG_FULL_THRESH(11)
   ) inst (
     .s_axis_aresetn(s_axis_aresetn),
     .s_axis_aclk(s_axis_aclk),
@@ -119,8 +119,8 @@ output wire m_axis_tlast;
     .s_axis_tvalid(s_axis_tvalid),
     .s_axis_tready(s_axis_tready),
     .s_axis_tdata(s_axis_tdata),
-    .s_axis_tstrb(4'HF),
-    .s_axis_tkeep(4'HF),
+    .s_axis_tstrb(8'HFF),
+    .s_axis_tkeep(8'HFF),
     .s_axis_tlast(s_axis_tlast),
     .s_axis_tid(1'H0),
     .s_axis_tdest(1'H0),

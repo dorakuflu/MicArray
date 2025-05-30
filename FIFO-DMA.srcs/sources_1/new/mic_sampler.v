@@ -23,7 +23,7 @@
 
 module mic_sampler #(
     parameter DATA_WIDTH    = 32,
-    parameter BUS_WIDTH     = 32,
+    parameter BUS_WIDTH     = 64,
     parameter MIC_NUM       = 100
 )(
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
@@ -44,7 +44,7 @@ module mic_sampler #(
     output wire                 m_axis_tlast
 );
     
-    localparam CYCLES = (MIC_NUM*DATA_WIDTH + BUS_WIDTH - 1) / BUS_WIDTH; // default 100
+    localparam CYCLES = (MIC_NUM*DATA_WIDTH + BUS_WIDTH - 1) / BUS_WIDTH; // default 50
     
     // FSM States
     localparam IDLE = 2'b00;
@@ -114,7 +114,7 @@ module mic_sampler #(
                 if(m_axis_tready) begin
                     next_cnt = cnt + 1;
                     
-                    //Default cnt == 99
+                    //Default cnt == 49
                     if (cnt == CYCLES - 1) begin
                         next_state  = LAST;
                     end
@@ -148,7 +148,7 @@ module mic_sampler #(
     
     
     assign m_axis_tvalid    = (state == SEND || state == LAST);   
-    assign m_axis_tdata     = (state == LAST) ? frame_cnt : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
+    assign m_axis_tdata     = (state == LAST) ? {32'hFFFFFFFF, frame_cnt} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
 //    assign m_axis_tstrb     = m_axis_tvalid ? {BUS_WIDTH/8{1'b1}} : {BUS_WIDTH/8{1'b0}};
     assign m_axis_tlast     = (state == LAST);
     

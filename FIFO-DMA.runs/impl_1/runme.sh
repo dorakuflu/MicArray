@@ -4,7 +4,7 @@
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/impl_1'
+HD_PWD='C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log mic_dma_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mic_dma_wrapper.tcl -notrace
 
 

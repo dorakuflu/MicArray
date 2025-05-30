@@ -12,3 +12,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO
 INFO: [VRFC 10-311] analyzing module sim_mic_dma_wrapper
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/new/tb_mic_sampler.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_mic_sampler
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

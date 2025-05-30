@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Thu May 29 13:09:04 2025
-// Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+// Date        : Fri May 30 17:14:40 2025
+// Host        : DK-SLS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_stub.v
+//               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_stub.v
 // Design      : mic_dma_rst_ps7_0_100M_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -14,8 +14,8 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "mic_dma_rst_ps7_0_100M_0,proc_sys_reset,{}" *) (* core_generation_info = "mic_dma_rst_ps7_0_100M_0,proc_sys_reset,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=0,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "proc_sys_reset,Vivado 2024.2" *) 
+(* CHECK_LICENSE_TYPE = "mic_dma_rst_ps7_0_100M_0,proc_sys_reset,{}" *) (* core_generation_info = "mic_dma_rst_ps7_0_100M_0,proc_sys_reset,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=0,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* x_core_info = "proc_sys_reset,Vivado 2024.2.2" *) 
 module mic_dma_rst_ps7_0_100M_0(slowest_sync_clk, ext_reset_in, aux_reset_in, 
   mb_debug_sys_rst, dcm_locked, mb_reset, bus_struct_reset, peripheral_reset, 
   interconnect_aresetn, peripheral_aresetn)

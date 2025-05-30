@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1748539810">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1748639569">
+  <File Type="PA-TCL" Name="mic_dma_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="mic_dma_wrapper_reports.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="mic_dma_wrapper_power_summary_routed.pb"/>
-  <File Type="BITSTR-MMI" Name="mic_dma_wrapper.mmi"/>
+  <File Type="INIT-TIMING" Name="mic_dma_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="mic_dma_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="mic_dma_wrapper_drc_opted.rpt"/>
-  <File Type="BG-DRC" Name="mic_dma_wrapper.drc"/>
-  <File Type="ROUTE-STATUS-PB" Name="mic_dma_wrapper_route_status.pb"/>
-  <File Type="BG-BGN" Name="mic_dma_wrapper.bgn"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="mic_dma_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="mic_dma_wrapper.hwdef"/>
+  <File Type="OPT-TIMING" Name="mic_dma_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="mic_dma_wrapper_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="mic_dma_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="mic_dma_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="mic_dma_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="mic_dma_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="mic_dma_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="mic_dma_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="mic_dma_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="mic_dma_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-IO" Name="mic_dma_wrapper_io_placed.rpt"/>
-  <File Type="BG-BIN" Name="mic_dma_wrapper.bin"/>
   <File Type="PLACE-CTRL" Name="mic_dma_wrapper_control_sets_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="mic_dma_wrapper_power_routed.rpx"/>
+  <File Type="PLACE-SIMILARITY" Name="mic_dma_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mic_dma_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="mic_dma_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="mic_dma_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mic_dma_wrapper_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="mic_dma_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="mic_dma_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="mic_dma_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="mic_dma_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mic_dma_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="mic_dma_wrapper_routed.dcp"/>
-  <File Type="BITSTR-MSK" Name="mic_dma_wrapper.msk"/>
-  <File Type="BITSTR-RBT" Name="mic_dma_wrapper.rbt"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="mic_dma_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="mic_dma_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="mic_dma_wrapper_route_status.rpt"/>
-  <File Type="PA-TCL" Name="mic_dma_wrapper.tcl"/>
-  <File Type="ROUTE-PWR" Name="mic_dma_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mic_dma_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="mic_dma_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="mic_dma_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="mic_dma_wrapper_drc_routed.pb"/>
-  <File Type="BITSTR-SYSDEF" Name="mic_dma_wrapper.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="mic_dma_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="mic_dma_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mic_dma_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="mic_dma_wrapper.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mic_dma_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="mic_dma_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="mic_dma_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="mic_dma_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="mic_dma_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="mic_dma_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mic_dma_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="mic_dma_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="mic_dma_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="mic_dma_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="mic_dma_wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="mic_dma_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="mic_dma_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="mic_dma_wrapper_bus_skew_routed.rpx"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="mic_dma_wrapper_bus_skew_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mic_dma_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="mic_dma_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mic_dma_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="mic_dma_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="mic_dma_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="mic_dma_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="mic_dma_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BITSTR-NKY" Name="mic_dma_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="mic_dma_wrapper_bd.bmm"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="mic_dma_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="mic_dma_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="mic_dma_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="mic_dma_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="mic_dma_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="mic_dma_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="mic_dma_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="mic_dma_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="mic_dma_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="mic_dma_wrapper_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="mic_dma_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="mic_dma_wrapper_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mic_dma_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mic_dma_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mic_dma_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mic_dma_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="mic_dma_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="mic_dma_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="mic_dma_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="mic_dma_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="mic_dma_wrapper.bit"/>
+  <File Type="BG-BIN" Name="mic_dma_wrapper.bin"/>
+  <File Type="BITSTR-MSK" Name="mic_dma_wrapper.msk"/>
+  <File Type="BITSTR-RBT" Name="mic_dma_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="mic_dma_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="mic_dma_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="mic_dma_wrapper.mmi"/>
   <File Type="PDI-FILE" Name="mic_dma_wrapper.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="mic_dma_wrapper_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="mic_dma_wrapper_pld.pdi"/>
@@ -66,6 +73,13 @@
   <File Type="RNPI_FILE" Name="mic_dma_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="mic_dma_wrapper.npi"/>
   <File Type="RBD_FILE" Name="mic_dma_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="mic_dma_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="mic_dma_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="mic_dma_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="mic_dma_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="mic_dma_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="mic_dma_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="mic_dma_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -153,9 +167,12 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_mic_sampler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_dma_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axis_data_fifo_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axi_mem_intercon_1_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axi_mem_intercon_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_mic_sampler_0_0"/>
 </GenRun>

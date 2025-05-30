@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Thu May 29 13:09:19 2025
-// Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+// Date        : Fri May 30 17:14:57 2025
+// Host        : DK-SLS running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_sim_netlist.v
+//               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_sim_netlist.v
 // Design      : mic_dma_mic_sampler_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 `timescale 1 ps / 1 ps
 
 (* CHECK_LICENSE_TYPE = "mic_dma_mic_sampler_0_0,mic_sampler,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "mic_sampler,Vivado 2024.2" *) 
+(* X_CORE_INFO = "mic_sampler,Vivado 2024.2.2" *) 
 (* NotValidForBitStream *)
 module mic_dma_mic_sampler_0_0
    (s_axis_aclk,
@@ -25,21 +25,47 @@ module mic_dma_mic_sampler_0_0
     m_axis_tlast);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, ASSOCIATED_BUSIF m_axis, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axis_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axis_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [31:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [63:0]m_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *) output m_axis_tlast;
 
-  wire [31:0]m_axis_tdata;
+  wire [38:0]\^m_axis_tdata ;
   wire m_axis_tlast;
   wire m_axis_tready;
   wire m_axis_tvalid;
   wire s_axis_aclk;
   wire s_axis_aresetn;
 
+  assign m_axis_tdata[63] = m_axis_tlast;
+  assign m_axis_tdata[62] = m_axis_tlast;
+  assign m_axis_tdata[61] = m_axis_tlast;
+  assign m_axis_tdata[60] = m_axis_tlast;
+  assign m_axis_tdata[59] = m_axis_tlast;
+  assign m_axis_tdata[58] = m_axis_tlast;
+  assign m_axis_tdata[57] = m_axis_tlast;
+  assign m_axis_tdata[56] = m_axis_tlast;
+  assign m_axis_tdata[55] = m_axis_tlast;
+  assign m_axis_tdata[54] = m_axis_tlast;
+  assign m_axis_tdata[53] = m_axis_tlast;
+  assign m_axis_tdata[52] = m_axis_tlast;
+  assign m_axis_tdata[51] = m_axis_tlast;
+  assign m_axis_tdata[50] = m_axis_tlast;
+  assign m_axis_tdata[49] = m_axis_tlast;
+  assign m_axis_tdata[48] = m_axis_tlast;
+  assign m_axis_tdata[47] = m_axis_tlast;
+  assign m_axis_tdata[46] = m_axis_tlast;
+  assign m_axis_tdata[45] = m_axis_tlast;
+  assign m_axis_tdata[44] = m_axis_tlast;
+  assign m_axis_tdata[43] = m_axis_tlast;
+  assign m_axis_tdata[42] = m_axis_tlast;
+  assign m_axis_tdata[41] = m_axis_tlast;
+  assign m_axis_tdata[40] = m_axis_tlast;
+  assign m_axis_tdata[39] = m_axis_tlast;
+  assign m_axis_tdata[38:0] = \^m_axis_tdata [38:0];
   mic_dma_mic_sampler_0_0_mic_sampler inst
        (.\FSM_onehot_state_reg[2]_0 (m_axis_tlast),
-        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tdata(\^m_axis_tdata ),
         .m_axis_tready(m_axis_tready),
         .m_axis_tvalid(m_axis_tvalid),
         .s_axis_aclk(s_axis_aclk),
@@ -53,31 +79,32 @@ module mic_dma_mic_sampler_0_0_clk_div
     \FSM_onehot_state_reg[0] ,
     clk_96k_edge,
     divclk_reg_0,
-    s_axis_aclk,
-    s_axis_aresetn,
     \FSM_onehot_state_reg[0]_0 ,
     \FSM_onehot_state_reg[2]_0 ,
+    s_axis_aresetn,
     \FSM_onehot_state_reg[1]_0 ,
     \FSM_onehot_state_reg[0]_1 ,
     \FSM_onehot_state_reg[0]_2 ,
     m_axis_tready,
-    clk_96k_last);
+    clk_96k_last,
+    s_axis_aclk);
   output \FSM_onehot_state_reg[2] ;
   output \FSM_onehot_state_reg[1] ;
   output \FSM_onehot_state_reg[0] ;
   output clk_96k_edge;
   output divclk_reg_0;
-  input s_axis_aclk;
-  input s_axis_aresetn;
   input \FSM_onehot_state_reg[0]_0 ;
   input \FSM_onehot_state_reg[2]_0 ;
+  input s_axis_aresetn;
   input \FSM_onehot_state_reg[1]_0 ;
   input \FSM_onehot_state_reg[0]_1 ;
   input \FSM_onehot_state_reg[0]_2 ;
   input m_axis_tready;
   input clk_96k_last;
+  input s_axis_aclk;
 
   wire \FSM_onehot_state[2]_i_2_n_0 ;
+  wire \FSM_onehot_state[2]_i_3_n_0 ;
   wire \FSM_onehot_state_reg[0] ;
   wire \FSM_onehot_state_reg[0]_0 ;
   wire \FSM_onehot_state_reg[0]_1 ;
@@ -139,15 +166,21 @@ module mic_dma_mic_sampler_0_0_clk_div
         .I3(s_axis_aresetn),
         .O(\FSM_onehot_state_reg[2] ));
   LUT6 #(
-    .INIT(64'hFFFF88F888888888)) 
+    .INIT(64'hF4FFF4F444444444)) 
     \FSM_onehot_state[2]_i_2 
-       (.I0(clk_96k_edge),
+       (.I0(\FSM_onehot_state[2]_i_3_n_0 ),
         .I1(\FSM_onehot_state_reg[1]_0 ),
-        .I2(\FSM_onehot_state_reg[0]_1 ),
-        .I3(\FSM_onehot_state_reg[0]_2 ),
-        .I4(\FSM_onehot_state_reg[0]_0 ),
+        .I2(\FSM_onehot_state_reg[0]_0 ),
+        .I3(\FSM_onehot_state_reg[0]_1 ),
+        .I4(\FSM_onehot_state_reg[0]_2 ),
         .I5(m_axis_tready),
         .O(\FSM_onehot_state[2]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \FSM_onehot_state[2]_i_3 
+       (.I0(clk_96k_last),
+        .I1(clk_96k),
+        .O(\FSM_onehot_state[2]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
@@ -160,7 +193,7 @@ module mic_dma_mic_sampler_0_0_clk_div
     \cnt[0]_i_1 
        (.I0(cnt_reg[0]),
         .O(\cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \cnt[1]_i_1 
@@ -223,7 +256,7 @@ module mic_dma_mic_sampler_0_0_clk_div
         .I4(cnt_reg[4]),
         .I5(cnt_reg[6]),
         .O(\cnt[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \cnt[7]_i_2 
@@ -343,13 +376,13 @@ module mic_dma_mic_sampler_0_0_clk_div
         .D(\cnt[9]_i_2_n_0 ),
         .Q(cnt_reg[9]),
         .R(\cnt[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
-    .INIT(8'h60)) 
+    .INIT(8'h28)) 
     divclk_i_1
-       (.I0(clk_96k),
-        .I1(\cnt[9]_i_3_n_0 ),
-        .I2(s_axis_aresetn),
+       (.I0(s_axis_aresetn),
+        .I1(clk_96k),
+        .I2(\cnt[9]_i_3_n_0 ),
         .O(divclk_i_1_n_0));
   FDRE divclk_reg
        (.C(s_axis_aclk),
@@ -357,7 +390,7 @@ module mic_dma_mic_sampler_0_0_clk_div
         .D(divclk_i_1_n_0),
         .Q(clk_96k),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \frame_cnt[0]_i_1 
@@ -371,17 +404,16 @@ module mic_dma_mic_sampler_0_0_mic_sampler
    (\FSM_onehot_state_reg[2]_0 ,
     m_axis_tvalid,
     m_axis_tdata,
-    s_axis_aresetn,
     s_axis_aclk,
+    s_axis_aresetn,
     m_axis_tready);
   output \FSM_onehot_state_reg[2]_0 ;
   output m_axis_tvalid;
-  output [31:0]m_axis_tdata;
-  input s_axis_aresetn;
+  output [38:0]m_axis_tdata;
   input s_axis_aclk;
+  input s_axis_aresetn;
   input m_axis_tready;
 
-  wire \FSM_onehot_state[2]_i_3_n_0 ;
   wire \FSM_onehot_state[2]_i_4_n_0 ;
   wire \FSM_onehot_state_reg[2]_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
@@ -399,7 +431,6 @@ module mic_dma_mic_sampler_0_0_mic_sampler
   wire \cnt[3]_i_1_n_0 ;
   wire \cnt[4]_i_1__0_n_0 ;
   wire \cnt[5]_i_1__0_n_0 ;
-  wire \cnt[5]_i_2_n_0 ;
   wire \cnt[6]_i_1__0_n_0 ;
   wire \cnt[6]_i_3_n_0 ;
   wire \cnt[6]_i_4_n_0 ;
@@ -468,7 +499,8 @@ module mic_dma_mic_sampler_0_0_mic_sampler
   wire \frame_cnt_reg[8]_i_1_n_5 ;
   wire \frame_cnt_reg[8]_i_1_n_6 ;
   wire \frame_cnt_reg[8]_i_1_n_7 ;
-  wire [31:0]m_axis_tdata;
+  wire [38:0]m_axis_tdata;
+  wire \m_axis_tdata[33]_INST_0_i_1_n_0 ;
   wire \m_axis_tdata[6]_INST_0_i_1_n_0 ;
   wire m_axis_tready;
   wire m_axis_tvalid;
@@ -477,22 +509,15 @@ module mic_dma_mic_sampler_0_0_mic_sampler
   wire s_axis_aresetn;
   wire [3:3]\NLW_frame_cnt_reg[28]_i_1_CO_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \FSM_onehot_state[2]_i_3 
-       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
-        .I1(cnt[1]),
-        .I2(cnt[0]),
-        .O(\FSM_onehot_state[2]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFF7)) 
+    .INIT(32'hFF7FFFFF)) 
     \FSM_onehot_state[2]_i_4 
-       (.I0(cnt[6]),
-        .I1(cnt[5]),
-        .I2(cnt[2]),
-        .I3(cnt[3]),
-        .I4(cnt[4]),
+       (.I0(cnt[5]),
+        .I1(cnt[4]),
+        .I2(cnt[0]),
+        .I3(cnt[6]),
+        .I4(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\FSM_onehot_state[2]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "IDLE:001,SEND:010,LAST:100," *) 
   FDRE #(
@@ -530,8 +555,8 @@ module mic_dma_mic_sampler_0_0_mic_sampler
   mic_dma_mic_sampler_0_0_clk_div clock_div
        (.\FSM_onehot_state_reg[0] (clock_div_n_2),
         .\FSM_onehot_state_reg[0]_0 (\FSM_onehot_state_reg[2]_0 ),
-        .\FSM_onehot_state_reg[0]_1 (\FSM_onehot_state[2]_i_3_n_0 ),
-        .\FSM_onehot_state_reg[0]_2 (\FSM_onehot_state[2]_i_4_n_0 ),
+        .\FSM_onehot_state_reg[0]_1 (\FSM_onehot_state[2]_i_4_n_0 ),
+        .\FSM_onehot_state_reg[0]_2 (\m_axis_tdata[6]_INST_0_i_1_n_0 ),
         .\FSM_onehot_state_reg[1] (clock_div_n_1),
         .\FSM_onehot_state_reg[1]_0 (\FSM_onehot_state_reg_n_0_[0] ),
         .\FSM_onehot_state_reg[2] (clock_div_n_0),
@@ -542,22 +567,22 @@ module mic_dma_mic_sampler_0_0_mic_sampler
         .m_axis_tready(m_axis_tready),
         .s_axis_aclk(s_axis_aclk),
         .s_axis_aresetn(s_axis_aresetn));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \cnt[0]_i_1__0 
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(cnt[0]),
         .O(\cnt[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
-    .INIT(8'h28)) 
+    .INIT(8'h60)) 
     \cnt[1]_i_1__0 
-       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
-        .I1(cnt[1]),
-        .I2(cnt[0]),
+       (.I0(cnt[1]),
+        .I1(cnt[0]),
+        .I2(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\cnt[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'h2A80)) 
     \cnt[2]_i_1__0 
@@ -566,7 +591,7 @@ module mic_dma_mic_sampler_0_0_mic_sampler
         .I2(cnt[1]),
         .I3(cnt[2]),
         .O(\cnt[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'h2AAA8000)) 
     \cnt[3]_i_1 
@@ -580,29 +605,21 @@ module mic_dma_mic_sampler_0_0_mic_sampler
     .INIT(64'h2AAAAAAA80000000)) 
     \cnt[4]_i_1__0 
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
-        .I1(cnt[2]),
-        .I2(cnt[0]),
-        .I3(cnt[1]),
-        .I4(cnt[3]),
+        .I1(cnt[3]),
+        .I2(cnt[2]),
+        .I3(cnt[0]),
+        .I4(cnt[1]),
         .I5(cnt[4]),
         .O(\cnt[4]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA2AAAAA00800000)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT4 #(
+    .INIT(16'h7800)) 
     \cnt[5]_i_1__0 
-       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
+       (.I0(\cnt[6]_i_4_n_0 ),
         .I1(cnt[4]),
-        .I2(cnt[3]),
-        .I3(\cnt[5]_i_2_n_0 ),
-        .I4(cnt[2]),
-        .I5(cnt[5]),
+        .I2(cnt[5]),
+        .I3(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\cnt[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \cnt[5]_i_2 
-       (.I0(cnt[0]),
-        .I1(cnt[1]),
-        .O(\cnt[5]_i_2_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \cnt[6]_i_1__0 
@@ -615,24 +632,24 @@ module mic_dma_mic_sampler_0_0_mic_sampler
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .I2(\FSM_onehot_state_reg[2]_0 ),
         .O(next_cnt));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h2A80)) 
-    \cnt[6]_i_3 
-       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
-        .I1(\cnt[6]_i_4_n_0 ),
-        .I2(cnt[5]),
-        .I3(cnt[6]),
-        .O(\cnt[6]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
+    .INIT(32'h2AAA8000)) 
+    \cnt[6]_i_3 
+       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
+        .I1(cnt[5]),
+        .I2(cnt[4]),
+        .I3(\cnt[6]_i_4_n_0 ),
+        .I4(cnt[6]),
+        .O(\cnt[6]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT4 #(
+    .INIT(16'h8000)) 
     \cnt[6]_i_4 
-       (.I0(cnt[4]),
-        .I1(cnt[3]),
-        .I2(cnt[1]),
-        .I3(cnt[0]),
-        .I4(cnt[2]),
+       (.I0(cnt[3]),
+        .I1(cnt[2]),
+        .I2(cnt[0]),
+        .I3(cnt[1]),
         .O(\cnt[6]_i_4_n_0 ));
   FDRE \cnt_reg[0] 
        (.C(s_axis_aclk),
@@ -937,80 +954,76 @@ module mic_dma_mic_sampler_0_0_mic_sampler
         .D(\frame_cnt_reg[8]_i_1_n_6 ),
         .Q(frame_cnt_reg[9]),
         .R(\cnt[6]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF0000A2AAA2AA)) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \m_axis_tdata[0]_INST_0 
-       (.I0(cnt[0]),
-        .I1(cnt[5]),
-        .I2(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
-        .I3(cnt[6]),
-        .I4(frame_cnt_reg[0]),
-        .I5(\FSM_onehot_state_reg[2]_0 ),
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(frame_cnt_reg[0]),
         .O(m_axis_tdata[0]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[10]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[10]),
         .O(m_axis_tdata[10]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[11]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[11]),
         .O(m_axis_tdata[11]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[12]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[12]),
         .O(m_axis_tdata[12]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[13]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[13]),
         .O(m_axis_tdata[13]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[14]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[14]),
         .O(m_axis_tdata[14]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[15]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[15]),
         .O(m_axis_tdata[15]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[16]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[16]),
         .O(m_axis_tdata[16]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[17]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[17]),
         .O(m_axis_tdata[17]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[18]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[18]),
         .O(m_axis_tdata[18]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[19]_INST_0 
@@ -1018,173 +1031,251 @@ module mic_dma_mic_sampler_0_0_mic_sampler
         .I1(frame_cnt_reg[19]),
         .O(m_axis_tdata[19]));
   LUT6 #(
-    .INIT(64'hFFFF0000A2AAA2AA)) 
+    .INIT(64'hB888B8B8B8B8B8B8)) 
     \m_axis_tdata[1]_INST_0 
-       (.I0(cnt[1]),
-        .I1(cnt[5]),
-        .I2(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
-        .I3(cnt[6]),
-        .I4(frame_cnt_reg[1]),
-        .I5(\FSM_onehot_state_reg[2]_0 ),
+       (.I0(frame_cnt_reg[1]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(cnt[0]),
+        .I3(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
+        .I4(cnt[4]),
+        .I5(cnt[5]),
         .O(m_axis_tdata[1]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[20]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[20]),
         .O(m_axis_tdata[20]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[21]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[21]),
         .O(m_axis_tdata[21]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[22]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[22]),
         .O(m_axis_tdata[22]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[23]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[23]),
         .O(m_axis_tdata[23]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[24]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[24]),
         .O(m_axis_tdata[24]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[25]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[25]),
         .O(m_axis_tdata[25]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[26]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[26]),
         .O(m_axis_tdata[26]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[27]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[27]),
         .O(m_axis_tdata[27]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[28]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[28]),
         .O(m_axis_tdata[28]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[29]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[29]),
         .O(m_axis_tdata[29]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
-    .INIT(32'hFF002A2A)) 
+    .INIT(32'h88B8B8B8)) 
     \m_axis_tdata[2]_INST_0 
-       (.I0(cnt[2]),
-        .I1(cnt[5]),
-        .I2(cnt[6]),
-        .I3(frame_cnt_reg[2]),
-        .I4(\FSM_onehot_state_reg[2]_0 ),
+       (.I0(frame_cnt_reg[2]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(cnt[1]),
+        .I3(cnt[5]),
+        .I4(cnt[4]),
         .O(m_axis_tdata[2]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[30]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[30]),
         .O(m_axis_tdata[30]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[31]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[31]),
         .O(m_axis_tdata[31]));
-  LUT5 #(
-    .INIT(32'hFF002A2A)) 
-    \m_axis_tdata[3]_INST_0 
-       (.I0(cnt[3]),
-        .I1(cnt[5]),
-        .I2(cnt[6]),
-        .I3(frame_cnt_reg[3]),
-        .I4(\FSM_onehot_state_reg[2]_0 ),
-        .O(m_axis_tdata[3]));
-  LUT5 #(
-    .INIT(32'hFF002A2A)) 
-    \m_axis_tdata[4]_INST_0 
+  LUT6 #(
+    .INIT(64'hAAABFFFFFFFFFFFF)) 
+    \m_axis_tdata[32]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[2]),
+        .I2(cnt[3]),
+        .I3(cnt[1]),
+        .I4(cnt[4]),
+        .I5(cnt[5]),
+        .O(m_axis_tdata[32]));
+  LUT6 #(
+    .INIT(64'hEEEEEEEFAAAAAAAA)) 
+    \m_axis_tdata[33]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(\m_axis_tdata[33]_INST_0_i_1_n_0 ),
+        .I2(cnt[1]),
+        .I3(cnt[3]),
+        .I4(cnt[2]),
+        .I5(cnt[0]),
+        .O(m_axis_tdata[33]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \m_axis_tdata[33]_INST_0_i_1 
        (.I0(cnt[4]),
         .I1(cnt[5]),
-        .I2(cnt[6]),
-        .I3(frame_cnt_reg[4]),
-        .I4(\FSM_onehot_state_reg[2]_0 ),
+        .O(\m_axis_tdata[33]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT4 #(
+    .INIT(16'hBFAA)) 
+    \m_axis_tdata[34]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[4]),
+        .I2(cnt[5]),
+        .I3(cnt[1]),
+        .O(m_axis_tdata[34]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT4 #(
+    .INIT(16'hAEEE)) 
+    \m_axis_tdata[35]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[2]),
+        .I2(cnt[4]),
+        .I3(cnt[5]),
+        .O(m_axis_tdata[35]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT4 #(
+    .INIT(16'hBFAA)) 
+    \m_axis_tdata[36]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[4]),
+        .I2(cnt[5]),
+        .I3(cnt[3]),
+        .O(m_axis_tdata[36]));
+  LUT6 #(
+    .INIT(64'hBBBBBBBFAAAAAAAA)) 
+    \m_axis_tdata[37]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[5]),
+        .I2(cnt[1]),
+        .I3(cnt[3]),
+        .I4(cnt[2]),
+        .I5(cnt[4]),
+        .O(m_axis_tdata[37]));
+  LUT6 #(
+    .INIT(64'hBBBBBBBFAAAAAAAA)) 
+    \m_axis_tdata[38]_INST_0 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(cnt[4]),
+        .I2(cnt[1]),
+        .I3(cnt[3]),
+        .I4(cnt[2]),
+        .I5(cnt[5]),
+        .O(m_axis_tdata[38]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'h8BBB8888)) 
+    \m_axis_tdata[3]_INST_0 
+       (.I0(frame_cnt_reg[3]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(cnt[5]),
+        .I3(cnt[4]),
+        .I4(cnt[2]),
+        .O(m_axis_tdata[3]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'h88B8B8B8)) 
+    \m_axis_tdata[4]_INST_0 
+       (.I0(frame_cnt_reg[4]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(cnt[3]),
+        .I3(cnt[5]),
+        .I4(cnt[4]),
         .O(m_axis_tdata[4]));
   LUT5 #(
-    .INIT(32'hCACAC0CA)) 
+    .INIT(32'hB888B8B8)) 
     \m_axis_tdata[5]_INST_0 
-       (.I0(cnt[5]),
-        .I1(frame_cnt_reg[5]),
-        .I2(\FSM_onehot_state_reg[2]_0 ),
-        .I3(cnt[6]),
-        .I4(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
+       (.I0(frame_cnt_reg[5]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(cnt[4]),
+        .I3(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
+        .I4(cnt[5]),
         .O(m_axis_tdata[5]));
   LUT5 #(
-    .INIT(32'hFF008A8A)) 
+    .INIT(32'hB888B8B8)) 
     \m_axis_tdata[6]_INST_0 
-       (.I0(cnt[6]),
-        .I1(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
+       (.I0(frame_cnt_reg[6]),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
         .I2(cnt[5]),
-        .I3(frame_cnt_reg[6]),
-        .I4(\FSM_onehot_state_reg[2]_0 ),
+        .I3(\m_axis_tdata[6]_INST_0_i_1_n_0 ),
+        .I4(cnt[4]),
         .O(m_axis_tdata[6]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \m_axis_tdata[6]_INST_0_i_1 
-       (.I0(cnt[4]),
+       (.I0(cnt[2]),
         .I1(cnt[3]),
-        .I2(cnt[2]),
+        .I2(cnt[1]),
         .O(\m_axis_tdata[6]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[7]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[7]),
         .O(m_axis_tdata[7]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[8]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[8]),
         .O(m_axis_tdata[8]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[9]_INST_0 
        (.I0(\FSM_onehot_state_reg[2]_0 ),
         .I1(frame_cnt_reg[9]),
         .O(m_axis_tdata[9]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'hE)) 
     m_axis_tvalid_INST_0
