@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
--- Date        : Fri May 30 17:14:40 2025
--- Host        : DK-SLS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+-- Date        : Thu May 29 13:09:03 2025
+-- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top mic_dma_rst_ps7_0_100M_0 -prefix
+--               mic_dma_rst_ps7_0_100M_0_ mic_dma_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : mic_dma_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity mic_dma_rst_ps7_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mic_dma_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end mic_dma_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0_cdc_sync is
@@ -248,8 +246,6 @@ entity mic_dma_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mic_dma_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end mic_dma_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0_upcnt_n is
@@ -414,8 +410,6 @@ entity mic_dma_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mic_dma_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end mic_dma_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0_lpf is
@@ -604,8 +598,6 @@ entity mic_dma_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mic_dma_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end mic_dma_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0_sequence_psr is
@@ -944,8 +936,6 @@ entity mic_dma_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of mic_dma_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of mic_dma_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mic_dma_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end mic_dma_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0_proc_sys_reset is
@@ -1076,7 +1066,7 @@ entity mic_dma_rst_ps7_0_100M_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of mic_dma_rst_ps7_0_100M_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of mic_dma_rst_ps7_0_100M_0 : entity is "proc_sys_reset,Vivado 2024.2.2";
+  attribute x_core_info of mic_dma_rst_ps7_0_100M_0 : entity is "proc_sys_reset,Vivado 2024.2";
 end mic_dma_rst_ps7_0_100M_0;
 
 architecture STRUCTURE of mic_dma_rst_ps7_0_100M_0 is

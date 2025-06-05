@@ -142,13 +142,13 @@ module mic_sampler #(
             state       <= next_state;     
             cnt         <= next_cnt;
             
-            frame_cnt <= clk_96k_edge ? (frame_cnt + 1) : frame_cnt;
+            frame_cnt <= clk_96k_edge ? ((frame_cnt == 32'h7FFF_FFFF) ? 0 : frame_cnt + 1) : frame_cnt;
         end
     end
     
     
     assign m_axis_tvalid    = (state == SEND || state == LAST);   
-    assign m_axis_tdata     = (state == LAST) ? {32'hFFFFFFFF, frame_cnt} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
+    assign m_axis_tdata     = (state == LAST) ? {32'hFFFF_FFFF, frame_cnt} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
 //    assign m_axis_tstrb     = m_axis_tvalid ? {BUS_WIDTH/8{1'b1}} : {BUS_WIDTH/8{1'b0}};
     assign m_axis_tlast     = (state == LAST);
     

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 16
+// IP Revision: 15
 
 `timescale 1ns/1ps
 
@@ -95,7 +95,7 @@ output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
 
-  axis_data_fifo_v2_0_16_top #(
+  axis_data_fifo_v2_0_15_top #(
     .C_FAMILY("zynq"),
     .C_AXIS_TDATA_WIDTH(64),
     .C_AXIS_TID_WIDTH(1),

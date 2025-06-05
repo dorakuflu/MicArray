@@ -1,25 +1,25 @@
 #-----------------------------------------------------------
-# Vivado v2024.2.2 (64-bit)
-# SW Build 6060944 on Thu Mar 06 19:10:01 MST 2025
-# IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
-# SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
-# Start of session at: Fri May 30 17:12:55 2025
-# Process ID         : 8764
-# Current directory  : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jun  5 13:16:39 2025
+# Process ID         : 24652
+# Current directory  : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1
 # Command line       : vivado.exe -log mic_dma_axi_mem_intercon_1_imp_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mic_dma_axi_mem_intercon_1_imp_auto_pc_0.tcl
-# Log file           : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.vds
-# Journal file       : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1\vivado.jou
-# Running On         : DK-SLS
+# Log file           : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.vds
+# Journal file       : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1\vivado.jou
+# Running On         : eecs3007vr01
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
-# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz
-# CPU Frequency      : 3302 MHz
-# CPU Physical cores : 4
-# CPU Logical cores  : 8
-# Host memory        : 17005 MB
-# Swap memory        : 11274 MB
-# Total Virtual      : 28280 MB
-# Available Virtual  : 9497 MB
+# Processor Detail   : Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
+# CPU Frequency      : 3792 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34079 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36227 MB
+# Available Virtual  : 19605 MB
 #-----------------------------------------------------------
 source mic_dma_axi_mem_intercon_1_imp_auto_pc_0.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mic_dma_axi_mem_intercon_1_imp_auto_pc_0
@@ -30,31 +30,31 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7820
+INFO: [Synth 8-7075] Helper process launched with PID 9160
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1063.371 ; gain = 466.848
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1055.008 ; gain = 467.285
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/synth/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_35_axi_protocol_converter' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_35_axi3_conv' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_35_b_downsizer' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_35_b_downsizer' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_35_a_axi3_conv' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_34_axic_fifo' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_34_fifo_gen' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/synth/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_33_axi_protocol_converter' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_33_axi3_conv' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_33_b_downsizer' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_33_b_downsizer' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_33_a_axi3_conv' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_32_axic_fifo' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/65ce/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_32_fifo_gen' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/65ce/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_34_fifo_gen' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_34_axic_fifo' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_35_a_axi3_conv' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_35_w_axi3_conv' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_35_w_axi3_conv' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_35_axi3_conv' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_35_axi_protocol_converter' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/synth/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/2a7e/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
-WARNING: [Synth 8-7129] Port S_AXI_WLAST in module axi_protocol_converter_v2_1_35_w_axi3_conv is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module axi_protocol_converter_v2_1_35_w_axi3_conv is either unconnected or has no load
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_32_fifo_gen' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/65ce/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_32_axic_fifo' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/65ce/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_33_a_axi3_conv' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_33_w_axi3_conv' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_33_w_axi3_conv' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_33_axi3_conv' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_33_axi_protocol_converter' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/synth/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
+WARNING: [Synth 8-7129] Port S_AXI_WLAST in module axi_protocol_converter_v2_1_33_w_axi3_conv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module axi_protocol_converter_v2_1_33_w_axi3_conv is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_I in module output_blk is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk is either unconnected or has no load
@@ -155,53 +155,53 @@ WARNING: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[4] in module rd_logic is e
 WARNING: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[3] in module rd_logic is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1310.426 ; gain = 713.902
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1301.758 ; gain = 714.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:49 . Memory (MB): peak = 1310.426 ; gain = 713.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1301.758 ; gain = 714.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:49 . Memory (MB): peak = 1310.426 ; gain = 713.902
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1301.758 ; gain = 714.035
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1310.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1301.758 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc]
 INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1389.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1380.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1390.090 ; gain = 0.324
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1381.055 ; gain = 0.059
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:01:07 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:01:07 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_axi4_axi3.axi3_conv_inst /\USE_WRITE.write_addr_inst /\USE_BURSTS.cmd_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_axi4_axi3.axi3_conv_inst /\USE_WRITE.write_addr_inst /\USE_B_CHANNEL.cmd_b_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:10 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
 INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
@@ -214,7 +214,7 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' i
             stage2_valid |                               01 |                               01
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -271,7 +271,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:17 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -293,13 +293,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 1390.090 ; gain = 793.566
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1381.055 ; gain = 793.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:29 . Memory (MB): peak = 1422.500 ; gain = 825.977
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1414.531 ; gain = 826.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -320,7 +320,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:29 . Memory (MB): peak = 1422.500 ; gain = 825.977
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1414.531 ; gain = 826.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -338,37 +338,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -398,32 +398,32 @@ Report Cell Usage:
 |12    |FDSE   |     2|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:35 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1214 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:30 . Memory (MB): peak = 1617.613 ; gain = 941.426
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:36 . Memory (MB): peak = 1617.613 ; gain = 1021.090
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1609.641 ; gain = 942.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1609.641 ; gain = 1021.918
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1622.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1609.789 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1616.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
 
-Synth Design complete | Checksum: 8ad55e29
+Synth Design complete | Checksum: 6d2bcc8
 INFO: [Common 17-83] Releasing license: Synthesis
 38 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:01:48 . Memory (MB): peak = 1630.387 ; gain = 1271.715
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1630.387 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mic_dma_axi_mem_intercon_1_imp_auto_pc_0, cache-ID = 529cdf2119067bcb
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 1616.504 ; gain = 1266.316
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1616.504 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mic_dma_axi_mem_intercon_1_imp_auto_pc_0, cache-ID = 3289cdfdd43107f1
 INFO: [Coretcl 2-1174] Renamed 39 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1630.387 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1616.504 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_synth_1/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mic_dma_axi_mem_intercon_1_imp_auto_pc_0_utilization_synth.rpt -pb mic_dma_axi_mem_intercon_1_imp_auto_pc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 30 17:15:07 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  5 13:17:48 2025...

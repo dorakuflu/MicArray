@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
--- Date        : Fri May 30 17:15:18 2025
--- Host        : DK-SLS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0_stub.vhdl
+-- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+-- Date        : Thu May 29 13:09:31 2025
+-- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mic_dma_axi_smc_0 -prefix
+--               mic_dma_axi_smc_0_ mic_dma_axi_smc_0_stub.vhdl
 -- Design      : mic_dma_axi_smc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -79,7 +79,7 @@ entity mic_dma_axi_smc_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of mic_dma_axi_smc_0 : entity is "mic_dma_axi_smc_0,bd_5a83,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mic_dma_axi_smc_0 : entity is "mic_dma_axi_smc_0,bd_5a83,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=smartconnect,x_ipVersion=1.0,x_ipCoreRevision=26,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}";
+  attribute CORE_GENERATION_INFO of mic_dma_axi_smc_0 : entity is "mic_dma_axi_smc_0,bd_5a83,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=smartconnect,x_ipVersion=1.0,x_ipCoreRevision=25,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mic_dma_axi_smc_0 : entity is "yes";
 end mic_dma_axi_smc_0;
@@ -160,6 +160,6 @@ architecture stub of mic_dma_axi_smc_0 is
   attribute X_INTERFACE_INFO of M00_AXI_rvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RVALID";
   attribute X_INTERFACE_INFO of M00_AXI_rready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RREADY";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "bd_5a83,Vivado 2024.2.2";
+  attribute X_CORE_INFO of stub : architecture is "bd_5a83,Vivado 2024.2";
 begin
 end;

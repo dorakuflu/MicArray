@@ -7,7 +7,7 @@
       "name": "mic_dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2.2",
+      "tool_version": "2024.2",
       "validated": "true"
     },
     "design_tree": {
@@ -1988,7 +1988,7 @@
       },
       "dma": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
-        "ip_revision": "35",
+        "ip_revision": "34",
         "xci_name": "mic_dma_dma_0",
         "xci_path": "ip\\mic_dma_dma_0\\mic_dma_dma_0.xci",
         "inst_hier_path": "dma",
@@ -2003,10 +2003,10 @@
             "value": "64"
           },
           "c_mm2s_burst_size": {
-            "value": "32"
+            "value": "8"
           },
           "c_s2mm_burst_size": {
-            "value": "32"
+            "value": "128"
           },
           "c_sg_length_width": {
             "value": "26"
@@ -2049,7 +2049,7 @@
       },
       "axi_smc": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
-        "ip_revision": "26",
+        "ip_revision": "25",
         "xci_name": "mic_dma_axi_smc_0",
         "xci_path": "ip\\mic_dma_axi_smc_0\\mic_dma_axi_smc_0.xci",
         "inst_hier_path": "axi_smc",
@@ -2229,7 +2229,7 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "35",
+                "ip_revision": "33",
                 "xci_name": "mic_dma_axi_mem_intercon_imp_auto_pc_0",
                 "xci_path": "ip\\mic_dma_axi_mem_intercon_imp_auto_pc_0\\mic_dma_axi_mem_intercon_imp_auto_pc_0.xci",
                 "inst_hier_path": "axi_mem_intercon/s00_couplers/auto_pc",
@@ -2443,7 +2443,7 @@
             "components": {
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "35",
+                "ip_revision": "33",
                 "xci_name": "mic_dma_axi_mem_intercon_1_imp_auto_pc_0",
                 "xci_path": "ip\\mic_dma_axi_mem_intercon_1_imp_auto_pc_0\\mic_dma_axi_mem_intercon_1_imp_auto_pc_0.xci",
                 "inst_hier_path": "axi_mem_intercon_1/s00_couplers/auto_pc",
@@ -2539,7 +2539,7 @@
       },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "16",
+        "ip_revision": "15",
         "xci_name": "mic_dma_axis_data_fifo_0_0",
         "xci_path": "ip\\mic_dma_axis_data_fifo_0_0\\mic_dma_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",

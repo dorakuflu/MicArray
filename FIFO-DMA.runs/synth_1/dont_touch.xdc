@@ -34,4 +34,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mic_dma_axi
 # IP: bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mic_dma_axi_mem_intercon_1_imp_auto_pc_0 || ORIG_REF_NAME==mic_dma_axi_mem_intercon_1_imp_auto_pc_0} -quiet] -quiet
 
-# XDC: c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/mic_dma_ooc.xdc
+# XDC: c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/mic_dma_ooc.xdc

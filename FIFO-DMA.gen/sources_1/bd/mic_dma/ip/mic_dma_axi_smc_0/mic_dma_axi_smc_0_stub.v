@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-// Date        : Fri May 30 17:15:18 2025
-// Host        : DK-SLS running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0_stub.v
+// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+// Date        : Thu May 29 13:09:31 2025
+// Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub -rename_top mic_dma_axi_smc_0 -prefix
+//               mic_dma_axi_smc_0_ mic_dma_axi_smc_0_stub.v
 // Design      : mic_dma_axi_smc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -14,8 +14,8 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "mic_dma_axi_smc_0,bd_5a83,{}" *) (* CORE_GENERATION_INFO = "mic_dma_axi_smc_0,bd_5a83,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=smartconnect,x_ipVersion=1.0,x_ipCoreRevision=26,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* X_CORE_INFO = "bd_5a83,Vivado 2024.2.2" *) 
+(* CHECK_LICENSE_TYPE = "mic_dma_axi_smc_0,bd_5a83,{}" *) (* CORE_GENERATION_INFO = "mic_dma_axi_smc_0,bd_5a83,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=smartconnect,x_ipVersion=1.0,x_ipCoreRevision=25,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* X_CORE_INFO = "bd_5a83,Vivado 2024.2" *) 
 module mic_dma_axi_smc_0(aclk, aresetn, S00_AXI_awid, S00_AXI_awaddr, 
   S00_AXI_awlen, S00_AXI_awsize, S00_AXI_awburst, S00_AXI_awlock, S00_AXI_awcache, 
   S00_AXI_awprot, S00_AXI_awqos, S00_AXI_awvalid, S00_AXI_awready, S00_AXI_wid, 

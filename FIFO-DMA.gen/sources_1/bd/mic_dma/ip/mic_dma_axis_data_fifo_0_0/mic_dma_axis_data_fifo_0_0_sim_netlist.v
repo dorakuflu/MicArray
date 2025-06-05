@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-// Date        : Fri May 30 17:14:41 2025
-// Host        : DK-SLS running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+// Date        : Thu Jun  5 13:17:31 2025
+// Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_sim_netlist.v
+//               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_sim_netlist.v
 // Design      : mic_dma_axis_data_fifo_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_16_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_16_top,Vivado 2024.2.2" *) 
+(* CHECK_LICENSE_TYPE = "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_15_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axis_data_fifo_v2_0_15_top,Vivado 2024.2" *) 
 (* NotValidForBitStream *)
 module mic_dma_axis_data_fifo_0_0
    (s_axis_aresetn,
@@ -114,7 +114,7 @@ module mic_dma_axis_data_fifo_0_0
   (* LP_TUSER_WIDTH = "1" *) 
   (* LP_USE_ADV_FEATURES = "825241648" *) 
   (* LP_WR_DATA_COUNT_WIDTH = "15" *) 
-  mic_dma_axis_data_fifo_0_0_axis_data_fifo_v2_0_16_top inst
+  mic_dma_axis_data_fifo_0_0_axis_data_fifo_v2_0_15_top inst
        (.almost_empty(NLW_inst_almost_empty_UNCONNECTED),
         .almost_full(NLW_inst_almost_full_UNCONNECTED),
         .axis_rd_data_count(NLW_inst_axis_rd_data_count_UNCONNECTED[31:0]),
@@ -167,8 +167,8 @@ endmodule
 (* LP_PROG_EMPTY_THRESH = "5" *) (* LP_PROG_FULL_THRESH = "11" *) (* LP_RD_DATA_COUNT_WIDTH = "15" *) 
 (* LP_RELATED_CLOCKS = "0" *) (* LP_S_ACLKEN_CAN_TOGGLE = "0" *) (* LP_TDATA_WIDTH = "64" *) 
 (* LP_TDEST_WIDTH = "1" *) (* LP_TID_WIDTH = "1" *) (* LP_TUSER_WIDTH = "1" *) 
-(* LP_USE_ADV_FEATURES = "825241648" *) (* LP_WR_DATA_COUNT_WIDTH = "15" *) (* ORIG_REF_NAME = "axis_data_fifo_v2_0_16_top" *) 
-module mic_dma_axis_data_fifo_0_0_axis_data_fifo_v2_0_16_top
+(* LP_USE_ADV_FEATURES = "825241648" *) (* LP_WR_DATA_COUNT_WIDTH = "15" *) (* ORIG_REF_NAME = "axis_data_fifo_v2_0_15_top" *) 
+module mic_dma_axis_data_fifo_0_0_axis_data_fifo_v2_0_15_top
    (s_axis_aclk,
     s_axis_aresetn,
     s_axis_aclken,

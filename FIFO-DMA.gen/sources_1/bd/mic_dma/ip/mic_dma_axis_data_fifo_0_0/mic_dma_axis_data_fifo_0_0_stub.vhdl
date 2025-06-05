@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
--- Date        : Fri May 30 17:14:41 2025
--- Host        : DK-SLS running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+-- Date        : Thu Jun  5 13:17:31 2025
+-- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_stub.vhdl
+--               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_stub.vhdl
 -- Design      : mic_dma_axis_data_fifo_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
@@ -28,9 +28,9 @@ entity mic_dma_axis_data_fifo_0_0 is
   );
 
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of mic_dma_axis_data_fifo_0_0 : entity is "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_16_top,{}";
+  attribute CHECK_LICENSE_TYPE of mic_dma_axis_data_fifo_0_0 : entity is "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_15_top,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mic_dma_axis_data_fifo_0_0 : entity is "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_16_top,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=64,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011,C_FIFO_DEPTH=16384,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=auto,C_USE_ADV_FEATURES=825241648,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}";
+  attribute CORE_GENERATION_INFO of mic_dma_axis_data_fifo_0_0 : entity is "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_15_top,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=64,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011,C_FIFO_DEPTH=16384,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=auto,C_USE_ADV_FEATURES=825241648,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mic_dma_axis_data_fifo_0_0 : entity is "yes";
 end mic_dma_axis_data_fifo_0_0;
@@ -62,6 +62,6 @@ architecture stub of mic_dma_axis_data_fifo_0_0 is
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "axis_data_fifo_v2_0_16_top,Vivado 2024.2.2";
+  attribute X_CORE_INFO of stub : architecture is "axis_data_fifo_v2_0_15_top,Vivado 2024.2";
 begin
 end;
