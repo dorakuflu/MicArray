@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "mic_sampler,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "mic_dma_mic_sampler_0_0,mic_sampler,{}" *)
-(* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *)
+(* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=10,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mic_dma_mic_sampler_0_0 (
@@ -84,6 +84,7 @@ output wire [63 : 0] m_axis_tdata;
 output wire m_axis_tlast;
 
   mic_sampler #(
+    .PACKET_SIZE(10),
     .DATA_WIDTH(32),
     .BUS_WIDTH(64),
     .MIC_NUM(100)

@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Jun  5 13:17:44 2025
+-- Date        : Mon Jun  9 14:32:49 2025
 -- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_sim_netlist.vhdl
@@ -18,17 +18,19 @@ use UNISIM.VCOMPONENTS.ALL;
 entity mic_dma_mic_sampler_0_0_clk_div is
   port (
     \FSM_onehot_state_reg[2]\ : out STD_LOGIC;
-    \FSM_onehot_state_reg[1]\ : out STD_LOGIC;
     \FSM_onehot_state_reg[0]\ : out STD_LOGIC;
-    E : out STD_LOGIC_VECTOR ( 0 to 0 );
-    divclk_reg_0 : out STD_LOGIC;
-    \FSM_onehot_state_reg[0]_0\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[0]_0\ : out STD_LOGIC;
+    divclk_reg_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    divclk_reg_1 : out STD_LOGIC;
     \FSM_onehot_state_reg[2]_0\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[2]_1\ : in STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \FSM_onehot_state_reg[2]_2\ : in STD_LOGIC;
     s_axis_aresetn : in STD_LOGIC;
-    \FSM_onehot_state_reg[1]_0\ : in STD_LOGIC;
     \FSM_onehot_state_reg[0]_1\ : in STD_LOGIC;
-    \FSM_onehot_state_reg[0]_2\ : in STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
+    \FSM_onehot_state_reg[0]_2\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[0]_3\ : in STD_LOGIC;
     clk_96k_last : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC
   );
@@ -37,7 +39,7 @@ entity mic_dma_mic_sampler_0_0_clk_div is
 end mic_dma_mic_sampler_0_0_clk_div;
 
 architecture STRUCTURE of mic_dma_mic_sampler_0_0_clk_div is
-  signal \FSM_onehot_state[2]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[0]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[2]_i_3_n_0\ : STD_LOGIC;
   signal clk_96k : STD_LOGIC;
   signal \cnt[0]_i_1_n_0\ : STD_LOGIC;
@@ -58,64 +60,67 @@ architecture STRUCTURE of mic_dma_mic_sampler_0_0_clk_div is
   signal cnt_reg : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal divclk_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[1]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \FSM_onehot_state[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_3\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of clk_96k_last_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \cnt[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \cnt[2]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \cnt[3]_i_1__0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \cnt[4]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \cnt[7]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \cnt[9]_i_4\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of divclk_i_1 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \frame_cnt[31]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \cnt[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \cnt[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \cnt[3]_i_1__0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \cnt[4]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \cnt[7]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \cnt[9]_i_4\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of divclk_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \frame_cnt[31]_i_1\ : label is "soft_lutpair0";
 begin
-\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT4
+\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E2FF"
+      INIT => X"FFAE00A200000000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg[1]_0\,
-      I1 => \FSM_onehot_state[2]_i_2_n_0\,
-      I2 => \FSM_onehot_state_reg[0]_0\,
-      I3 => s_axis_aresetn,
+      I0 => \FSM_onehot_state_reg[0]_1\,
+      I1 => \FSM_onehot_state_reg[0]_2\,
+      I2 => \FSM_onehot_state_reg[0]_3\,
+      I3 => \FSM_onehot_state[0]_i_3_n_0\,
+      I4 => \FSM_onehot_state_reg[2]_0\,
+      I5 => s_axis_aresetn,
+      O => \FSM_onehot_state_reg[0]_0\
+    );
+\FSM_onehot_state[0]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"8F888888"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg[0]_1\,
+      I1 => m_axis_tready,
+      I2 => clk_96k_last,
+      I3 => clk_96k,
+      I4 => \FSM_onehot_state_reg[2]_2\,
+      O => \FSM_onehot_state[0]_i_3_n_0\
+    );
+\FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DDCCC8C8FFFFFFFF"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg[2]_1\,
+      I1 => \FSM_onehot_state_reg[0]_1\,
+      I2 => m_axis_tready,
+      I3 => \FSM_onehot_state[2]_i_3_n_0\,
+      I4 => \FSM_onehot_state_reg[2]_2\,
+      I5 => s_axis_aresetn,
       O => \FSM_onehot_state_reg[0]\
     );
-\FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT4
+\FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E200"
+      INIT => X"FEFF020200000000"
     )
         port map (
       I0 => \FSM_onehot_state_reg[2]_0\,
-      I1 => \FSM_onehot_state[2]_i_2_n_0\,
-      I2 => \FSM_onehot_state_reg[1]_0\,
-      I3 => s_axis_aresetn,
-      O => \FSM_onehot_state_reg[1]\
-    );
-\FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"E200"
-    )
-        port map (
-      I0 => \FSM_onehot_state_reg[0]_0\,
-      I1 => \FSM_onehot_state[2]_i_2_n_0\,
-      I2 => \FSM_onehot_state_reg[2]_0\,
-      I3 => s_axis_aresetn,
+      I1 => \FSM_onehot_state_reg[2]_1\,
+      I2 => E(0),
+      I3 => \FSM_onehot_state[2]_i_3_n_0\,
+      I4 => \FSM_onehot_state_reg[2]_2\,
+      I5 => s_axis_aresetn,
       O => \FSM_onehot_state_reg[2]\
-    );
-\FSM_onehot_state[2]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF44444444444"
-    )
-        port map (
-      I0 => \FSM_onehot_state[2]_i_3_n_0\,
-      I1 => \FSM_onehot_state_reg[1]_0\,
-      I2 => \FSM_onehot_state_reg[0]_1\,
-      I3 => \FSM_onehot_state_reg[0]_2\,
-      I4 => \FSM_onehot_state_reg[0]_0\,
-      I5 => m_axis_tready,
-      O => \FSM_onehot_state[2]_i_2_n_0\
     );
 \FSM_onehot_state[2]_i_3\: unisim.vcomponents.LUT2
     generic map(
@@ -133,7 +138,7 @@ clk_96k_last_i_1: unisim.vcomponents.LUT2
         port map (
       I0 => clk_96k,
       I1 => s_axis_aresetn,
-      O => divclk_reg_0
+      O => divclk_reg_1
     );
 \cnt[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -407,7 +412,7 @@ divclk_reg: unisim.vcomponents.FDRE
         port map (
       I0 => clk_96k,
       I1 => clk_96k_last,
-      O => E(0)
+      O => divclk_reg_0(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -416,22 +421,24 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity mic_dma_mic_sampler_0_0_mic_sampler is
   port (
-    \FSM_onehot_state_reg[2]_0\ : out STD_LOGIC;
+    \FSM_onehot_state_reg[0]_0\ : out STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tdata : out STD_LOGIC_VECTOR ( 38 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
     s_axis_aclk : in STD_LOGIC;
-    s_axis_aresetn : in STD_LOGIC;
-    m_axis_tready : in STD_LOGIC
+    s_axis_aresetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of mic_dma_mic_sampler_0_0_mic_sampler : entity is "mic_sampler";
 end mic_dma_mic_sampler_0_0_mic_sampler;
 
 architecture STRUCTURE of mic_dma_mic_sampler_0_0_mic_sampler is
-  signal \FSM_onehot_state[2]_i_4_n_0\ : STD_LOGIC;
-  signal \^fsm_onehot_state_reg[2]_0\ : STD_LOGIC;
-  signal \FSM_onehot_state_reg_n_0_[0]\ : STD_LOGIC;
+  signal \FSM_onehot_state[0]_i_2_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_state[2]_i_2_n_0\ : STD_LOGIC;
+  signal \^fsm_onehot_state_reg[0]_0\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[1]\ : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
   signal clk_96k_edge : STD_LOGIC;
   signal clk_96k_last : STD_LOGIC;
   signal clock_div_n_0 : STD_LOGIC;
@@ -523,26 +530,28 @@ architecture STRUCTURE of mic_dma_mic_sampler_0_0_mic_sampler is
   signal \m_axis_tdata[33]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \m_axis_tdata[6]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal next_cnt : STD_LOGIC;
+  signal p_1_in : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal packet_cnt : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal packet_cnt0 : STD_LOGIC;
   signal \NLW_frame_cnt_reg[31]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_frame_cnt_reg[31]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[2]_i_4\ : label is "soft_lutpair9";
   attribute FSM_ENCODED_STATES : string;
-  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "IDLE:001,SEND:010,LAST:100,";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "IDLE:001,SEND:010,LAST:100,";
-  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "IDLE:001,SEND:010,LAST:100,";
-  attribute SOFT_HLUTNM of \cnt[0]_i_1__0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \cnt[1]_i_1__0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \cnt[2]_i_1__0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \cnt[3]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \cnt[5]_i_1__0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \cnt[6]_i_3\ : label is "soft_lutpair10";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "IDLE:010,SEND:100,LAST:001,";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "IDLE:010,SEND:100,LAST:001,";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "IDLE:010,SEND:100,LAST:001,";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \cnt[0]_i_1__0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \cnt[1]_i_1__0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \cnt[2]_i_1__0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \cnt[3]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \cnt[5]_i_1__0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \cnt[6]_i_3\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \cnt[6]_i_4\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \frame_cnt[0]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \frame_cnt[31]_i_10\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \frame_cnt[31]_i_11\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \frame_cnt[31]_i_8\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \frame_cnt[31]_i_9\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \frame_cnt[0]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \frame_cnt[31]_i_10\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \frame_cnt[31]_i_11\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \frame_cnt[31]_i_8\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \frame_cnt[31]_i_9\ : label is "soft_lutpair14";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \frame_cnt_reg[12]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \frame_cnt_reg[16]_i_2\ : label is 35;
@@ -552,69 +561,88 @@ architecture STRUCTURE of mic_dma_mic_sampler_0_0_mic_sampler is
   attribute ADDER_THRESHOLD of \frame_cnt_reg[31]_i_3\ : label is 35;
   attribute ADDER_THRESHOLD of \frame_cnt_reg[4]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \frame_cnt_reg[8]_i_2\ : label is 35;
-  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axis_tdata[10]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \m_axis_tdata[10]_INST_0\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \m_axis_tdata[11]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axis_tdata[12]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \m_axis_tdata[12]_INST_0\ : label is "soft_lutpair27";
   attribute SOFT_HLUTNM of \m_axis_tdata[13]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axis_tdata[14]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_axis_tdata[15]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \m_axis_tdata[14]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \m_axis_tdata[15]_INST_0\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of \m_axis_tdata[16]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_axis_tdata[17]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \m_axis_tdata[17]_INST_0\ : label is "soft_lutpair25";
   attribute SOFT_HLUTNM of \m_axis_tdata[18]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_axis_tdata[19]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axis_tdata[19]_INST_0\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \m_axis_tdata[20]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \m_axis_tdata[21]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_axis_tdata[22]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axis_tdata[21]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axis_tdata[22]_INST_0\ : label is "soft_lutpair23";
   attribute SOFT_HLUTNM of \m_axis_tdata[23]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \m_axis_tdata[25]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \m_axis_tdata[26]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axis_tdata[27]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axis_tdata[28]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_axis_tdata[30]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axis_tdata[31]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \m_axis_tdata[33]_INST_0_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axis_tdata[34]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_axis_tdata[35]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[36]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axis_tdata[26]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axis_tdata[27]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m_axis_tdata[28]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axis_tdata[30]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_axis_tdata[31]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axis_tdata[33]_INST_0_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_axis_tdata[34]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axis_tdata[35]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axis_tdata[36]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair29";
   attribute SOFT_HLUTNM of \m_axis_tdata[9]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of m_axis_tlast_INST_0 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \packet_cnt[1]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \packet_cnt[2]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \packet_cnt[3]_i_2\ : label is "soft_lutpair13";
 begin
-  \FSM_onehot_state_reg[2]_0\ <= \^fsm_onehot_state_reg[2]_0\;
-\FSM_onehot_state[2]_i_4\: unisim.vcomponents.LUT5
+  \FSM_onehot_state_reg[0]_0\ <= \^fsm_onehot_state_reg[0]_0\;
+\FSM_onehot_state[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00800000"
+      INIT => X"F7FFFFFFFFFFFFFF"
     )
         port map (
-      I0 => cnt(5),
-      I1 => cnt(4),
-      I2 => cnt(0),
+      I0 => m_axis_tready,
+      I1 => cnt(0),
+      I2 => cnt(6),
+      I3 => \FSM_onehot_state_reg_n_0_[2]\,
+      I4 => cnt(5),
+      I5 => cnt(4),
+      O => \FSM_onehot_state[0]_i_2_n_0\
+    );
+\FSM_onehot_state[2]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0080000000000000"
+    )
+        port map (
+      I0 => \m_axis_tdata[6]_INST_0_i_1_n_0\,
+      I1 => \m_axis_tdata[33]_INST_0_i_1_n_0\,
+      I2 => \FSM_onehot_state_reg_n_0_[2]\,
       I3 => cnt(6),
-      I4 => \FSM_onehot_state_reg_n_0_[1]\,
-      O => \FSM_onehot_state[2]_i_4_n_0\
+      I4 => cnt(0),
+      I5 => m_axis_tready,
+      O => \FSM_onehot_state[2]_i_2_n_0\
     );
 \FSM_onehot_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '1'
+      INIT => '0'
     )
         port map (
       C => s_axis_aclk,
       CE => '1',
       D => clock_div_n_2,
-      Q => \FSM_onehot_state_reg_n_0_[0]\,
+      Q => \^fsm_onehot_state_reg[0]_0\,
       R => '0'
     );
 \FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
     generic map(
-      INIT => '0'
+      INIT => '1'
     )
         port map (
       C => s_axis_aclk,
@@ -631,7 +659,7 @@ begin
       C => s_axis_aclk,
       CE => '1',
       D => clock_div_n_0,
-      Q => \^fsm_onehot_state_reg[2]_0\,
+      Q => \FSM_onehot_state_reg_n_0_[2]\,
       R => '0'
     );
 clk_96k_last_reg: unisim.vcomponents.FDRE
@@ -644,17 +672,19 @@ clk_96k_last_reg: unisim.vcomponents.FDRE
     );
 clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
      port map (
-      E(0) => clk_96k_edge,
-      \FSM_onehot_state_reg[0]\ => clock_div_n_2,
-      \FSM_onehot_state_reg[0]_0\ => \^fsm_onehot_state_reg[2]_0\,
-      \FSM_onehot_state_reg[0]_1\ => \FSM_onehot_state[2]_i_4_n_0\,
+      E(0) => packet_cnt0,
+      \FSM_onehot_state_reg[0]\ => clock_div_n_1,
+      \FSM_onehot_state_reg[0]_0\ => clock_div_n_2,
+      \FSM_onehot_state_reg[0]_1\ => \^fsm_onehot_state_reg[0]_0\,
       \FSM_onehot_state_reg[0]_2\ => \m_axis_tdata[6]_INST_0_i_1_n_0\,
-      \FSM_onehot_state_reg[1]\ => clock_div_n_1,
-      \FSM_onehot_state_reg[1]_0\ => \FSM_onehot_state_reg_n_0_[0]\,
+      \FSM_onehot_state_reg[0]_3\ => \FSM_onehot_state[0]_i_2_n_0\,
       \FSM_onehot_state_reg[2]\ => clock_div_n_0,
-      \FSM_onehot_state_reg[2]_0\ => \FSM_onehot_state_reg_n_0_[1]\,
+      \FSM_onehot_state_reg[2]_0\ => \FSM_onehot_state_reg_n_0_[2]\,
+      \FSM_onehot_state_reg[2]_1\ => \FSM_onehot_state[2]_i_2_n_0\,
+      \FSM_onehot_state_reg[2]_2\ => \FSM_onehot_state_reg_n_0_[1]\,
       clk_96k_last => clk_96k_last,
-      divclk_reg_0 => clock_div_n_4,
+      divclk_reg_0(0) => clk_96k_edge,
+      divclk_reg_1 => clock_div_n_4,
       m_axis_tready => m_axis_tready,
       s_axis_aclk => s_axis_aclk,
       s_axis_aresetn => s_axis_aresetn
@@ -664,7 +694,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"2"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
       I1 => cnt(0),
       O => \cnt[0]_i_1__0_n_0\
     );
@@ -675,7 +705,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
         port map (
       I0 => cnt(1),
       I1 => cnt(0),
-      I2 => \FSM_onehot_state_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_reg_n_0_[2]\,
       O => \cnt[1]_i_1__0_n_0\
     );
 \cnt[2]_i_1__0\: unisim.vcomponents.LUT4
@@ -683,7 +713,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"2A80"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
       I1 => cnt(0),
       I2 => cnt(1),
       I3 => cnt(2),
@@ -694,7 +724,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"2AAA8000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
       I1 => cnt(1),
       I2 => cnt(0),
       I3 => cnt(2),
@@ -706,7 +736,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"2AAAAAAA80000000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
       I1 => cnt(3),
       I2 => cnt(2),
       I3 => cnt(0),
@@ -722,7 +752,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       I0 => \cnt[6]_i_4_n_0\,
       I1 => cnt(4),
       I2 => cnt(5),
-      I3 => \FSM_onehot_state_reg_n_0_[1]\,
+      I3 => \FSM_onehot_state_reg_n_0_[2]\,
       O => \cnt[5]_i_1__0_n_0\
     );
 \cnt[6]_i_1__0\: unisim.vcomponents.LUT1
@@ -739,8 +769,8 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => m_axis_tready,
-      I1 => \FSM_onehot_state_reg_n_0_[1]\,
-      I2 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \FSM_onehot_state_reg_n_0_[2]\,
+      I2 => \^fsm_onehot_state_reg[0]_0\,
       O => next_cnt
     );
 \cnt[6]_i_3\: unisim.vcomponents.LUT5
@@ -748,7 +778,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"2AAA8000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
       I1 => \cnt[6]_i_4_n_0\,
       I2 => cnt(5),
       I3 => cnt(4),
@@ -1111,10 +1141,10 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"7FFF"
     )
         port map (
-      I0 => in2(5),
-      I1 => in2(4),
-      I2 => in2(7),
-      I3 => in2(6),
+      I0 => in2(21),
+      I1 => in2(1),
+      I2 => in2(28),
+      I3 => in2(11),
       O => \frame_cnt[31]_i_10_n_0\
     );
 \frame_cnt[31]_i_11\: unisim.vcomponents.LUT4
@@ -1122,10 +1152,10 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"7FFF"
     )
         port map (
-      I0 => in2(14),
-      I1 => in2(13),
-      I2 => in2(15),
-      I3 => in2(12),
+      I0 => in2(27),
+      I1 => in2(0),
+      I2 => in2(26),
+      I3 => in2(22),
       O => \frame_cnt[31]_i_11_n_0\
     );
 \frame_cnt[31]_i_2\: unisim.vcomponents.LUT5
@@ -1142,13 +1172,13 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     );
 \frame_cnt[31]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF7FFF"
+      INIT => X"FFFFBFFF"
     )
         port map (
-      I0 => in2(16),
-      I1 => in2(19),
-      I2 => in2(17),
-      I3 => in2(18),
+      I0 => in2(31),
+      I1 => in2(3),
+      I2 => in2(2),
+      I3 => in2(7),
       I4 => \frame_cnt[31]_i_8_n_0\,
       O => \frame_cnt[31]_i_4_n_0\
     );
@@ -1157,22 +1187,22 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"FFFF7FFF"
     )
         port map (
-      I0 => in2(24),
-      I1 => in2(27),
-      I2 => in2(25),
-      I3 => in2(26),
+      I0 => in2(6),
+      I1 => in2(18),
+      I2 => in2(19),
+      I3 => in2(24),
       I4 => \frame_cnt[31]_i_9_n_0\,
       O => \frame_cnt[31]_i_5_n_0\
     );
 \frame_cnt[31]_i_6\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000080"
+      INIT => X"00008000"
     )
         port map (
-      I0 => in2(1),
-      I1 => in2(3),
-      I2 => in2(2),
-      I3 => in2(31),
+      I0 => in2(16),
+      I1 => in2(29),
+      I2 => in2(20),
+      I3 => in2(23),
       I4 => \frame_cnt[31]_i_10_n_0\,
       O => \frame_cnt[31]_i_6_n_0\
     );
@@ -1181,10 +1211,10 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"FFFF7FFF"
     )
         port map (
-      I0 => in2(8),
-      I1 => in2(11),
-      I2 => in2(9),
-      I3 => in2(10),
+      I0 => in2(4),
+      I1 => in2(14),
+      I2 => in2(12),
+      I3 => in2(17),
       I4 => \frame_cnt[31]_i_11_n_0\,
       O => \frame_cnt[31]_i_7_n_0\
     );
@@ -1193,10 +1223,10 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"7FFF"
     )
         port map (
-      I0 => in2(21),
-      I1 => in2(20),
-      I2 => in2(23),
-      I3 => in2(22),
+      I0 => in2(15),
+      I1 => in2(9),
+      I2 => in2(13),
+      I3 => in2(8),
       O => \frame_cnt[31]_i_8_n_0\
     );
 \frame_cnt[31]_i_9\: unisim.vcomponents.LUT4
@@ -1204,10 +1234,10 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"7FFF"
     )
         port map (
-      I0 => in2(29),
-      I1 => in2(28),
-      I2 => in2(30),
-      I3 => in2(0),
+      I0 => in2(30),
+      I1 => in2(5),
+      I2 => in2(25),
+      I3 => in2(10),
       O => \frame_cnt[31]_i_9_n_0\
     );
 \frame_cnt[3]_i_1\: unisim.vcomponents.LUT5
@@ -1652,7 +1682,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(0),
       O => m_axis_tdata(0)
     );
@@ -1661,7 +1691,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(10),
       O => m_axis_tdata(10)
     );
@@ -1670,7 +1700,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(11),
       O => m_axis_tdata(11)
     );
@@ -1679,7 +1709,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(12),
       O => m_axis_tdata(12)
     );
@@ -1688,7 +1718,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(13),
       O => m_axis_tdata(13)
     );
@@ -1697,7 +1727,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(14),
       O => m_axis_tdata(14)
     );
@@ -1706,7 +1736,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(15),
       O => m_axis_tdata(15)
     );
@@ -1715,7 +1745,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(16),
       O => m_axis_tdata(16)
     );
@@ -1724,7 +1754,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(17),
       O => m_axis_tdata(17)
     );
@@ -1733,7 +1763,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(18),
       O => m_axis_tdata(18)
     );
@@ -1742,7 +1772,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(19),
       O => m_axis_tdata(19)
     );
@@ -1752,7 +1782,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(1),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(0),
       I3 => cnt(4),
       I4 => cnt(5),
@@ -1764,7 +1794,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(20),
       O => m_axis_tdata(20)
     );
@@ -1773,7 +1803,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(21),
       O => m_axis_tdata(21)
     );
@@ -1782,7 +1812,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(22),
       O => m_axis_tdata(22)
     );
@@ -1791,7 +1821,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(23),
       O => m_axis_tdata(23)
     );
@@ -1800,7 +1830,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(24),
       O => m_axis_tdata(24)
     );
@@ -1809,7 +1839,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(25),
       O => m_axis_tdata(25)
     );
@@ -1818,7 +1848,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(26),
       O => m_axis_tdata(26)
     );
@@ -1827,7 +1857,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(27),
       O => m_axis_tdata(27)
     );
@@ -1836,7 +1866,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(28),
       O => m_axis_tdata(28)
     );
@@ -1845,7 +1875,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(29),
       O => m_axis_tdata(29)
     );
@@ -1855,7 +1885,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(2),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(1),
       I3 => cnt(5),
       I4 => cnt(4),
@@ -1866,7 +1896,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(30),
       O => m_axis_tdata(30)
     );
@@ -1875,7 +1905,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(31),
       O => m_axis_tdata(31)
     );
@@ -1884,7 +1914,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BFBFBFBFBFBFBFFF"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(4),
       I2 => cnt(5),
       I3 => cnt(2),
@@ -1897,7 +1927,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"AAABFFFFAAAAAAAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(1),
       I2 => cnt(3),
       I3 => cnt(2),
@@ -1919,7 +1949,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BFAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(4),
       I2 => cnt(5),
       I3 => cnt(1),
@@ -1930,7 +1960,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BFAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(4),
       I2 => cnt(5),
       I3 => cnt(2),
@@ -1941,7 +1971,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BFAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(4),
       I2 => cnt(5),
       I3 => cnt(3),
@@ -1952,7 +1982,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BBBBBBBFAAAAAAAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(5),
       I2 => cnt(1),
       I3 => cnt(3),
@@ -1965,7 +1995,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"BBBBBBBFAAAAAAAA"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => cnt(4),
       I2 => cnt(1),
       I3 => cnt(3),
@@ -1979,7 +2009,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(3),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(2),
       I3 => cnt(5),
       I4 => cnt(4),
@@ -1991,7 +2021,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(4),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(3),
       I3 => cnt(5),
       I4 => cnt(4),
@@ -2003,7 +2033,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(5),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(4),
       I3 => \m_axis_tdata[6]_INST_0_i_1_n_0\,
       I4 => cnt(5),
@@ -2015,7 +2045,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
     )
         port map (
       I0 => in2(6),
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       I2 => cnt(5),
       I3 => \m_axis_tdata[6]_INST_0_i_1_n_0\,
       I4 => cnt(4),
@@ -2036,7 +2066,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(7),
       O => m_axis_tdata(7)
     );
@@ -2045,7 +2075,7 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(8),
       O => m_axis_tdata(8)
     );
@@ -2054,18 +2084,112 @@ clock_div: entity work.mic_dma_mic_sampler_0_0_clk_div
       INIT => X"8"
     )
         port map (
-      I0 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \^fsm_onehot_state_reg[0]_0\,
       I1 => in2(9),
       O => m_axis_tdata(9)
+    );
+m_axis_tlast_INST_0: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"02000000"
+    )
+        port map (
+      I0 => \^fsm_onehot_state_reg[0]_0\,
+      I1 => packet_cnt(1),
+      I2 => packet_cnt(2),
+      I3 => packet_cnt(0),
+      I4 => packet_cnt(3),
+      O => m_axis_tlast
     );
 m_axis_tvalid_INST_0: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[1]\,
-      I1 => \^fsm_onehot_state_reg[2]_0\,
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
       O => m_axis_tvalid
+    );
+\packet_cnt[0]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => packet_cnt(0),
+      O => p_1_in(0)
+    );
+\packet_cnt[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"A45A"
+    )
+        port map (
+      I0 => packet_cnt(0),
+      I1 => packet_cnt(2),
+      I2 => packet_cnt(1),
+      I3 => packet_cnt(3),
+      O => p_1_in(1)
+    );
+\packet_cnt[2]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"BD40"
+    )
+        port map (
+      I0 => packet_cnt(3),
+      I1 => packet_cnt(1),
+      I2 => packet_cnt(0),
+      I3 => packet_cnt(2),
+      O => p_1_in(2)
+    );
+\packet_cnt[3]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => m_axis_tready,
+      I1 => \^fsm_onehot_state_reg[0]_0\,
+      O => packet_cnt0
+    );
+\packet_cnt[3]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0180"
+    )
+        port map (
+      I0 => packet_cnt(0),
+      I1 => packet_cnt(2),
+      I2 => packet_cnt(1),
+      I3 => packet_cnt(3),
+      O => p_1_in(3)
+    );
+\packet_cnt_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axis_aclk,
+      CE => packet_cnt0,
+      D => p_1_in(0),
+      Q => packet_cnt(0),
+      R => \cnt[6]_i_1__0_n_0\
+    );
+\packet_cnt_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axis_aclk,
+      CE => packet_cnt0,
+      D => p_1_in(1),
+      Q => packet_cnt(1),
+      R => \cnt[6]_i_1__0_n_0\
+    );
+\packet_cnt_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axis_aclk,
+      CE => packet_cnt0,
+      D => p_1_in(2),
+      Q => packet_cnt(2),
+      R => \cnt[6]_i_1__0_n_0\
+    );
+\packet_cnt_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => s_axis_aclk,
+      CE => packet_cnt0,
+      D => p_1_in(3),
+      Q => packet_cnt(3),
+      R => \cnt[6]_i_1__0_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -2094,8 +2218,7 @@ entity mic_dma_mic_sampler_0_0 is
 end mic_dma_mic_sampler_0_0;
 
 architecture STRUCTURE of mic_dma_mic_sampler_0_0 is
-  signal \^m_axis_tdata\ : STD_LOGIC_VECTOR ( 38 downto 0 );
-  signal \^m_axis_tlast\ : STD_LOGIC;
+  signal \^m_axis_tdata\ : STD_LOGIC_VECTOR ( 39 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 m_axis TLAST";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 m_axis TREADY";
@@ -2112,37 +2235,36 @@ architecture STRUCTURE of mic_dma_mic_sampler_0_0 is
   attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 m_axis TDATA";
 begin
-  m_axis_tdata(63) <= \^m_axis_tlast\;
-  m_axis_tdata(62) <= \^m_axis_tlast\;
-  m_axis_tdata(61) <= \^m_axis_tlast\;
-  m_axis_tdata(60) <= \^m_axis_tlast\;
-  m_axis_tdata(59) <= \^m_axis_tlast\;
-  m_axis_tdata(58) <= \^m_axis_tlast\;
-  m_axis_tdata(57) <= \^m_axis_tlast\;
-  m_axis_tdata(56) <= \^m_axis_tlast\;
-  m_axis_tdata(55) <= \^m_axis_tlast\;
-  m_axis_tdata(54) <= \^m_axis_tlast\;
-  m_axis_tdata(53) <= \^m_axis_tlast\;
-  m_axis_tdata(52) <= \^m_axis_tlast\;
-  m_axis_tdata(51) <= \^m_axis_tlast\;
-  m_axis_tdata(50) <= \^m_axis_tlast\;
-  m_axis_tdata(49) <= \^m_axis_tlast\;
-  m_axis_tdata(48) <= \^m_axis_tlast\;
-  m_axis_tdata(47) <= \^m_axis_tlast\;
-  m_axis_tdata(46) <= \^m_axis_tlast\;
-  m_axis_tdata(45) <= \^m_axis_tlast\;
-  m_axis_tdata(44) <= \^m_axis_tlast\;
-  m_axis_tdata(43) <= \^m_axis_tlast\;
-  m_axis_tdata(42) <= \^m_axis_tlast\;
-  m_axis_tdata(41) <= \^m_axis_tlast\;
-  m_axis_tdata(40) <= \^m_axis_tlast\;
-  m_axis_tdata(39) <= \^m_axis_tlast\;
-  m_axis_tdata(38 downto 0) <= \^m_axis_tdata\(38 downto 0);
-  m_axis_tlast <= \^m_axis_tlast\;
+  m_axis_tdata(63) <= \^m_axis_tdata\(39);
+  m_axis_tdata(62) <= \^m_axis_tdata\(39);
+  m_axis_tdata(61) <= \^m_axis_tdata\(39);
+  m_axis_tdata(60) <= \^m_axis_tdata\(39);
+  m_axis_tdata(59) <= \^m_axis_tdata\(39);
+  m_axis_tdata(58) <= \^m_axis_tdata\(39);
+  m_axis_tdata(57) <= \^m_axis_tdata\(39);
+  m_axis_tdata(56) <= \^m_axis_tdata\(39);
+  m_axis_tdata(55) <= \^m_axis_tdata\(39);
+  m_axis_tdata(54) <= \^m_axis_tdata\(39);
+  m_axis_tdata(53) <= \^m_axis_tdata\(39);
+  m_axis_tdata(52) <= \^m_axis_tdata\(39);
+  m_axis_tdata(51) <= \^m_axis_tdata\(39);
+  m_axis_tdata(50) <= \^m_axis_tdata\(39);
+  m_axis_tdata(49) <= \^m_axis_tdata\(39);
+  m_axis_tdata(48) <= \^m_axis_tdata\(39);
+  m_axis_tdata(47) <= \^m_axis_tdata\(39);
+  m_axis_tdata(46) <= \^m_axis_tdata\(39);
+  m_axis_tdata(45) <= \^m_axis_tdata\(39);
+  m_axis_tdata(44) <= \^m_axis_tdata\(39);
+  m_axis_tdata(43) <= \^m_axis_tdata\(39);
+  m_axis_tdata(42) <= \^m_axis_tdata\(39);
+  m_axis_tdata(41) <= \^m_axis_tdata\(39);
+  m_axis_tdata(40) <= \^m_axis_tdata\(39);
+  m_axis_tdata(39 downto 0) <= \^m_axis_tdata\(39 downto 0);
 inst: entity work.mic_dma_mic_sampler_0_0_mic_sampler
      port map (
-      \FSM_onehot_state_reg[2]_0\ => \^m_axis_tlast\,
+      \FSM_onehot_state_reg[0]_0\ => \^m_axis_tdata\(39),
       m_axis_tdata(38 downto 0) => \^m_axis_tdata\(38 downto 0),
+      m_axis_tlast => m_axis_tlast,
       m_axis_tready => m_axis_tready,
       m_axis_tvalid => m_axis_tvalid,
       s_axis_aclk => s_axis_aclk,

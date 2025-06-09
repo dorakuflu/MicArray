@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Thu Jun  5 13:17:44 2025
+// Date        : Mon Jun  9 14:32:49 2025
 // Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_stub.v
@@ -14,7 +14,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "mic_dma_mic_sampler_0_0,mic_sampler,{}" *) (* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "mic_dma_mic_sampler_0_0,mic_sampler,{}" *) (* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=10,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* IP_DEFINITION_SOURCE = "module_ref" *) (* X_CORE_INFO = "mic_sampler,Vivado 2024.2" *) 
 module mic_dma_mic_sampler_0_0(s_axis_aclk, s_axis_aresetn, m_axis_tready, 
   m_axis_tvalid, m_axis_tdata, m_axis_tlast)

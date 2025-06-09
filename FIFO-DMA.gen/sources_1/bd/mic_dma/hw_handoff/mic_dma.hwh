@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun  5 13:16:22 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  9 14:31:44 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="mic_dma" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -3198,6 +3198,7 @@
         <PARAMETER NAME="BUS_WIDTH" VALUE="64"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MIC_NUM" VALUE="100"/>
+        <PARAMETER NAME="PACKET_SIZE" VALUE="10"/>
         <PARAMETER NAME="Component_Name" VALUE="mic_dma_mic_sampler_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
