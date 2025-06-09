@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Jun  5 13:17:47 2025
+-- Date        : Thu Jun  5 13:17:46 2025
 -- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mic_dma_axi_mem_intercon_1_imp_auto_pc_0 -prefix
+--               mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.vhdl
 -- Design      : mic_dma_axi_mem_intercon_1_imp_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

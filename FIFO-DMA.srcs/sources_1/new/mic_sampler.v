@@ -22,6 +22,7 @@
 
 
 module mic_sampler #(
+    parameter PACKET_SIZE   = 10, //Frames in transfer
     parameter DATA_WIDTH    = 32,
     parameter BUS_WIDTH     = 64,
     parameter MIC_NUM       = 100
@@ -55,7 +56,8 @@ module mic_sampler #(
     reg [1:0]                     state, next_state;
     reg [$clog2(MIC_NUM+1)-1:0]   cnt, next_cnt;
     
-    reg [DATA_WIDTH-1:0]  frame_cnt;
+    reg [DATA_WIDTH-1:0]            frame_cnt;
+    reg [$clog2(PACKET_SIZE)-1:0]   packet_cnt;
     
     // Clocking
     wire    clk_96k, clk_96k_edge;
@@ -134,15 +136,17 @@ module mic_sampler #(
     
     always @(posedge s_axis_aclk) begin
         if (~s_axis_aresetn) begin
-            state       <= IDLE;         
+            state       <= IDLE;
+            
             cnt         <= 0;
-            
-            frame_cnt <= 0;
+            frame_cnt   <= 0;
+            packet_cnt  <= 0;
         end else begin
-            state       <= next_state;     
-            cnt         <= next_cnt;
+            state       <= next_state;
             
-            frame_cnt <= clk_96k_edge ? ((frame_cnt == 32'h7FFF_FFFF) ? 0 : frame_cnt + 1) : frame_cnt;
+            cnt         <= next_cnt;
+            frame_cnt   <= clk_96k_edge ? ((frame_cnt == 32'h7FFF_FFFF) ? 0 : frame_cnt + 1) : frame_cnt;
+            packet_cnt  <= (state == LAST && m_axis_tready) ? ((packet_cnt + 1) % PACKET_SIZE) : packet_cnt;
         end
     end
     
@@ -150,6 +154,6 @@ module mic_sampler #(
     assign m_axis_tvalid    = (state == SEND || state == LAST);   
     assign m_axis_tdata     = (state == LAST) ? {32'hFFFF_FFFF, frame_cnt} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
 //    assign m_axis_tstrb     = m_axis_tvalid ? {BUS_WIDTH/8{1'b1}} : {BUS_WIDTH/8{1'b0}};
-    assign m_axis_tlast     = (state == LAST);
+    assign m_axis_tlast     = (state == LAST) && (packet_cnt == PACKET_SIZE - 1);
     
 endmodule

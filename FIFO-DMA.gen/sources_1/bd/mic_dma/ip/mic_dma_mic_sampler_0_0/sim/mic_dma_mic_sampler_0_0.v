@@ -83,6 +83,7 @@ output wire [63 : 0] m_axis_tdata;
 output wire m_axis_tlast;
 
   mic_sampler #(
+    .PACKET_SIZE(10),
     .DATA_WIDTH(32),
     .BUS_WIDTH(64),
     .MIC_NUM(100)
