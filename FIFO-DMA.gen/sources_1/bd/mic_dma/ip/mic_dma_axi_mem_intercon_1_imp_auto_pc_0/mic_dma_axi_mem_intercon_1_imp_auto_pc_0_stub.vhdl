@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Jun  5 13:17:46 2025
+-- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+-- Date        : Wed Jun 11 14:08:04 2025
 -- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top mic_dma_axi_mem_intercon_1_imp_auto_pc_0 -prefix
 --               mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.vhdl
@@ -57,9 +57,9 @@ entity mic_dma_axi_mem_intercon_1_imp_auto_pc_0 is
   );
 
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 : entity is "mic_dma_axi_mem_intercon_1_imp_auto_pc_0,axi_protocol_converter_v2_1_33_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 : entity is "mic_dma_axi_mem_intercon_1_imp_auto_pc_0,axi_protocol_converter_v2_1_36_axi_protocol_converter,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 : entity is "mic_dma_axi_mem_intercon_1_imp_auto_pc_0,axi_protocol_converter_v2_1_33_axi_protocol_converter,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_converter,x_ipVersion=2.1,x_ipCoreRevision=33,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_M_AXI_PROTOCOL=1,C_S_AXI_PROTOCOL=0,C_IGNORE_ID=1,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=0,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_TRANSLATION_MODE=2}";
+  attribute CORE_GENERATION_INFO of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 : entity is "mic_dma_axi_mem_intercon_1_imp_auto_pc_0,axi_protocol_converter_v2_1_36_axi_protocol_converter,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_converter,x_ipVersion=2.1,x_ipCoreRevision=36,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_M_AXI_PROTOCOL=1,C_S_AXI_PROTOCOL=0,C_IGNORE_ID=1,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=0,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_TRANSLATION_MODE=2}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 : entity is "yes";
 end mic_dma_axi_mem_intercon_1_imp_auto_pc_0;
@@ -120,6 +120,6 @@ architecture stub of mic_dma_axi_mem_intercon_1_imp_auto_pc_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "axi_protocol_converter_v2_1_33_axi_protocol_converter,Vivado 2024.2";
+  attribute X_CORE_INFO of stub : architecture is "axi_protocol_converter_v2_1_36_axi_protocol_converter,Vivado 2025.1";
 begin
 end;

@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Mon Jun  9 14:32:49 2025
+-- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+-- Date        : Thu Jun 19 14:37:49 2025
 -- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_stub.vhdl
@@ -20,13 +20,14 @@ entity mic_dma_mic_sampler_0_0 is
     m_axis_tready : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axis_tlast : out STD_LOGIC
+    m_axis_tlast : out STD_LOGIC;
+    SW : in STD_LOGIC
   );
 
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of mic_dma_mic_sampler_0_0 : entity is "mic_dma_mic_sampler_0_0,mic_sampler,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of mic_dma_mic_sampler_0_0 : entity is "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=10,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}";
+  attribute CORE_GENERATION_INFO of mic_dma_mic_sampler_0_0 : entity is "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=20,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mic_dma_mic_sampler_0_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -37,7 +38,7 @@ architecture stub of mic_dma_mic_sampler_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "s_axis_aclk,s_axis_aresetn,m_axis_tready,m_axis_tvalid,m_axis_tdata[63:0],m_axis_tlast";
+  attribute black_box_pad_pin of stub : architecture is "s_axis_aclk,s_axis_aresetn,m_axis_tready,m_axis_tvalid,m_axis_tdata[63:0],m_axis_tlast,SW";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
   attribute X_INTERFACE_MODE : string;
@@ -54,6 +55,6 @@ architecture stub of mic_dma_mic_sampler_0_0 is
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 m_axis TDATA";
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 m_axis TLAST";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "mic_sampler,Vivado 2024.2";
+  attribute X_CORE_INFO of stub : architecture is "mic_sampler,Vivado 2025.1";
 begin
 end;

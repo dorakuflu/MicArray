@@ -22,7 +22,7 @@
 
 
 module mic_sampler #(
-    parameter PACKET_SIZE   = 10, //Frames in transfer
+    parameter PACKET_SIZE   = 20, //Frames in transfer
     parameter DATA_WIDTH    = 32,
     parameter BUS_WIDTH     = 64,
     parameter MIC_NUM       = 100
@@ -30,19 +30,18 @@ module mic_sampler #(
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
     (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF m_axis, FREQ_HZ 100000000" *)
     input                       s_axis_aclk,
+    
     (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *)
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input                       s_axis_aresetn,
     
     input                       m_axis_tready,
-    
-//    input logic                                 mic_data_start,
-//    input logic     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data,
-    
     output wire                 m_axis_tvalid,
     output wire [BUS_WIDTH-1:0] m_axis_tdata,
 //    output logic    [BUS_WIDTH/8-1:0]           m_axis_tstrb,
-    output wire                 m_axis_tlast
+    output wire                 m_axis_tlast,
+    
+    input                       SW
 );
     
     localparam CYCLES = (MIC_NUM*DATA_WIDTH + BUS_WIDTH - 1) / BUS_WIDTH; // default 50
@@ -95,7 +94,7 @@ module mic_sampler #(
         end
     end
     
-    assign mic_data_start = 1;
+    assign mic_data_start = SW;
     //
     
     

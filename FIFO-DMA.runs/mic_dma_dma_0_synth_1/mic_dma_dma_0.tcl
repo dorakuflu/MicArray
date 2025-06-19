@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "mic_dma_dma_0_synth_1" START { ROLLUP_AUTO }
+set_param general.usePosixSpawnForFork 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -71,8 +72,6 @@ set_property parent.project_path C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.xpr 
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/dkuflu/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

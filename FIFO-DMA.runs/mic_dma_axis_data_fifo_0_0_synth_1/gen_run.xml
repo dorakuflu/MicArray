@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="mic_dma_axis_data_fifo_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1749143790">
+<GenRun Id="mic_dma_axis_data_fifo_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1750183767">
   <File Type="REPORTS-TCL" Name="mic_dma_axis_data_fifo_0_0_reports.tcl"/>
   <File Type="RDS-UTIL" Name="mic_dma_axis_data_fifo_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mic_dma_axis_data_fifo_0_0_utilization_synth.pb"/>
@@ -49,7 +49,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

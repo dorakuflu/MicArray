@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Jun  5 13:17:30 2025
+-- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+-- Date        : Wed Jun 11 14:07:54 2025
 -- Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0_sim_netlist.vhdl
@@ -5178,7 +5178,7 @@ entity mic_dma_processing_system7_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mic_dma_processing_system7_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of mic_dma_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2024.2";
+  attribute X_CORE_INFO of mic_dma_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2025.1";
 end mic_dma_processing_system7_0_0;
 
 architecture STRUCTURE of mic_dma_processing_system7_0_0 is

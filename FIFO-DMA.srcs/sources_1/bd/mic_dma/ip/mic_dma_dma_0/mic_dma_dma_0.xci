@@ -4,7 +4,7 @@
     "xci_name": "mic_dma_dma_0",
     "cell_name": "dma",
     "component_reference": "xilinx.com:ip:axi_dma:7.1",
-    "ip_revision": "34",
+    "ip_revision": "36",
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0",
     "parameters": {
       "component_parameters": {
@@ -71,7 +71,7 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
         "PACKAGE": [ { "value": "clg400" } ],
@@ -84,12 +84,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "34" } ],
+        "IPREVISION": [ { "value": "36" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

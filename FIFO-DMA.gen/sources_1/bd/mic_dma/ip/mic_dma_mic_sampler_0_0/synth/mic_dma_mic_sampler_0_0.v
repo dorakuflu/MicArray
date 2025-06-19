@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:mic_sampler:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "mic_sampler,Vivado 2024.2" *)
+(* X_CORE_INFO = "mic_sampler,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "mic_dma_mic_sampler_0_0,mic_sampler,{}" *)
-(* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=10,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *)
+(* CORE_GENERATION_INFO = "mic_dma_mic_sampler_0_0,mic_sampler,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=mic_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,PACKET_SIZE=20,DATA_WIDTH=32,BUS_WIDTH=64,MIC_NUM=100}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mic_dma_mic_sampler_0_0 (
@@ -61,7 +61,8 @@ module mic_dma_mic_sampler_0_0 (
   m_axis_tready,
   m_axis_tvalid,
   m_axis_tdata,
-  m_axis_tlast
+  m_axis_tlast,
+  SW
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
@@ -82,9 +83,10 @@ output wire m_axis_tvalid;
 output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
 output wire m_axis_tlast;
+input wire SW;
 
   mic_sampler #(
-    .PACKET_SIZE(10),
+    .PACKET_SIZE(20),
     .DATA_WIDTH(32),
     .BUS_WIDTH(64),
     .MIC_NUM(100)
@@ -94,6 +96,7 @@ output wire m_axis_tlast;
     .m_axis_tready(m_axis_tready),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tdata(m_axis_tdata),
-    .m_axis_tlast(m_axis_tlast)
+    .m_axis_tlast(m_axis_tlast),
+    .SW(SW)
   );
 endmodule

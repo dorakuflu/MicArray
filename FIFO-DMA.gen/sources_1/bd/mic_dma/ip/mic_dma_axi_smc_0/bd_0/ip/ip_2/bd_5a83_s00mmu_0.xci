@@ -4,13 +4,13 @@
     "xci_name": "bd_5a83_s00mmu_0",
     "cell_name": "s00_mmu",
     "component_reference": "xilinx.com:ip:sc_mmu:1.0",
-    "ip_revision": "14",
+    "ip_revision": "15",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
         "SUPPORTS_WRITE_DECERR": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "SUPPORTS_READ_DECERR": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "SUPPORTS_WRAP": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "SUPPORTS_WRAP": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "IS_CASCADED": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "ENABLE_PIPELINING": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "NUM_SEG": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -2114,14 +2114,14 @@
         "C_NUM_READ_OUTSTANDING": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_NUM_WRITE_OUTSTANDING": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SINGLE_ISSUING": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_SUPPORTS_WRAP": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SUPPORTS_WRAP": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SUPPORTS_NARROW": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SUPPORTS_READ_DECERR": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SUPPORTS_WRITE_DECERR": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
         "PACKAGE": [ { "value": "clg400" } ],
@@ -2134,12 +2134,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "14" } ],
+        "IPREVISION": [ { "value": "15" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

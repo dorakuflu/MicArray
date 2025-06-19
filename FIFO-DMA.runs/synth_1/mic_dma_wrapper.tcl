@@ -56,8 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param bd.open.in_stealth_mode 1
-set_msg_config -id {HDL-1065} -limit 10000
+set_param general.usePosixSpawnForFork 1
+set_param bd.open.in_stealth_mode 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -70,8 +70,6 @@ set_property parent.project_path C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.xpr 
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/dkuflu/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -83,7 +81,6 @@ set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Resear
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_1/bd_5a83_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_1/bd_5a83_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_5/bd_5a83_s00a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_6/bd_5a83_sarn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/bd_0/ip/ip_7/bd_5a83_srn_0_ooc.xdc]
@@ -94,9 +91,14 @@ set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Resear
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/bd_f53e_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/bd_f53e_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/mic_dma_system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/mic_dma_ooc.xdc]
@@ -110,6 +112,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

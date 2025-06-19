@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Jun  5 13:18:10 2025
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jun 11 14:08:24 2025
 | Host         : eecs3007vr01 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mic_dma_dma_0_utilization_synth.rpt -pb mic_dma_dma_0_utilization_synth.pb
 | Design       : mic_dma_dma_0
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1862 |     0 |          0 |     53200 |  3.50 |
-|   LUT as Logic             | 1658 |     0 |          0 |     53200 |  3.12 |
+| Slice LUTs*                | 1852 |     0 |          0 |     53200 |  3.48 |
+|   LUT as Logic             | 1648 |     0 |          0 |     53200 |  3.10 |
 |   LUT as Memory            |  204 |     0 |          0 |     17400 |  1.17 |
 |     LUT as Distributed RAM |   10 |     0 |            |           |       |
 |     LUT as Shift Register  |  194 |     0 |            |           |       |
@@ -154,15 +154,15 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 2412 |        Flop & Latch |
-| LUT3     |  600 |                 LUT |
+| LUT3     |  593 |                 LUT |
 | LUT6     |  424 |                 LUT |
-| LUT4     |  331 |                 LUT |
-| LUT5     |  269 |                 LUT |
+| LUT4     |  317 |                 LUT |
+| LUT5     |  272 |                 LUT |
 | LUT2     |  196 |                 LUT |
 | SRL16E   |  194 |  Distributed Memory |
 | FDSE     |   78 |        Flop & Latch |
 | CARRY4   |   73 |          CarryLogic |
-| LUT1     |   67 |                 LUT |
+| LUT1     |   66 |                 LUT |
 | RAMD32   |   14 |  Distributed Memory |
 | MUXF7    |    5 |               MuxFx |
 | RAMS32   |    4 |  Distributed Memory |
