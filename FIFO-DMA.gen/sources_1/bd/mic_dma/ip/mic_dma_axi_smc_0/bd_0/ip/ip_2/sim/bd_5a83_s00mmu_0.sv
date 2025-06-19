@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_mmu:1.0
-// IP Revision: 14
+// IP Revision: 15
 
 `timescale 1ns/1ps
 
@@ -313,7 +313,7 @@ input wire m_axi_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  sc_mmu_v1_0_14_top #(
+  sc_mmu_v1_0_15_top #(
     .C_FAMILY("zynq"),
     .C_IS_CASCADED(0),
     .C_ENABLE_PIPELINING(1'D0),
@@ -343,7 +343,7 @@ output wire m_axi_rready;
     .C_NUM_READ_OUTSTANDING(8),
     .C_NUM_WRITE_OUTSTANDING(8),
     .C_SINGLE_ISSUING(1),
-    .C_SUPPORTS_WRAP(0),
+    .C_SUPPORTS_WRAP(1),
     .C_SUPPORTS_NARROW(0),
     .C_SUPPORTS_READ_DECERR(1),
     .C_SUPPORTS_WRITE_DECERR(1)

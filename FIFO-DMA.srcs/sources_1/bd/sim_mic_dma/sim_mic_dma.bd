@@ -7,7 +7,7 @@
       "name": "sim_mic_dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2025.1"
     },
     "design_tree": {
       "axis_data_fifo_0": "",
@@ -34,10 +34,11 @@
     "components": {
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "15",
+        "ip_revision": "17",
         "xci_name": "sim_mic_dma_axis_data_fifo_0_0",
         "xci_path": "ip\\sim_mic_dma_axis_data_fifo_0_0\\sim_mic_dma_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "FIFO_DEPTH": {
             "value": "256"
@@ -57,11 +58,29 @@
         },
         "interface_ports": {
           "S_AXIS": {
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M_AXIS",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "INTERIOR",
+                "value_src": "auto"
+              }
+            },
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "mode": "Slave",
             "bridges": [
               "M_AXIS"
             ]
+          },
+          "M_AXIS": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "INTERIOR",
+                "value_src": "auto"
+              }
+            }
           }
         }
       },
@@ -71,6 +90,7 @@
         "xci_name": "sim_mic_dma_mic_sampler_0_0",
         "xci_path": "ip\\sim_mic_dma_mic_sampler_0_0\\sim_mic_dma_mic_sampler_0_0.xci",
         "inst_hier_path": "mic_sampler_0",
+        "has_run_ip_tcl": "true",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "mic_sampler",
@@ -165,6 +185,9 @@
                 "value_src": "constant"
               }
             }
+          },
+          "SW": {
+            "direction": "I"
           }
         }
       }

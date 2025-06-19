@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 15
+// IP Revision: 17
 
 `timescale 1ns/1ps
 
@@ -63,7 +63,9 @@ module mic_dma_axis_data_fifo_0_0 (
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
-  m_axis_tlast
+  m_axis_tlast,
+  axis_wr_data_count,
+  prog_full
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_RSTIF RST" *)
@@ -94,24 +96,26 @@ input wire m_axis_tready;
 output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
+output wire [31 : 0] axis_wr_data_count;
+output wire prog_full;
 
-  axis_data_fifo_v2_0_15_top #(
+  axis_data_fifo_v2_0_17_top #(
     .C_FAMILY("zynq"),
     .C_AXIS_TDATA_WIDTH(64),
     .C_AXIS_TID_WIDTH(1),
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_SIGNAL_SET(32'B00000000000000000000000000010011),
-    .C_FIFO_DEPTH(16384),
+    .C_FIFO_DEPTH(4096),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(0),
     .C_SYNCHRONIZER_STAGE(3),
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
     .C_FIFO_MEMORY_TYPE("auto"),
-    .C_USE_ADV_FEATURES(825241648),
+    .C_USE_ADV_FEATURES(825241654),
     .C_PROG_EMPTY_THRESH(5),
-    .C_PROG_FULL_THRESH(11)
+    .C_PROG_FULL_THRESH(4000)
   ) inst (
     .s_axis_aresetn(s_axis_aresetn),
     .s_axis_aclk(s_axis_aclk),
@@ -136,12 +140,12 @@ output wire m_axis_tlast;
     .m_axis_tid(),
     .m_axis_tdest(),
     .m_axis_tuser(),
-    .axis_wr_data_count(),
+    .axis_wr_data_count(axis_wr_data_count),
     .axis_rd_data_count(),
     .almost_empty(),
     .prog_empty(),
     .almost_full(),
-    .prog_full(),
+    .prog_full(prog_full),
     .sbiterr(),
     .dbiterr(),
     .injectsbiterr(1'H0),

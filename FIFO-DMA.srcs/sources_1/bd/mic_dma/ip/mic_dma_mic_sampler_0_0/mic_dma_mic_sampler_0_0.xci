@@ -8,21 +8,21 @@
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0",
     "parameters": {
       "component_parameters": {
-        "PACKET_SIZE": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "20", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "MIC_NUM": [ { "value": "100", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "mic_dma_mic_sampler_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "PACKET_SIZE": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "20", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "MIC_NUM": [ { "value": "100", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
         "PACKAGE": [ { "value": "clg400" } ],
@@ -40,7 +40,7 @@
         "OUTPUTDIR": [ { "value": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
         "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
       }
     },
@@ -51,7 +51,8 @@
         "m_axis_tready": [ { "direction": "in", "driver_value": "1" } ],
         "m_axis_tvalid": [ { "direction": "out" } ],
         "m_axis_tdata": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
-        "m_axis_tlast": [ { "direction": "out" } ]
+        "m_axis_tlast": [ { "direction": "out" } ],
+        "SW": [ { "direction": "in" } ]
       },
       "interfaces": {
         "s_axis_aclk": {

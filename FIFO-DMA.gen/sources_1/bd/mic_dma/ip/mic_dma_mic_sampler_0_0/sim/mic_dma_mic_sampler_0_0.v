@@ -60,7 +60,8 @@ module mic_dma_mic_sampler_0_0 (
   m_axis_tready,
   m_axis_tvalid,
   m_axis_tdata,
-  m_axis_tlast
+  m_axis_tlast,
+  SW
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
@@ -81,9 +82,10 @@ output wire m_axis_tvalid;
 output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
 output wire m_axis_tlast;
+input wire SW;
 
   mic_sampler #(
-    .PACKET_SIZE(10),
+    .PACKET_SIZE(20),
     .DATA_WIDTH(32),
     .BUS_WIDTH(64),
     .MIC_NUM(100)
@@ -93,6 +95,7 @@ output wire m_axis_tlast;
     .m_axis_tready(m_axis_tready),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tdata(m_axis_tdata),
-    .m_axis_tlast(m_axis_tlast)
+    .m_axis_tlast(m_axis_tlast),
+    .SW(SW)
   );
 endmodule

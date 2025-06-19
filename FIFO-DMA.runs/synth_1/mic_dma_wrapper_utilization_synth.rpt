@@ -1,7 +1,7 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Mon Jun  9 14:33:38 2025
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Jun 19 14:38:38 2025
 | Host         : eecs3007vr01 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mic_dma_wrapper_utilization_synth.rpt -pb mic_dma_wrapper_utilization_synth.pb
 | Design       : mic_dma_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    0 |     0 |          0 |       125 |  0.00 |
+| Bonded IOB                  |    1 |     0 |          0 |       125 |  0.80 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,6 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| IBUF     |    1 |                  IO |
++----------+------+---------------------+
 
 
 8. Black Boxes
@@ -157,6 +159,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------------------------------+------+
 |                 Ref Name                 | Used |
 +------------------------------------------+------+
+| mic_dma_system_ila_0_0                   |    1 |
 | mic_dma_rst_ps7_0_100M_0                 |    1 |
 | mic_dma_processing_system7_0_0           |    1 |
 | mic_dma_mic_sampler_0_0                  |    1 |

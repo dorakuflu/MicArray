@@ -1,8 +1,8 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-//Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+//Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Jun  9 14:31:39 2025
+//Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+//Date        : Thu Jun 19 14:36:36 2025
 //Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma.bd
 //Design      : mic_dma
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
+(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
 module mic_dma
    (DDR_addr,
     DDR_ba,
@@ -32,7 +32,8 @@ module mic_dma
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb);
+    FIXED_IO_ps_srstb,
+    SW);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -54,6 +55,7 @@ module mic_dma
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  input SW;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -76,6 +78,7 @@ module mic_dma
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire SW;
   wire [31:0]axi_mem_intercon_1_M00_AXI_AWADDR;
   wire [1:0]axi_mem_intercon_1_M00_AXI_AWBURST;
   wire [3:0]axi_mem_intercon_1_M00_AXI_AWCACHE;
@@ -125,10 +128,12 @@ module mic_dma
   wire [31:0]axi_smc_M00_AXI_WDATA;
   wire axi_smc_M00_AXI_WREADY;
   wire axi_smc_M00_AXI_WVALID;
-  wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
-  wire axis_data_fifo_0_M_AXIS_TLAST;
-  wire axis_data_fifo_0_M_AXIS_TREADY;
-  wire axis_data_fifo_0_M_AXIS_TVALID;
+  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
+  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TLAST;
+  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TREADY;
+  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TVALID;
+  wire [31:0]axis_data_fifo_0_axis_wr_data_count;
+  wire axis_data_fifo_0_prog_full;
   wire [31:0]dma_M_AXI_MM2S_ARADDR;
   wire [1:0]dma_M_AXI_MM2S_ARBURST;
   wire [3:0]dma_M_AXI_MM2S_ARCACHE;
@@ -158,10 +163,10 @@ module mic_dma
   wire dma_M_AXI_S2MM_WREADY;
   wire [7:0]dma_M_AXI_S2MM_WSTRB;
   wire dma_M_AXI_S2MM_WVALID;
-  wire [63:0]mic_sampler_0_m_axis_TDATA;
-  wire mic_sampler_0_m_axis_TLAST;
-  wire mic_sampler_0_m_axis_TREADY;
-  wire mic_sampler_0_m_axis_TVALID;
+  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]mic_sampler_0_m_axis_TDATA;
+  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TLAST;
+  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TREADY;
+  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TVALID;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
   wire [31:0]processing_system7_0_M_AXI_GP0_ARADDR;
@@ -338,10 +343,12 @@ module mic_dma
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   mic_dma_axis_data_fifo_0_0 axis_data_fifo_0
-       (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+       (.axis_wr_data_count(axis_data_fifo_0_axis_wr_data_count),
+        .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
+        .prog_full(axis_data_fifo_0_prog_full),
         .s_axis_aclk(processing_system7_0_FCLK_CLK0),
         .s_axis_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axis_tdata(mic_sampler_0_m_axis_TDATA),
@@ -405,7 +412,8 @@ module mic_dma
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
   mic_dma_mic_sampler_0_0 mic_sampler_0
-       (.m_axis_tdata(mic_sampler_0_m_axis_TDATA),
+       (.SW(SW),
+        .m_axis_tdata(mic_sampler_0_m_axis_TDATA),
         .m_axis_tlast(mic_sampler_0_m_axis_TLAST),
         .m_axis_tready(mic_sampler_0_m_axis_TREADY),
         .m_axis_tvalid(mic_sampler_0_m_axis_TVALID),
@@ -551,6 +559,19 @@ module mic_dma
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  mic_dma_system_ila_0_0 system_ila_0
+       (.SLOT_0_AXIS_tdata(mic_sampler_0_m_axis_TDATA),
+        .SLOT_0_AXIS_tlast(mic_sampler_0_m_axis_TLAST),
+        .SLOT_0_AXIS_tready(mic_sampler_0_m_axis_TREADY),
+        .SLOT_0_AXIS_tvalid(mic_sampler_0_m_axis_TVALID),
+        .SLOT_1_AXIS_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+        .SLOT_1_AXIS_tlast(axis_data_fifo_0_M_AXIS_TLAST),
+        .SLOT_1_AXIS_tready(axis_data_fifo_0_M_AXIS_TREADY),
+        .SLOT_1_AXIS_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
+        .clk(processing_system7_0_FCLK_CLK0),
+        .probe0(axis_data_fifo_0_axis_wr_data_count),
+        .probe1(axis_data_fifo_0_prog_full),
+        .resetn(rst_ps7_0_100M_peripheral_aresetn));
 endmodule
 
 module mic_dma_axi_mem_intercon_0
