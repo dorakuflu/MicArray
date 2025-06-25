@@ -8,14 +8,14 @@
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/sim_mic_dma/ip/sim_mic_dma_mic_sampler_0_0_1",
     "parameters": {
       "component_parameters": {
-        "PACKET_SIZE": [ { "value": "20", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "128", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "MIC_NUM": [ { "value": "100", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "sim_mic_dma_mic_sampler_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "PACKET_SIZE": [ { "value": "20", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "128", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "MIC_NUM": [ { "value": "100", "resolve_type": "generated", "format": "long", "usage": "all" } ]

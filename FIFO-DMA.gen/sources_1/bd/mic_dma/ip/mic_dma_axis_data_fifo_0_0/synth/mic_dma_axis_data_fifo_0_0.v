@@ -52,8 +52,8 @@
 
 (* X_CORE_INFO = "axis_data_fifo_v2_0_17_top,Vivado 2025.1" *)
 (* CHECK_LICENSE_TYPE = "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_17_top,{}" *)
-(* CORE_GENERATION_INFO = "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_17_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=64,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011,C_FIFO_DEPTH=4096,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=aut\
-o,C_USE_ADV_FEATURES=825241654,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=4000}" *)
+(* CORE_GENERATION_INFO = "mic_dma_axis_data_fifo_0_0,axis_data_fifo_v2_0_17_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=64,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000010011,C_FIFO_DEPTH=32768,C_FIFO_MODE=2,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=au\
+to,C_USE_ADV_FEATURES=825765957,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=30000}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module mic_dma_axis_data_fifo_0_0 (
   s_axis_aresetn,
@@ -108,16 +108,16 @@ output wire prog_full;
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_SIGNAL_SET(32'B00000000000000000000000000010011),
-    .C_FIFO_DEPTH(4096),
-    .C_FIFO_MODE(1),
+    .C_FIFO_DEPTH(32768),
+    .C_FIFO_MODE(2),
     .C_IS_ACLK_ASYNC(0),
     .C_SYNCHRONIZER_STAGE(3),
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
     .C_FIFO_MEMORY_TYPE("auto"),
-    .C_USE_ADV_FEATURES(825241654),
+    .C_USE_ADV_FEATURES(825765957),
     .C_PROG_EMPTY_THRESH(5),
-    .C_PROG_FULL_THRESH(4000)
+    .C_PROG_FULL_THRESH(30000)
   ) inst (
     .s_axis_aresetn(s_axis_aresetn),
     .s_axis_aclk(s_axis_aclk),

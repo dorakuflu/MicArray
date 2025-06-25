@@ -2628,13 +2628,13 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "FIFO_DEPTH": {
-            "value": "4096"
+            "value": "32768"
           },
           "FIFO_MEMORY_TYPE": {
             "value": "auto"
           },
-          "HAS_AFULL": {
-            "value": "0"
+          "FIFO_MODE": {
+            "value": "2"
           },
           "HAS_PROG_FULL": {
             "value": "1"
@@ -2643,7 +2643,7 @@
             "value": "1"
           },
           "PROG_FULL_THRESH": {
-            "value": "4000"
+            "value": "30000"
           }
         },
         "interface_ports": {
@@ -2798,7 +2798,7 @@
         "has_run_ip_tcl": "true",
         "parameters": {
           "C_DATA_DEPTH": {
-            "value": "16384"
+            "value": "8192"
           },
           "C_EN_STRG_QUAL": {
             "value": "0"

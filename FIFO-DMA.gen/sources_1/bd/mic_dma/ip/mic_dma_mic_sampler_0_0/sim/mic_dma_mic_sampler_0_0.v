@@ -85,7 +85,7 @@ output wire m_axis_tlast;
 input wire SW;
 
   mic_sampler #(
-    .PACKET_SIZE(20),
+    .PACKET_SIZE(128),
     .DATA_WIDTH(32),
     .BUS_WIDTH(64),
     .MIC_NUM(100)

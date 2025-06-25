@@ -22,7 +22,7 @@
 
 
 module mic_sampler #(
-    parameter PACKET_SIZE   = 20, //Frames in transfer
+    parameter PACKET_SIZE   = 128, //Frames in transfer
     parameter DATA_WIDTH    = 32,
     parameter BUS_WIDTH     = 64,
     parameter MIC_NUM       = 100

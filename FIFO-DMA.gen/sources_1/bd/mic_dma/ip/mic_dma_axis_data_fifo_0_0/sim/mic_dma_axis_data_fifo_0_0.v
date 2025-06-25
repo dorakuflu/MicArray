@@ -106,16 +106,16 @@ output wire prog_full;
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_SIGNAL_SET(32'B00000000000000000000000000010011),
-    .C_FIFO_DEPTH(4096),
-    .C_FIFO_MODE(1),
+    .C_FIFO_DEPTH(32768),
+    .C_FIFO_MODE(2),
     .C_IS_ACLK_ASYNC(0),
     .C_SYNCHRONIZER_STAGE(3),
     .C_ACLKEN_CONV_MODE(0),
     .C_ECC_MODE(0),
     .C_FIFO_MEMORY_TYPE("auto"),
-    .C_USE_ADV_FEATURES(825241654),
+    .C_USE_ADV_FEATURES(825765957),
     .C_PROG_EMPTY_THRESH(5),
-    .C_PROG_FULL_THRESH(4000)
+    .C_PROG_FULL_THRESH(30000)
   ) inst (
     .s_axis_aresetn(s_axis_aresetn),
     .s_axis_aclk(s_axis_aclk),

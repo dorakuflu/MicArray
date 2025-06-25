@@ -56,8 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "mic_dma_mic_sampler_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 2
+set_param bd.open.in_stealth_mode 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mref
