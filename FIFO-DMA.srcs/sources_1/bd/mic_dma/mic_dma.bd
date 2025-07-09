@@ -7,8 +7,7 @@
       "name": "mic_dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.1",
-      "validated": "true"
+      "tool_version": "2025.1"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -25,9 +24,8 @@
           "auto_pc": ""
         }
       },
-      "axis_data_fifo_0": "",
       "mic_sampler_0": "",
-      "system_ila_0": ""
+      "fifo_generator_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2619,61 +2617,6 @@
           }
         }
       },
-      "axis_data_fifo_0": {
-        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "ip_revision": "17",
-        "xci_name": "mic_dma_axis_data_fifo_0_0",
-        "xci_path": "ip\\mic_dma_axis_data_fifo_0_0\\mic_dma_axis_data_fifo_0_0.xci",
-        "inst_hier_path": "axis_data_fifo_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "FIFO_DEPTH": {
-            "value": "32768"
-          },
-          "FIFO_MEMORY_TYPE": {
-            "value": "auto"
-          },
-          "FIFO_MODE": {
-            "value": "2"
-          },
-          "HAS_PROG_FULL": {
-            "value": "1"
-          },
-          "HAS_WR_DATA_COUNT": {
-            "value": "1"
-          },
-          "PROG_FULL_THRESH": {
-            "value": "30000"
-          }
-        },
-        "interface_ports": {
-          "S_AXIS": {
-            "bd_attributes": {
-              "BRIDGES": {
-                "value": "M_AXIS",
-                "value_src": "auto"
-              },
-              "TYPE": {
-                "value": "INTERIOR",
-                "value_src": "auto"
-              }
-            },
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "mode": "Slave",
-            "bridges": [
-              "M_AXIS"
-            ]
-          },
-          "M_AXIS": {
-            "bd_attributes": {
-              "TYPE": {
-                "value": "INTERIOR",
-                "value_src": "auto"
-              }
-            }
-          }
-        }
-      },
       "mic_sampler_0": {
         "vlnv": "xilinx.com:module_ref:mic_sampler:1.0",
         "ip_revision": "1",
@@ -2789,51 +2732,31 @@
           }
         }
       },
-      "system_ila_0": {
-        "vlnv": "xilinx.com:ip:system_ila:1.1",
-        "ip_revision": "21",
-        "xci_name": "mic_dma_system_ila_0_0",
-        "xci_path": "ip\\mic_dma_system_ila_0_0\\mic_dma_system_ila_0_0.xci",
-        "inst_hier_path": "system_ila_0",
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "ip_revision": "13",
+        "xci_name": "mic_dma_fifo_generator_0_0",
+        "xci_path": "ip\\mic_dma_fifo_generator_0_0\\mic_dma_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
         "has_run_ip_tcl": "true",
         "parameters": {
-          "C_DATA_DEPTH": {
-            "value": "8192"
+          "Enable_TLAST": {
+            "value": "true"
           },
-          "C_EN_STRG_QUAL": {
+          "FIFO_Application_Type_axis": {
+            "value": "Packet_FIFO"
+          },
+          "INTERFACE_TYPE": {
+            "value": "AXI_STREAM"
+          },
+          "Input_Depth_axis": {
+            "value": "65536"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "8"
+          },
+          "TUSER_WIDTH": {
             "value": "0"
-          },
-          "C_MON_TYPE": {
-            "value": "MIX"
-          },
-          "C_NUM_MONITOR_SLOTS": {
-            "value": "2"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "2"
-          },
-          "C_SLOT": {
-            "value": "1"
-          },
-          "C_SLOT_0_INTF_TYPE": {
-            "value": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "C_SLOT_1_INTF_TYPE": {
-            "value": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "interface_ports": {
-          "SLOT_0_AXIS": {
-            "mode": "Monitor",
-            "monitor_type": "SlaveType",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "SLOT_1_AXIS": {
-            "mode": "Monitor",
-            "monitor_type": "SlaveType",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
           }
         }
       }
@@ -2857,13 +2780,6 @@
           "dma/S_AXI_LITE"
         ]
       },
-      "axis_data_fifo_0_M_AXIS": {
-        "interface_ports": [
-          "dma/S_AXIS_S2MM",
-          "axis_data_fifo_0/M_AXIS",
-          "system_ila_0/SLOT_1_AXIS"
-        ]
-      },
       "dma_M_AXI_MM2S": {
         "interface_ports": [
           "dma/M_AXI_MM2S",
@@ -2876,11 +2792,16 @@
           "axi_mem_intercon_1/S00_AXI"
         ]
       },
+      "fifo_generator_0_M_AXIS": {
+        "interface_ports": [
+          "fifo_generator_0/M_AXIS",
+          "dma/S_AXIS_S2MM"
+        ]
+      },
       "mic_sampler_0_m_axis": {
         "interface_ports": [
-          "mic_sampler_0/m_axis",
-          "axis_data_fifo_0/S_AXIS",
-          "system_ila_0/SLOT_0_AXIS"
+          "fifo_generator_0/S_AXIS",
+          "mic_sampler_0/m_axis"
         ]
       },
       "processing_system7_0_DDR": {
@@ -2909,18 +2830,6 @@
           "mic_sampler_0/SW"
         ]
       },
-      "axis_data_fifo_0_axis_wr_data_count": {
-        "ports": [
-          "axis_data_fifo_0/axis_wr_data_count",
-          "system_ila_0/probe0"
-        ]
-      },
-      "axis_data_fifo_0_prog_full": {
-        "ports": [
-          "axis_data_fifo_0/prog_full",
-          "system_ila_0/probe1"
-        ]
-      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -2931,7 +2840,6 @@
           "axi_mem_intercon_1/S00_ACLK",
           "axi_mem_intercon_1/M00_ACLK",
           "axi_smc/aclk",
-          "axis_data_fifo_0/s_axis_aclk",
           "dma/s_axi_lite_aclk",
           "dma/m_axi_mm2s_aclk",
           "dma/m_axi_s2mm_aclk",
@@ -2939,7 +2847,7 @@
           "processing_system7_0/S_AXI_HP0_ACLK",
           "processing_system7_0/S_AXI_HP2_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "system_ila_0/clk",
+          "fifo_generator_0/s_aclk",
           "mic_sampler_0/s_axis_aclk"
         ]
       },
@@ -2959,9 +2867,8 @@
           "axi_mem_intercon_1/S00_ARESETN",
           "axi_mem_intercon_1/M00_ARESETN",
           "axi_smc/aresetn",
-          "axis_data_fifo_0/s_axis_aresetn",
           "dma/axi_resetn",
-          "system_ila_0/resetn",
+          "fifo_generator_0/s_aresetn",
           "mic_sampler_0/s_axis_aresetn"
         ]
       }

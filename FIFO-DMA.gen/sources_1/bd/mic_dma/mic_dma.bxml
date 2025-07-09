@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="mic_dma" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1750876424"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1750876424"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1750876424"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1750876424"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1752082048"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1752082048"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1752082048"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1752082048"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\mic_dma.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

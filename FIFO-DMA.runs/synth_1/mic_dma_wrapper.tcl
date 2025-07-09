@@ -61,7 +61,6 @@ set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -96,15 +95,10 @@ set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Resear
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axis_data_fifo_0_0/mic_dma_axis_data_fifo_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/bd_f53e_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/bd_0/ip/ip_0/bd_f53e_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_system_ila_0_0/mic_dma_system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/mic_dma_ooc.xdc]
 
 OPTRACE "Adding files" END { }

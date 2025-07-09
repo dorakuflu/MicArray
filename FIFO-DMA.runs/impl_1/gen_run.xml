@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1750876437">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1752081083">
   <File Type="PA-TCL" Name="mic_dma_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="mic_dma_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="mic_dma_wrapper_timing_summary_init.rpt"/>
@@ -141,6 +141,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/mic_dma_ila/mic_dma_ila.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/mic_dma_ila/hdl/mic_dma_ila_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/sim_mic_dma/sim_mic_dma.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -200,9 +216,13 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_dma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_mic_sampler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_axis_data_fifo_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_dma_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_mic_sampler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_system_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_fifo_generator_0_0"/>
 </GenRun>

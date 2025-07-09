@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Wed Jun 25 14:33:39 2025
+//Date        : Thu Jul  3 15:20:26 2025
 //Host        : eecs3007vr01 running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma.bd
 //Design      : mic_dma
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
+(* CORE_GENERATION_INFO = "mic_dma,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mic_dma,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "mic_dma.hwdef" *) 
 module mic_dma
    (DDR_addr,
     DDR_ba,
@@ -128,12 +128,6 @@ module mic_dma
   wire [31:0]axi_smc_M00_AXI_WDATA;
   wire axi_smc_M00_AXI_WREADY;
   wire axi_smc_M00_AXI_WVALID;
-  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
-  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TLAST;
-  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TREADY;
-  (* CONN_BUS_INFO = "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [31:0]axis_data_fifo_0_axis_wr_data_count;
-  wire axis_data_fifo_0_prog_full;
   wire [31:0]dma_M_AXI_MM2S_ARADDR;
   wire [1:0]dma_M_AXI_MM2S_ARBURST;
   wire [3:0]dma_M_AXI_MM2S_ARCACHE;
@@ -163,10 +157,14 @@ module mic_dma
   wire dma_M_AXI_S2MM_WREADY;
   wire [7:0]dma_M_AXI_S2MM_WSTRB;
   wire dma_M_AXI_S2MM_WVALID;
-  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DONT_TOUCH *) wire [63:0]mic_sampler_0_m_axis_TDATA;
-  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TLAST" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TLAST;
-  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TREADY;
-  (* CONN_BUS_INFO = "mic_sampler_0_m_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DONT_TOUCH *) wire mic_sampler_0_m_axis_TVALID;
+  wire [63:0]fifo_generator_0_M_AXIS_TDATA;
+  wire fifo_generator_0_M_AXIS_TLAST;
+  wire fifo_generator_0_M_AXIS_TREADY;
+  wire fifo_generator_0_M_AXIS_TVALID;
+  wire [63:0]mic_sampler_0_m_axis_TDATA;
+  wire mic_sampler_0_m_axis_TLAST;
+  wire mic_sampler_0_m_axis_TREADY;
+  wire mic_sampler_0_m_axis_TVALID;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
   wire [31:0]processing_system7_0_M_AXI_GP0_ARADDR;
@@ -342,19 +340,6 @@ module mic_dma
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
-  mic_dma_axis_data_fifo_0_0 axis_data_fifo_0
-       (.axis_wr_data_count(axis_data_fifo_0_axis_wr_data_count),
-        .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
-        .prog_full(axis_data_fifo_0_prog_full),
-        .s_axis_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axis_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s_axis_tdata(mic_sampler_0_m_axis_TDATA),
-        .s_axis_tlast(mic_sampler_0_m_axis_TLAST),
-        .s_axis_tready(mic_sampler_0_m_axis_TREADY),
-        .s_axis_tvalid(mic_sampler_0_m_axis_TVALID));
   mic_dma_dma_0 dma
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -406,11 +391,23 @@ module mic_dma
         .s_axi_lite_wdata(axi_smc_M00_AXI_WDATA),
         .s_axi_lite_wready(axi_smc_M00_AXI_WREADY),
         .s_axi_lite_wvalid(axi_smc_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+        .s_axis_s2mm_tdata(fifo_generator_0_M_AXIS_TDATA),
         .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+        .s_axis_s2mm_tlast(fifo_generator_0_M_AXIS_TLAST),
+        .s_axis_s2mm_tready(fifo_generator_0_M_AXIS_TREADY),
+        .s_axis_s2mm_tvalid(fifo_generator_0_M_AXIS_TVALID));
+  mic_dma_fifo_generator_0_0 fifo_generator_0
+       (.m_axis_tdata(fifo_generator_0_M_AXIS_TDATA),
+        .m_axis_tlast(fifo_generator_0_M_AXIS_TLAST),
+        .m_axis_tready(fifo_generator_0_M_AXIS_TREADY),
+        .m_axis_tvalid(fifo_generator_0_M_AXIS_TVALID),
+        .s_aclk(processing_system7_0_FCLK_CLK0),
+        .s_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axis_tdata(mic_sampler_0_m_axis_TDATA),
+        .s_axis_tlast(mic_sampler_0_m_axis_TLAST),
+        .s_axis_tready(mic_sampler_0_m_axis_TREADY),
+        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tvalid(mic_sampler_0_m_axis_TVALID));
   mic_dma_mic_sampler_0_0 mic_sampler_0
        (.SW(SW),
         .m_axis_tdata(mic_sampler_0_m_axis_TDATA),
@@ -559,19 +556,6 @@ module mic_dma
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  mic_dma_system_ila_0_0 system_ila_0
-       (.SLOT_0_AXIS_tdata(mic_sampler_0_m_axis_TDATA),
-        .SLOT_0_AXIS_tlast(mic_sampler_0_m_axis_TLAST),
-        .SLOT_0_AXIS_tready(mic_sampler_0_m_axis_TREADY),
-        .SLOT_0_AXIS_tvalid(mic_sampler_0_m_axis_TVALID),
-        .SLOT_1_AXIS_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .SLOT_1_AXIS_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .SLOT_1_AXIS_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .SLOT_1_AXIS_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
-        .clk(processing_system7_0_FCLK_CLK0),
-        .probe0(axis_data_fifo_0_axis_wr_data_count),
-        .probe1(axis_data_fifo_0_prog_full),
-        .resetn(rst_ps7_0_100M_peripheral_aresetn));
 endmodule
 
 module mic_dma_axi_mem_intercon_0
