@@ -37,13 +37,13 @@ module clk_div #(
 
   always @(posedge sysclk) begin
     if (!rstn) begin
-      cnt     <= 0;
-      divclk  <= 0;
+      cnt       <= 0;
+      divclk    <= 0;
     end else if (cnt == N-1) begin
-      cnt     <= 0;
-      divclk <= ~divclk;
+      cnt       <= 0;
+      divclk    <= ~divclk;
     end else begin
-      cnt <= cnt + 1;
+      cnt       <= cnt + 1;
     end
   end
 

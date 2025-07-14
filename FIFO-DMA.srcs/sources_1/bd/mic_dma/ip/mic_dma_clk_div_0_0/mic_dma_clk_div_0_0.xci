@@ -1,0 +1,65 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "mic_dma_clk_div_0_0",
+    "cell_name": "clk_div_0",
+    "component_reference": "xilinx.com:module_ref:clk_div:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_div_0_0",
+    "parameters": {
+      "component_parameters": {
+        "SYS_FREQ": [ { "value": "7680000", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "OUT_FREQ": [ { "value": "3840000", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "mic_dma_clk_div_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "SYS_FREQ": [ { "value": "7680000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "OUT_FREQ": [ { "value": "3840000", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_div_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "sysclk": [ { "direction": "in" } ],
+        "rstn": [ { "direction": "in" } ],
+        "divclk": [ { "direction": "out" } ]
+      },
+      "interfaces": {
+        "rstn": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "rstn" } ]
+          }
+        }
+      }
+    }
+  }
+}

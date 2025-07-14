@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB138697298CBD174",
+      "boundary_crc": "0x43FCDCE823C4E7C1",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FIFO-DMA.gen/sources_1/bd/mic_dma",
       "name": "mic_dma",
@@ -25,7 +25,9 @@
         }
       },
       "mic_sampler_0": "",
-      "fifo_generator_0": ""
+      "fifo_generator_0": "",
+      "clk_wiz_0": "",
+      "clk_div_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -200,6 +202,24 @@
     "ports": {
       "SW": {
         "direction": "I"
+      },
+      "clk_7p68M": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "7680000"
+          }
+        }
+      },
+      "clk_3p84M": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "3840000"
+          }
+        }
       }
     },
     "components": {
@@ -2759,6 +2779,79 @@
             "value": "0"
           }
         }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "16",
+        "xci_name": "mic_dma_clk_wiz_0_0",
+        "xci_path": "ip\\mic_dma_clk_wiz_0_0\\mic_dma_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "452.882"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "310.955"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "7.68"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "42.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "109.375"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk_div_0": {
+        "vlnv": "xilinx.com:module_ref:clk_div:1.0",
+        "ip_revision": "1",
+        "xci_name": "mic_dma_clk_div_0_0",
+        "xci_path": "ip\\mic_dma_clk_div_0_0\\mic_dma_clk_div_0_0.xci",
+        "inst_hier_path": "clk_div_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "OUT_FREQ": {
+            "value": "3840000"
+          },
+          "SYS_FREQ": {
+            "value": "7680000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sysclk": {
+            "direction": "I"
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "divclk": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2830,6 +2923,19 @@
           "mic_sampler_0/SW"
         ]
       },
+      "clk_div_0_divclk": {
+        "ports": [
+          "clk_div_0/divclk",
+          "clk_3p84M"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "clk_7p68M",
+          "clk_div_0/sysclk"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -2848,13 +2954,16 @@
           "processing_system7_0/S_AXI_HP2_ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
           "fifo_generator_0/s_aclk",
-          "mic_sampler_0/s_axis_aclk"
+          "mic_sampler_0/s_axis_aclk",
+          "clk_wiz_0/clk_in1"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
-          "rst_ps7_0_100M/ext_reset_in"
+          "rst_ps7_0_100M/ext_reset_in",
+          "clk_wiz_0/resetn",
+          "clk_div_0/rstn"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn": {
