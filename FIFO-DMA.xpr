@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="70" Path="C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.xpr">
+<Project Product="Vivado" Version="7" Minor="70" Path="C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="6b8c6ccf37254329a8da2eb958f4dd2f"/>
@@ -177,6 +177,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/proc_sys.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="mic_dma_wrapper"/>
@@ -184,8 +192,10 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc"/>
+          <Attr Name="ImportTime" Val="1752602865"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -367,9 +377,7 @@
     </Run>
     <Run Id="mic_dma_ila_system_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_ila_system_ila_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_system_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_ila_system_ila_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_system_ila_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_system_ila_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -379,9 +387,7 @@
     </Run>
     <Run Id="mic_dma_ila_mic_sampler_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_ila_mic_sampler_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_mic_sampler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_ila_mic_sampler_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_mic_sampler_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_mic_sampler_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -391,9 +397,7 @@
     </Run>
     <Run Id="mic_dma_ila_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_ila_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_ila_processing_system7_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_processing_system7_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_processing_system7_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -403,9 +407,7 @@
     </Run>
     <Run Id="mic_dma_ila_axi_smc_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_ila_axi_smc_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_axi_smc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_ila_axi_smc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_axi_smc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_axi_smc_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -415,9 +417,7 @@
     </Run>
     <Run Id="mic_dma_ila_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_ila_fifo_generator_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_fifo_generator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_ila_fifo_generator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -513,9 +513,7 @@
     </Run>
     <Run Id="mic_dma_ila_system_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_system_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_system_ila_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_system_ila_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_system_ila_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -532,9 +530,7 @@
     </Run>
     <Run Id="mic_dma_ila_mic_sampler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_mic_sampler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_mic_sampler_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_mic_sampler_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_mic_sampler_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -551,9 +547,7 @@
     </Run>
     <Run Id="mic_dma_ila_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_processing_system7_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_processing_system7_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_processing_system7_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -570,9 +564,7 @@
     </Run>
     <Run Id="mic_dma_ila_axi_smc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_axi_smc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_axi_smc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_axi_smc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_axi_smc_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -589,9 +581,7 @@
     </Run>
     <Run Id="mic_dma_ila_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
