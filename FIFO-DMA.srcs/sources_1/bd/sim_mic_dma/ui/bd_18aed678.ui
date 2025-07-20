@@ -10,10 +10,10 @@ preplace port port-id_clk -pg 1 -lvl 0 -x -40 -y -520 -defaultsOSRD
 preplace port port-id_fifo_block -pg 1 -lvl 2 -x 630 -y -370 -defaultsOSRD -right
 preplace inst axis_data_fifo_0 -pg 1 -lvl 1 -x 440 -y -370 -defaultsOSRD
 preplace inst mic_sampler_0 -pg 1 -lvl 1 -x 440 -y -660 -defaultsOSRD
-preplace netloc clk_wiz_clk_out1 1 0 1 260 -680n
-preplace netloc fifo_block_1 1 1 1 600 -380n
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 0 1 270 -660n
-preplace netloc mic_sampler_0_m_axis 1 0 2 280 -740 600
+preplace netloc clk_wiz_clk_out1 1 0 1 270 -710n
+preplace netloc fifo_block_1 1 1 1 590 -380n
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 0 1 280 -690n
+preplace netloc mic_sampler_0_m_axis 1 0 2 290 -770 590
 levelinfo -pg 1 -40 440 630
 pagesize -pg 1 -db -bbox -sgen -150 -880 1940 300
 "

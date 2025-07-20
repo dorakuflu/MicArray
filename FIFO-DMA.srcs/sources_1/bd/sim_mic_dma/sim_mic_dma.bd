@@ -186,6 +186,17 @@
               }
             }
           },
+          "mic_data_in": {
+            "direction": "I",
+            "left": "3199",
+            "right": "0"
+          },
+          "mic_ready_in": {
+            "direction": "I"
+          },
+          "mic_valid_in": {
+            "direction": "I"
+          },
           "SW": {
             "direction": "I"
           }

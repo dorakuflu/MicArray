@@ -35,6 +35,10 @@ module mic_sampler #(
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input                       s_axis_aresetn,
     
+    input [(MIC_NUM*DATA_WIDTH)-1:0]    mic_data_in,
+    input                               mic_ready_in,
+    input                               mic_valid_in,
+    
     input                       m_axis_tready,
     output wire                 m_axis_tvalid,
     output wire [BUS_WIDTH-1:0] m_axis_tdata,
@@ -58,44 +62,22 @@ module mic_sampler #(
     reg [DATA_WIDTH-1:0]            frame_cnt;
     reg [$clog2(PACKET_SIZE)-1:0]   packet_cnt;
     
-    // Clocking
-    wire    clk_96k, clk_96k_edge;
-    reg     clk_96k_last;
+    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;  
+    reg                                 mic_valid;
     
-    clk_div #(
-        .SYS_FREQ(100_000_000),
-        .OUT_FREQ(96_000)
-    ) clock_div (
-        .sysclk(s_axis_aclk),
-        .rstn(s_axis_aresetn),
-        .divclk(clk_96k)
-    );
+//    // Mock mic data
+//    wire                                mic_data_start;
+//    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;
     
-    always @(posedge s_axis_aclk) begin
-        if (~s_axis_aresetn) begin
-            clk_96k_last <= 0;
-        end else begin
-            clk_96k_last <= clk_96k;
-        end
-    end
+//    integer i;
+//    always @(posedge s_axis_aclk) begin // synthetic mic_data generation
+//        for (i = 0; i < MIC_NUM; i = i+1) begin
+//            mic_data[i*DATA_WIDTH +: DATA_WIDTH] <= i;
+//        end
+//    end
     
-    assign clk_96k_edge = clk_96k && !clk_96k_last;
-    //
-    
-    
-    // Mock mic data
-    wire                                mic_data_start;
-    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;
-    
-    integer i;
-    always @(posedge s_axis_aclk) begin // synthetic mic_data generation
-        for (i = 0; i < MIC_NUM; i = i+1) begin
-            mic_data[i*DATA_WIDTH +: DATA_WIDTH] <= i;
-        end
-    end
-    
-    assign mic_data_start = SW;
-    //
+//    assign mic_data_start = SW;
+//    //
     
     
     always @(*) begin
@@ -105,7 +87,7 @@ module mic_sampler #(
         case (state)
             IDLE: begin
                 // valid data input
-                if (mic_data_start && clk_96k_edge) begin
+                if (mic_ready_in) begin
                     next_state = SEND;
                 end
             end
@@ -136,16 +118,24 @@ module mic_sampler #(
     always @(posedge s_axis_aclk) begin
         if (~s_axis_aresetn) begin
             state       <= IDLE;
-            
             cnt         <= 0;
+
             frame_cnt   <= 0;
             packet_cnt  <= 0;
+            
+            mic_data    <= 0;
+            mic_valid   <= 0;
         end else begin
             state       <= next_state;
-            
             cnt         <= next_cnt;
-            frame_cnt   <= clk_96k_edge ? ((frame_cnt == 32'h7FFF_FFFF) ? 0 : frame_cnt + 1) : frame_cnt;
+            
+            frame_cnt   <= mic_ready_in ? ((frame_cnt == 32'h7FFF_FFFF) ? 0 : frame_cnt + 1) : frame_cnt;
             packet_cnt  <= (state == LAST && m_axis_tready) ? ((packet_cnt + 1) % PACKET_SIZE) : packet_cnt;
+            
+            if (mic_ready_in) begin
+                mic_data <= mic_data_in;
+                mic_valid <= mic_valid_in;
+            end
         end
     end
     
