@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_cic_compiler_0_0/sim/PDM_to_PCM_cic_compiler_0_0.vhd" \
+"../../../../FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_fir_compiler_0_0/sim/PDM_to_PCM_fir_compiler_0_0.vhd" \
+"../../../../FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_cic_compiler_1_0/sim/PDM_to_PCM_cic_compiler_1_0.vhd" \
+"../../../../FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_fir_compiler_1_0/sim/PDM_to_PCM_fir_compiler_1_0.vhd" \
+
+# Do not sort compile order
+nosort

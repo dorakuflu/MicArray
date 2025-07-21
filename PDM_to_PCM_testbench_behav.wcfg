@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="PDM_to_PCM_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="PDM_to_PCM_testbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,486.001 ns"></ZoomEndTime>
+      <Cursor1Time time="10,195.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/PDM_to_PCM_testbench/clk_100MHz" type="logic">
+      <obj_property name="ElementShortName">clk_100MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/resetn" type="logic">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/clk_pdm" type="logic">
+      <obj_property name="ElementShortName">clk_pdm</obj_property>
+      <obj_property name="ObjectShortName">clk_pdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/pdm_pin" type="logic">
+      <obj_property name="ElementShortName">pdm_pin</obj_property>
+      <obj_property name="ObjectShortName">pdm_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/valid_rise" type="logic">
+      <obj_property name="ElementShortName">valid_rise</obj_property>
+      <obj_property name="ObjectShortName">valid_rise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/data_rise" type="array">
+      <obj_property name="ElementShortName">data_rise[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rise[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/valid_fall" type="logic">
+      <obj_property name="ElementShortName">valid_fall</obj_property>
+      <obj_property name="ObjectShortName">valid_fall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/data_fall" type="array">
+      <obj_property name="ElementShortName">data_fall[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_fall[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/PDM_reader_0/m00_axis" type="protoinst">
+      <obj_property name="children_use_element_short_name">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">fff,fff=blank</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00E600</obj_property>
+      <obj_property name="Render_Data">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/PDM_reader_0/m00_axis.streamWaveData</obj_property>
+      <obj_property name="Number_Overlay">2</obj_property>
+      <obj_property name="Overlay_Object_0">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/PDM_reader_0/m00_axis.linkStarve</obj_property>
+      <obj_property name="Overlay_Color_0">#99E600</obj_property>
+      <obj_property name="Overlay_Object_1">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/PDM_reader_0/m00_axis.linkStall</obj_property>
+      <obj_property name="Overlay_Color_1">#E64C00</obj_property>
+      <obj_property name="Detail_Data">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/PDM_reader_0/m00_axis.streamTooltipData</obj_property>
+      <obj_property name="ElementShortName">m00_axis</obj_property>
+      <obj_property name="ObjectShortName">m00_axis</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/cic_compiler_0/M_AXIS_DATA" type="protoinst">
+      <obj_property name="children_use_element_short_name">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="EnumTransactionColorTable">fff,fff=blank</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00E600</obj_property>
+      <obj_property name="Render_Data">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/cic_compiler_0/M_AXIS_DATA.streamWaveData</obj_property>
+      <obj_property name="Number_Overlay">2</obj_property>
+      <obj_property name="Overlay_Object_0">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/cic_compiler_0/M_AXIS_DATA.linkStarve</obj_property>
+      <obj_property name="Overlay_Color_0">#99E600</obj_property>
+      <obj_property name="Overlay_Object_1">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/cic_compiler_0/M_AXIS_DATA.linkStall</obj_property>
+      <obj_property name="Overlay_Color_1">#E64C00</obj_property>
+      <obj_property name="Detail_Data">/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/cic_compiler_0/M_AXIS_DATA.streamTooltipData</obj_property>
+      <obj_property name="ElementShortName">M_AXIS_DATA</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_DATA</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/fir_compiler_0/m_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/fir_compiler_0/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[47:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/round_and_saturate_0/out_rise" type="array">
+      <obj_property name="ElementShortName">out_rise[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out_rise[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/round_and_saturate_0/inst/rounded_rise" type="array">
+      <obj_property name="ElementShortName">rounded_rise[48:0]</obj_property>
+      <obj_property name="ObjectShortName">rounded_rise[48:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/round_and_saturate_0/inst/shifted_rise" type="array">
+      <obj_property name="ElementShortName">shifted_rise[32:0]</obj_property>
+      <obj_property name="ObjectShortName">shifted_rise[32:0]</obj_property>
+   </wvobject>
+</wave_config>

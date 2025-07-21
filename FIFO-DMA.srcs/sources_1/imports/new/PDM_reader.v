@@ -66,13 +66,13 @@ module PDM_reader (
 
 
     // FSM States
-    localparam IDLE = 3'd0;
-    localparam RISE = 3'd1;
-    localparam WAIT = 3'd2;  
-    localparam FALL = 3'd3;
-    localparam DONE = 3'd4;
+    localparam IDLE = 3'h0;
+    localparam RISE = 3'h1;
+    localparam WAIT = 3'h2;  
+    localparam FALL = 3'h3;
+    localparam DONE = 3'h4;
     
-    reg [1:0]   state, next_state;  
+    reg [2:0]   state, next_state;  
     
     
     // 4-cycle delay for propagation
@@ -109,7 +109,7 @@ module PDM_reader (
             
             FALL: begin
                 if (delay_count == 3) begin
-                    next_state = IDLE;
+                    next_state = DONE;
                     next_delay_count = 0;
                 end else begin
                     next_delay_count = delay_count + 1;
@@ -141,9 +141,9 @@ module PDM_reader (
     end
     
     assign m00_axis_tvalid  = state == DONE;
-    assign m00_axis_tdata   = data_d[1:0];  // CIC takes 2 bit 2s comp signed
+    assign m00_axis_tdata   = {6'b0, data_d[1:0]};  // CIC takes 2 bit 2s comp signed
     
     assign m01_axis_tvalid  = state == DONE;
-    assign m01_axis_tdata   = data_d[3:2];
+    assign m01_axis_tdata   = {6'b0, data_d[3:2]};
     
 endmodule

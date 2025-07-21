@@ -1,0 +1,9 @@
+verilog xil_defaultlib -i "../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" --include "C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
+"../../../bd/PDM_to_PCM/ip/PDM_to_PCM_PDM_reader_0_0/sim/PDM_to_PCM_PDM_reader_0_0.v" \
+"../../../bd/PDM_to_PCM/ip/PDM_to_PCM_round_and_saturate_0_0/sim/PDM_to_PCM_round_and_saturate_0_0.v" \
+"../../../bd/PDM_to_PCM/sim/PDM_to_PCM.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,33 +1,119 @@
-Vivado Simulator v2024.2.2
+Vivado Simulator v2025.1.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_1 -L axis_data_fifo_v2_0_16 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_mic_sampler_behav xil_defaultlib.tb_mic_sampler xil_defaultlib.glbl -log elaborate.log 
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_14 -L axi_utils_v2_0_10 -L cic_compiler_v4_0_21 -L xbip_pipe_v3_0_10 -L fir_compiler_v7_2_24 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PDM_to_PCM_testbench_behav xil_defaultlib.PDM_to_PCM_testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv:81]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:78]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:84]
 Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 81, File C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
-Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
-Compiling module axis_infrastructure_v1_1_1.axis_infrastructure_v1_1_1_util_...
-Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
-Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
-Compiling module xpm.xpm_fifo_reg_bit
-Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
-Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=8...
-Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
-Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
-Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=2...
-Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=256,TDA...
-Compiling module axis_data_fifo_v2_0_16.axis_data_fifo_v2_0_16_top(C_FAM...
-Compiling module xil_defaultlib.sim_mic_dma_axis_data_fifo_0_0
-Compiling module xil_defaultlib.clk_div_default
-Compiling module xil_defaultlib.mic_sampler_default
-Compiling module xil_defaultlib.sim_mic_dma_mic_sampler_0_0
-Compiling module xil_defaultlib.sim_mic_dma
-Compiling module xil_defaultlib.sim_mic_dma_wrapper
-Compiling module xil_defaultlib.tb_mic_sampler
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cic_compiler_v4_0_21.cic_compiler_v4_0_21_viv_comp
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.math_real
+Compiling package xbip_utils_v3_0_14.xbip_utils_v3_0_14_pkg
+Compiling package ieee.std_logic_textio
+Compiling package unisim.vcomponents
+Compiling package cic_compiler_v4_0_21.toolbox_pkg
+Compiling package cic_compiler_v4_0_21.cic_compiler_v4_0_21_pkg
+Compiling package cic_compiler_v4_0_21.cic_compiler_v4_0_21_hdl_comps
+Compiling package axi_utils_v2_0_10.global_util_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package fir_compiler_v7_2_24.fir_compiler_v7_2_24_viv_comp
+Compiling package fir_compiler_v7_2_24.globals_pkg
+Compiling package fir_compiler_v7_2_24.components
+Compiling module xil_defaultlib.PDM_reader
+Compiling module xil_defaultlib.PDM_to_PCM_PDM_reader_0_0
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=1,family=(p_dsp...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,dreg=0,inmodere...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=0,family=(p_dsp...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=0,family=(p_dsp...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.emb_calc [\emb_calc(param=((p_dsp48e1,fals...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay_bit [\delay_bit(delay_len=0,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=0,family=(p_dsp...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay_bit [\delay_bit(delay_len=2,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=3,family=(p_dsp...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay_bit [\delay_bit(delay_len=7,family=(p...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.int_comb_stage_folded [\int_comb_stage_folded(c_int_or_...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.int_comb_section [\int_comb_section(c_int_or_comb=...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay_bit [\delay_bit(delay_len=1,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay_bit [\delay_bit(delay_len=0,family=(p...]
+Compiling architecture struct_all of entity cic_compiler_v4_0_21.delay [\delay(delay_len=1,family=(p_dsp...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.int_comb_stage_folded [\int_comb_stage_folded(c_int_or_...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.int_comb_section [\int_comb_section(c_int_or_comb=...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.decimate [\decimate(c_num_stages=5,c_rate=...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.cic_compiler_v4_0_21_viv [\cic_compiler_v4_0_21_viv(c_comp...]
+Compiling architecture xilinx of entity cic_compiler_v4_0_21.cic_compiler_v4_0_21 [\cic_compiler_v4_0_21(c_componen...]
+Compiling architecture pdm_to_pcm_cic_compiler_0_0_arch of entity xil_defaultlib.PDM_to_PCM_cic_compiler_0_0 [pdm_to_pcm_cic_compiler_0_0_defa...]
+Compiling architecture synth of entity cic_compiler_v4_0_21.cic_compiler_v4_0_21_viv [\cic_compiler_v4_0_21_viv(c_comp...]
+Compiling architecture xilinx of entity cic_compiler_v4_0_21.cic_compiler_v4_0_21 [\cic_compiler_v4_0_21(c_componen...]
+Compiling architecture pdm_to_pcm_cic_compiler_1_0_arch of entity xil_defaultlib.PDM_to_PCM_cic_compiler_1_0 [pdm_to_pcm_cic_compiler_1_0_defa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.addsub_mult_accum [\addsub_mult_accum(c_xdevicefami...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.ext_mult [\ext_mult(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.fir_compiler_v7_2_24_viv [\fir_compiler_v7_2_24_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_24.fir_compiler_v7_2_24 [\fir_compiler_v7_2_24(c_xdevicef...]
+Compiling architecture pdm_to_pcm_fir_compiler_0_0_arch of entity xil_defaultlib.PDM_to_PCM_fir_compiler_0_0 [pdm_to_pcm_fir_compiler_0_0_defa...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_24.fir_compiler_v7_2_24_viv [\fir_compiler_v7_2_24_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_24.fir_compiler_v7_2_24 [\fir_compiler_v7_2_24(c_xdevicef...]
+Compiling architecture pdm_to_pcm_fir_compiler_1_0_arch of entity xil_defaultlib.PDM_to_PCM_fir_compiler_1_0 [pdm_to_pcm_fir_compiler_1_0_defa...]
+Compiling module xil_defaultlib.round_and_saturate_default
+Compiling module xil_defaultlib.PDM_to_PCM_round_and_saturate_0_...
+Compiling module xil_defaultlib.PDM_to_PCM
+Compiling module xil_defaultlib.PDM_to_PCM_wrapper
+Compiling module xil_defaultlib.PDM_to_PCM_testbench
+WARNING: [XSIM 43-3373] "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv" Line 84. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_mic_sampler_behav
+Built simulation snapshot PDM_to_PCM_testbench_behav

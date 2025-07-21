@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_mic_sampler_behav/xsimk.exe -simmode gui -wdb tb_mic_sampler_behav.wdb -simrunnum 0 -socket 62598
-Design successfully loaded
-Design Loading Memory Usage: 29368 KB (Peak: 29368 KB)
-Design Loading CPU Usage: 827 ms
-Simulation completed
-Simulation Memory Usage: 30856 KB (Peak: 30856 KB)
-Simulation CPU Usage: 937 ms

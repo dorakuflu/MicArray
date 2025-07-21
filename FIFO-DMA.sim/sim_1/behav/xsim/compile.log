@@ -1,16 +1,14 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/new/clk_div.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module clk_div
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/new/mic_sampler.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mic_sampler
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/sim_mic_dma/ip/sim_mic_dma_axis_data_fifo_0_0_1/sim/sim_mic_dma_axis_data_fifo_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_mic_dma_axis_data_fifo_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/sim_mic_dma/ip/sim_mic_dma_mic_sampler_0_0_1/sim/sim_mic_dma_mic_sampler_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_mic_dma_mic_sampler_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/sim_mic_dma/sim/sim_mic_dma.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_mic_dma
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/sim_mic_dma/hdl/sim_mic_dma_wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module sim_mic_dma_wrapper
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/new/tb_mic_sampler.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_mic_sampler
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/imports/new/PDM_reader.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_reader
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/imports/new/round_and_saturate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module round_and_saturate
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_PDM_reader_0_0/sim/PDM_to_PCM_PDM_reader_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_to_PCM_PDM_reader_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/ip/PDM_to_PCM_round_and_saturate_0_0/sim/PDM_to_PCM_round_and_saturate_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_to_PCM_round_and_saturate_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_to_PCM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/PDM_to_PCM/hdl/PDM_to_PCM_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_to_PCM_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PDM_to_PCM_testbench
