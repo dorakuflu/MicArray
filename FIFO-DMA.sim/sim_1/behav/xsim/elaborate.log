@@ -5,11 +5,11 @@ Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv:81]
-WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:78]
-WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:84]
+WARNING: [VRFC 10-8967] first argument of $fatal is invalid; expected 0, 1 or 2 [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv:83]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:82]
+WARNING: [VRFC 10-5021] port 's_axis_data_tready' is not connected on this instance [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.ip_user_files/bd/PDM_to_PCM/sim/PDM_to_PCM.v:88]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 81, File C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 83, File C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
@@ -114,6 +114,6 @@ Compiling module xil_defaultlib.PDM_to_PCM_round_and_saturate_0_...
 Compiling module xil_defaultlib.PDM_to_PCM
 Compiling module xil_defaultlib.PDM_to_PCM_wrapper
 Compiling module xil_defaultlib.PDM_to_PCM_testbench
-WARNING: [XSIM 43-3373] "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv" Line 84. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+WARNING: [XSIM 43-3373] "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sim_1/imports/Downloads/PDM_to_PCM_testbench.sv" Line 86. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot PDM_to_PCM_testbench_behav

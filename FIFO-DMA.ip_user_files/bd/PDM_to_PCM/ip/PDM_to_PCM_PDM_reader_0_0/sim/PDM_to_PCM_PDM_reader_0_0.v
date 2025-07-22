@@ -57,6 +57,7 @@
 module PDM_to_PCM_PDM_reader_0_0 (
   clk_100MHz,
   resetn,
+  SW,
   clk_pdm,
   beat_pdm,
   m00_axis_tready,
@@ -75,6 +76,7 @@ input wire clk_100MHz;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 input wire resetn;
+input wire SW;
 input wire clk_pdm;
 input wire beat_pdm;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m00_axis TREADY" *)
@@ -97,6 +99,7 @@ output wire [7 : 0] m01_axis_tdata;
   PDM_reader inst (
     .clk_100MHz(clk_100MHz),
     .resetn(resetn),
+    .SW(SW),
     .clk_pdm(clk_pdm),
     .beat_pdm(beat_pdm),
     .m00_axis_tready(m00_axis_tready),

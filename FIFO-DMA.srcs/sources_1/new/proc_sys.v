@@ -36,7 +36,7 @@ module proc_sys #(
     (* X_INTERFACE_PARAMETER = "FREQ_HZ 3840000" *)
     input                               pdm_clk,
     
-    input                               SW,
+    input                               SW, // Onboard switch
     input   [MIC_NUM-1:0]               mic_array,
     
     input                       m_axis_tready,
@@ -75,6 +75,7 @@ module proc_sys #(
             assign proc_mic_array[(2*i+1)*DATA_WIDTH +: DATA_WIDTH] = data_fall;
             
             PDM_to_PCM_wrapper input_pipeline (
+                .SW(SW),
                 .clk100Mhz(sys_clk),
                 .clk_pdm(pdm_clk),
                 .data_fall(data_fall),
@@ -96,7 +97,6 @@ module proc_sys #(
         .m_axis_tready(m_axis_tready),
         .m_axis_tvalid(m_axis_tvalid),
         .m_axis_tdata(m_axis_tdata),
-        .m_axis_tlast(m_axis_tlast),
-        .SW(SW)
+        .m_axis_tlast(m_axis_tlast)
     );
 endmodule

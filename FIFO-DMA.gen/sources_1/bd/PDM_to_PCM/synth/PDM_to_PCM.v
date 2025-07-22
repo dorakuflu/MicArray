@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Mon Jul 21 17:00:18 2025
+//Date        : Tue Jul 22 19:44:51 2025
 //Host        : DK-SLS running 64-bit major release  (build 9200)
 //Command     : generate_target PDM_to_PCM.bd
 //Design      : PDM_to_PCM
@@ -12,7 +12,8 @@
 
 (* CORE_GENERATION_INFO = "PDM_to_PCM,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=PDM_to_PCM,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "PDM_to_PCM.hwdef" *) 
 module PDM_to_PCM
-   (clk_100MHz,
+   (SW,
+    clk_100MHz,
     clk_pdm,
     data_fall,
     data_rise,
@@ -20,6 +21,7 @@ module PDM_to_PCM
     resetn,
     valid_fall,
     valid_rise);
+  input SW;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, ASSOCIATED_RESET resetn, CLK_DOMAIN PDM_to_PCM_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   input clk_pdm;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.DATA_FALL DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.DATA_FALL, LAYERED_METADATA undef" *) output [31:0]data_fall;
@@ -35,6 +37,7 @@ module PDM_to_PCM
   wire [7:0]PDM_reader_0_m01_axis_TDATA;
   wire PDM_reader_0_m01_axis_TREADY;
   wire PDM_reader_0_m01_axis_TVALID;
+  wire SW;
   wire [31:0]cic_compiler_0_M_AXIS_DATA_TDATA;
   wire cic_compiler_0_M_AXIS_DATA_TVALID;
   wire [31:0]cic_compiler_1_M_AXIS_DATA_TDATA;
@@ -51,7 +54,8 @@ module PDM_to_PCM
   wire valid_rise;
 
   PDM_to_PCM_PDM_reader_0_0 PDM_reader_0
-       (.beat_pdm(pdm_pin),
+       (.SW(SW),
+        .beat_pdm(pdm_pin),
         .clk_100MHz(clk_100MHz),
         .clk_pdm(clk_pdm),
         .m00_axis_tdata(PDM_reader_0_m00_axis_TDATA),

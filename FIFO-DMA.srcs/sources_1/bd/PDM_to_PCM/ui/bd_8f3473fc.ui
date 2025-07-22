@@ -1,40 +1,42 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-964,-62",
+   "Default View_TopLeft":"147,-42",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port port-id_clk_pdm -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace port port-id_pdm_pin -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_clk_pdm -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_pdm_pin -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
 preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
-preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_valid_rise -pg 1 -lvl 3 -x 800 -y 140 -defaultsOSRD
-preplace port port-id_valid_fall -pg 1 -lvl 3 -x 800 -y 110 -defaultsOSRD
-preplace portBus data_rise -pg 1 -lvl 3 -x 800 -y 50 -defaultsOSRD
-preplace portBus data_fall -pg 1 -lvl 3 -x 800 -y 80 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_valid_rise -pg 1 -lvl 3 -x 790 -y 140 -defaultsOSRD
+preplace port port-id_valid_fall -pg 1 -lvl 3 -x 790 -y 110 -defaultsOSRD
+preplace port port-id_SW -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus data_rise -pg 1 -lvl 3 -x 790 -y 50 -defaultsOSRD
+preplace portBus data_fall -pg 1 -lvl 3 -x 790 -y 80 -defaultsOSRD
 preplace inst PDM_reader_0 -pg 1 -lvl 1 -x 240 -y 90 -defaultsOSRD
-preplace inst cic_compiler_0 -pg 1 -lvl 1 -x 240 -y 230 -defaultsOSRD
-preplace inst fir_compiler_0 -pg 1 -lvl 1 -x 240 -y 480 -defaultsOSRD
-preplace inst cic_compiler_1 -pg 1 -lvl 1 -x 240 -y 350 -defaultsOSRD
-preplace inst fir_compiler_1 -pg 1 -lvl 1 -x 240 -y 620 -defaultsOSRD
+preplace inst cic_compiler_0 -pg 1 -lvl 1 -x 240 -y 240 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 1 -x 240 -y 490 -defaultsOSRD
+preplace inst cic_compiler_1 -pg 1 -lvl 1 -x 240 -y 360 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 1 -x 240 -y 630 -defaultsOSRD
 preplace inst round_and_saturate_0 -pg 1 -lvl 2 -x 630 -y 60 -defaultsOSRD
 preplace netloc clk_100MHz_0_1 1 0 1 40 50n
-preplace netloc clk_pdm_0_1 1 0 1 50 20n
+preplace netloc clk_pdm_0_1 1 0 1 N 110
 preplace netloc fir_compiler_0_m_axis_data_tdata 1 1 1 440 50n
 preplace netloc fir_compiler_0_m_axis_data_tvalid 1 1 2 460 140 NJ
 preplace netloc fir_compiler_1_m_axis_data_tdata 1 1 1 450 70n
 preplace netloc fir_compiler_1_m_axis_data_tvalid 1 1 2 470 130 770J
-preplace netloc pdm_pin_0_1 1 0 1 N 120
-preplace netloc resetn_1 1 0 1 N 80
+preplace netloc pdm_pin_0_1 1 0 1 N 130
+preplace netloc resetn_1 1 0 1 N 70
 preplace netloc round_and_saturate_0_out_fall 1 2 1 770 70n
 preplace netloc round_and_saturate_0_out_rise 1 2 1 N 50
-preplace netloc PDM_reader_0_m00_axis 1 0 2 70 0 410
-preplace netloc PDM_reader_0_m01_axis 1 0 2 70 700 430
-preplace netloc cic_compiler_0_M_AXIS_DATA 1 0 2 60 710 420
-preplace netloc cic_compiler_1_M_AXIS_DATA 1 0 2 50 720 410
-levelinfo -pg 1 0 240 630 800
-pagesize -pg 1 -db -bbox -sgen -130 -10 960 750
+preplace netloc SW_1 1 0 1 N 90
+preplace netloc PDM_reader_0_m00_axis 1 0 2 70 -10 410
+preplace netloc PDM_reader_0_m01_axis 1 0 2 70 710 430
+preplace netloc cic_compiler_0_M_AXIS_DATA 1 0 2 60 720 420
+preplace netloc cic_compiler_1_M_AXIS_DATA 1 0 2 50 730 410
+levelinfo -pg 1 0 240 630 790
+pagesize -pg 1 -db -bbox -sgen -130 -20 960 790
 "
 }
 0

@@ -2730,9 +2730,6 @@
           },
           "mic_valid_in": {
             "direction": "I"
-          },
-          "SW": {
-            "direction": "I"
           }
         }
       },
@@ -2886,8 +2883,7 @@
     "nets": {
       "SW_1": {
         "ports": [
-          "SW",
-          "mic_sampler_0/SW"
+          "SW"
         ]
       },
       "fifo_generator_0_axis_data_count": {

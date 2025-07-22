@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3489A0E8B21F136B",
+      "boundary_crc": "0xB448A6932C31685A",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FIFO-DMA.gen/sources_1/bd/PDM_to_PCM",
       "name": "PDM_to_PCM",
@@ -97,6 +97,9 @@
       },
       "valid_fall": {
         "direction": "O"
+      },
+      "SW": {
+        "direction": "I"
       }
     },
     "components": {
@@ -264,6 +267,9 @@
                 "value_src": "constant"
               }
             }
+          },
+          "SW": {
+            "direction": "I"
           },
           "clk_pdm": {
             "direction": "I"
@@ -526,6 +532,12 @@
       }
     },
     "nets": {
+      "SW_1": {
+        "ports": [
+          "SW",
+          "PDM_reader_0/SW"
+        ]
+      },
       "clk_100MHz_0_1": {
         "ports": [
           "clk_100MHz",

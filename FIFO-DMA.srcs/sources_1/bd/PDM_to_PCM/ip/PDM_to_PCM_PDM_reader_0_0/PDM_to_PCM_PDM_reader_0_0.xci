@@ -38,6 +38,7 @@
       "ports": {
         "clk_100MHz": [ { "direction": "in" } ],
         "resetn": [ { "direction": "in" } ],
+        "SW": [ { "direction": "in" } ],
         "clk_pdm": [ { "direction": "in" } ],
         "beat_pdm": [ { "direction": "in" } ],
         "m00_axis_tready": [ { "direction": "in", "driver_value": "1" } ],

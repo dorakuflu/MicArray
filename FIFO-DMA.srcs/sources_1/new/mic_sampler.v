@@ -42,10 +42,7 @@ module mic_sampler #(
     input                       m_axis_tready,
     output wire                 m_axis_tvalid,
     output wire [BUS_WIDTH-1:0] m_axis_tdata,
-//    output logic    [BUS_WIDTH/8-1:0]           m_axis_tstrb,
-    output wire                 m_axis_tlast,
-    
-    input                       SW
+    output wire                 m_axis_tlast
 );
     
     localparam CYCLES = (MIC_NUM*DATA_WIDTH + BUS_WIDTH - 1) / BUS_WIDTH; // default 50
@@ -60,24 +57,14 @@ module mic_sampler #(
     reg [$clog2(MIC_NUM+1)-1:0]   cnt, next_cnt;
     
     reg [DATA_WIDTH-1:0]            frame_cnt;
+    wire [DATA_WIDTH-1:0]            frame_num;
+    
+    assign frame_num = mic_valid_in ? frame_cnt : 32'hFFFF_FFFF;
+    
     reg [$clog2(PACKET_SIZE)-1:0]   packet_cnt;
     
     reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;  
     reg                                 mic_valid;
-    
-//    // Mock mic data
-//    wire                                mic_data_start;
-//    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;
-    
-//    integer i;
-//    always @(posedge s_axis_aclk) begin // synthetic mic_data generation
-//        for (i = 0; i < MIC_NUM; i = i+1) begin
-//            mic_data[i*DATA_WIDTH +: DATA_WIDTH] <= i;
-//        end
-//    end
-    
-//    assign mic_data_start = SW;
-//    //
     
     
     always @(*) begin
@@ -141,8 +128,7 @@ module mic_sampler #(
     
     
     assign m_axis_tvalid    = (state == SEND || state == LAST);   
-    assign m_axis_tdata     = (state == LAST) ? {32'hFFFF_FFFF, frame_cnt} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
-//    assign m_axis_tstrb     = m_axis_tvalid ? {BUS_WIDTH/8{1'b1}} : {BUS_WIDTH/8{1'b0}};
+    assign m_axis_tdata     = (state == LAST) ? {32'h0, frame_num} : mic_data[cnt * BUS_WIDTH +: BUS_WIDTH];
     assign m_axis_tlast     = (state == LAST) && (packet_cnt == PACKET_SIZE - 1);
     
 endmodule

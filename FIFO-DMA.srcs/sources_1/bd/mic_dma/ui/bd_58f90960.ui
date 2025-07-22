@@ -1,45 +1,45 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.689188",
-   "Default View_TopLeft":"-1148,-985",
+   "Default View_TopLeft":"-241,-953",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 2260 -y -170 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 2260 -y -140 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 2270 -y -170 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 2270 -y -140 -defaultsOSRD
 preplace port port-id_SW -pg 1 -lvl 0 -x -100 -y -610 -defaultsOSRD
-preplace port port-id_clk_7p68M -pg 1 -lvl 5 -x 2260 -y -470 -defaultsOSRD
-preplace port port-id_clk_3p84M -pg 1 -lvl 5 -x 2260 -y -580 -defaultsOSRD
+preplace port port-id_clk_7p68M -pg 1 -lvl 5 -x 2270 -y -470 -defaultsOSRD
+preplace port port-id_clk_3p84M -pg 1 -lvl 5 -x 2270 -y -580 -defaultsOSRD
 preplace portBus mic_array -pg 1 -lvl 0 -x -100 -y -470 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -x 1400 -y -110 -defaultsOSRD
 preplace inst dma -pg 1 -lvl 1 -x 560 -y -100 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 1820 -y -330 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1820 -y 10 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1820 -y -540 -defaultsOSRD
-preplace inst axi_mem_intercon_1 -pg 1 -lvl 3 -x 1820 -y -770 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 1830 -y -330 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1830 -y 10 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 1830 -y -540 -defaultsOSRD
+preplace inst axi_mem_intercon_1 -pg 1 -lvl 3 -x 1830 -y -770 -defaultsOSRD
 preplace inst fifo_generator_0 -pg 1 -lvl 1 -x 560 -y -410 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 2140 -y -460 -defaultsOSRD
-preplace inst clk_div_0 -pg 1 -lvl 4 -x 2140 -y -580 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 2150 -y -460 -defaultsOSRD
+preplace inst clk_div_0 -pg 1 -lvl 4 -x 2150 -y -580 -defaultsOSRD
 preplace inst proc_sys_0 -pg 1 -lvl 1 -x 560 -y -690 -defaultsOSRD
-preplace netloc clk_div_0_divclk 1 0 5 400 -890 N -890 N -890 N -890 2240
-preplace netloc clk_wiz_0_clk_out1 1 3 2 2040 -390 2240
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 380 -240 1170 -260 1620 -420 2030
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 1630 -410 2020
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 360 -270 NJ -270 1650J -220 1990
 preplace netloc SW_1 1 0 1 -80 -670n
+preplace netloc clk_div_0_divclk 1 0 5 390 -890 N -890 N -890 N -890 2250
+preplace netloc clk_wiz_0_clk_out1 1 3 2 2050 -390 2250
 preplace netloc mic_array_1 1 0 1 -70 -650n
-preplace netloc axi_mem_intercon_1_M00_AXI 1 1 3 1180 -250 NJ -250 2010J
-preplace netloc axi_mem_intercon_M00_AXI 1 1 3 1190 -240 NJ -240 2000J
-preplace netloc axi_smc_M00_AXI 1 0 4 400 -230 NJ -230 NJ -230 1990J
-preplace netloc dma_M_AXI_MM2S 1 1 2 740J -600 NJ
-preplace netloc dma_M_AXI_S2MM 1 1 2 730J -830 NJ
-preplace netloc fifo_generator_0_M_AXIS 1 0 2 390 -490 720
-preplace netloc processing_system7_0_DDR 1 2 3 NJ -160 N -160 2240
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 370 -240 1150 -260 1630 -420 2040
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 1640 -410 2030
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 350 -270 NJ -270 1660J -220 2000
+preplace netloc axi_mem_intercon_1_M00_AXI 1 1 3 1160 -250 NJ -250 2020J
+preplace netloc axi_mem_intercon_M00_AXI 1 1 3 1170 -240 NJ -240 2010J
+preplace netloc axi_smc_M00_AXI 1 0 4 390 -230 NJ -230 NJ -230 2000J
+preplace netloc dma_M_AXI_MM2S 1 1 2 750J -600 NJ
+preplace netloc dma_M_AXI_S2MM 1 1 2 740J -830 NJ
+preplace netloc fifo_generator_0_M_AXIS 1 0 2 380 -490 730
+preplace netloc proc_sys_0_m_axis 1 0 2 360 -790 730
+preplace netloc processing_system7_0_DDR 1 2 3 NJ -160 N -160 2250
 preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ -140 N -140 N
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 1640J -350n
-preplace netloc proc_sys_0_m_axis 1 0 2 370 -790 720
-levelinfo -pg 1 -100 560 1400 1820 2140 2260
-pagesize -pg 1 -db -bbox -sgen -240 -970 2580 300
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 1650J -350n
+levelinfo -pg 1 -100 560 1400 1830 2150 2270
+pagesize -pg 1 -db -bbox -sgen -250 -970 2580 300
 "
 }
 {

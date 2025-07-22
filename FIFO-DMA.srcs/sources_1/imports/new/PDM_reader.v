@@ -28,24 +28,25 @@ module PDM_reader (
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input wire resetn,
     
-    input wire clk_pdm,     // PDM Clock
-    input wire beat_pdm,    // PDM GPIO pin
+    input       SW,         // Onboard switch
+    input wire  clk_pdm,    // PDM Clock
+    input wire  beat_pdm,   // PDM GPIO pin
     
     // PDM out rising
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m00_axis TREADY" *)
-    input               m00_axis_tready,
+    input                       m00_axis_tready,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m00_axis TVALID" *)
-    output wire         m00_axis_tvalid,
+    output wire                 m00_axis_tvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m00_axis TDATA" *)
-    output wire [7:0]   m00_axis_tdata,
+    output wire signed  [7:0]   m00_axis_tdata,
     
     // PDM out falling
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m01_axis TREADY" *)
-    input               m01_axis_tready,
+    input                       m01_axis_tready,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m01_axis TVALID" *)
-    output wire         m01_axis_tvalid,
+    output wire                 m01_axis_tvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m01_axis TDATA" *)
-    output wire [7:0]   m01_axis_tdata
+    output wire signed  [7:0]   m01_axis_tdata
 );
 
 
@@ -66,19 +67,23 @@ module PDM_reader (
 
 
     // FSM States
+    reg [2:0]   state, next_state;
+    
     localparam IDLE = 3'h0;
     localparam RISE = 3'h1;
     localparam WAIT = 3'h2;  
     localparam FALL = 3'h3;
-    localparam DONE = 3'h4;
-    
-    reg [2:0]   state, next_state;  
+    localparam DONE = 3'h4; 
     
     
     // 4-cycle delay for propagation
     reg [2:0] delay_count, next_delay_count;
- 
-    reg [3:0] data_d;
+    
+    // Internal signals
+    reg [1:0]   data_d;
+    wire        send_ready;
+    
+    assign send_ready = (state == DONE) && m00_axis_tready && m01_axis_tready;
 
 
     always @(*) begin
@@ -87,7 +92,7 @@ module PDM_reader (
         
         case (state)
             IDLE: begin
-                if (clk_pdm_rising && m00_axis_tready) begin
+                if (clk_pdm_rising && SW) begin
                     next_state = RISE;
                 end
             end
@@ -102,7 +107,7 @@ module PDM_reader (
             end
             
             WAIT: begin
-                if (clk_pdm_falling && m01_axis_tready) begin
+                if (clk_pdm_falling) begin
                     next_state = FALL;
                 end
             end
@@ -117,7 +122,9 @@ module PDM_reader (
             end
             
             DONE: begin
-                next_state = IDLE;
+                if (send_ready) begin
+                    next_state = IDLE;
+                end
             end
         endcase
     end
@@ -133,17 +140,17 @@ module PDM_reader (
             delay_count <= next_delay_count;
             
             if (state == RISE && delay_count == 3) begin
-                data_d  <= {2'b0, (beat_pdm == 0) ? 2'b11 : 2'b01};
+                data_d  <= {1'b0, beat_pdm};
             end else if (state == FALL && delay_count == 3) begin
-                data_d  <= {(beat_pdm == 0) ? 2'b11 : 2'b01, data_d[1:0]}; 
+                data_d  <= {beat_pdm, data_d[0]}; 
             end
         end
     end
     
-    assign m00_axis_tvalid  = state == DONE;
-    assign m00_axis_tdata   = {6'b0, data_d[1:0]};  // CIC takes 2 bit 2s comp signed
+    assign m00_axis_tvalid  = send_ready;
+    assign m00_axis_tdata   = (data_d[0] == 0) ? -1 : 1;
     
-    assign m01_axis_tvalid  = state == DONE;
-    assign m01_axis_tdata   = {6'b0, data_d[3:2]};
+    assign m01_axis_tvalid  = send_ready;
+    assign m01_axis_tdata   = (data_d[1] == 0) ? -1 : 1;
     
 endmodule

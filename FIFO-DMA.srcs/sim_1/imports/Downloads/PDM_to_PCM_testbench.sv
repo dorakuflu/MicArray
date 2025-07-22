@@ -25,8 +25,9 @@ module PDM_to_PCM_testbench;
     // Inputs
     reg clk_100MHz = 0;
     reg resetn = 0;
+    reg SW = 0;
     reg clk_pdm = 0;
-    reg pdm_pin = 0;
+    reg pdm_pin;
 
     // Outputs
     // wire [29:0] M_AXIS_DATA_0_tdata;
@@ -50,6 +51,7 @@ module PDM_to_PCM_testbench;
 //    );
 
     PDM_to_PCM_wrapper dut (
+        .SW(SW),
         .clk_100MHz(clk_100MHz),
         .clk_pdm(clk_pdm),
         .data_fall(data_fall),
@@ -71,7 +73,7 @@ module PDM_to_PCM_testbench;
     reg [8*16:1] line;
     integer value;
     integer i = 0;
-    integer sample_idx = 0;
+    integer sample_idx;
     integer j;
 
     // Read PDM input file
@@ -92,28 +94,28 @@ module PDM_to_PCM_testbench;
             @(posedge clk_100MHz);
         end
         resetn = 1;
+        SW = 1; // Enable valid data generation
         
 //        #10000000; // 0.01s (length o finput file)
-        #10000
+        #500000
         $finish;     
     end
 
     // Feed input data into pdm_pin
     always @(posedge clk_pdm) begin
-        if (sample_idx <= `INPUTDATA_LEN) begin
-            pdm_pin <= (sample_buf[sample_idx] == -1) ? 1'b0 : 1'b1;
-            sample_idx <= sample_idx + 1;
+        if (!resetn) begin
+            pdm_pin <= 0;
+            sample_idx <= 0;
         end else begin
-            pdm_pin <= 1'b0;
+            if (sample_idx <= `INPUTDATA_LEN) begin
+                pdm_pin <= (sample_buf[sample_idx] == -1) ? 1'b0 : 1'b1;
+                sample_idx <= sample_idx + 1;
+            end else begin
+                pdm_pin <= 1'b0;
+            end
         end
     end
 
-    // Monitor output
-//    always @(posedge clk_100MHz) begin
-//        if (M_AXIS_DATA_0_tvalid) begin
-//            $display("Time: %0t | PCM Output = %d", $time, M_AXIS_DATA_0_tdata);
-//        end
-//    end
     always @(posedge clk_100MHz) begin
         if (valid_fall) begin
             $display("Time: %0t | PCM Output = %d", $time, data_fall);

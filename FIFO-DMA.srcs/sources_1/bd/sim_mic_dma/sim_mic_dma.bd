@@ -196,9 +196,6 @@
           },
           "mic_valid_in": {
             "direction": "I"
-          },
-          "SW": {
-            "direction": "I"
           }
         }
       }
