@@ -1,7 +1,0 @@
-Running: xsim.dir/PDM_to_PCM_testbench_behav/xsimk.exe -simmode gui -wdb PDM_to_PCM_testbench_behav.wdb -simrunnum 0 -socket 53708
-Design successfully loaded
-Design Loading Memory Usage: 13376 KB (Peak: 13376 KB)
-Design Loading CPU Usage: 61 ms
-Simulation completed
-Simulation Memory Usage: 29456 KB (Peak: 29456 KB)
-Simulation CPU Usage: 352109 ms

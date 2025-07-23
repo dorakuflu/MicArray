@@ -487,14 +487,14 @@
             "left": "47",
             "right": "0"
           },
-          "out_rise": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
           "in_fall": {
             "direction": "I",
             "left": "47",
+            "right": "0"
+          },
+          "out_rise": {
+            "direction": "O",
+            "left": "31",
             "right": "0"
           },
           "out_fall": {

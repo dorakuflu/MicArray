@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="685.000001 us"></ZoomEndTime>
+      <ZoomEndTime time="796.781096 us"></ZoomEndTime>
       <Cursor1Time time="500.195000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="250"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wvobject fp_name="/PDM_to_PCM_testbench/clk_100MHz" type="logic">
@@ -54,7 +54,6 @@
    <wvobject fp_name="/PDM_to_PCM_testbench/data_fall" type="array">
       <obj_property name="ElementShortName">data_fall[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_fall[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/PDM_to_PCM_testbench/dut/PDM_to_PCM_i/fir_compiler_0/m_axis_data_tdata" type="array">
       <obj_property name="ElementShortName">m_axis_data_tdata[47:0]</obj_property>

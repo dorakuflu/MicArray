@@ -8,13 +8,13 @@
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/PDM_to_PCM/ip/PDM_to_PCM_round_and_saturate_0_0",
     "parameters": {
       "component_parameters": {
-        "N": [ { "value": "48", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "M": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "INPUT_WIDTH": [ { "value": "48", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "OUTPUT_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "PDM_to_PCM_round_and_saturate_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "N": [ { "value": "48", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "M": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "INPUT_WIDTH": [ { "value": "48", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "OUTPUT_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -43,8 +43,8 @@
     "boundary": {
       "ports": {
         "in_rise": [ { "direction": "in", "size_left": "47", "size_right": "0" } ],
-        "out_rise": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "in_fall": [ { "direction": "in", "size_left": "47", "size_right": "0" } ],
+        "out_rise": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "out_fall": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
       }
     }

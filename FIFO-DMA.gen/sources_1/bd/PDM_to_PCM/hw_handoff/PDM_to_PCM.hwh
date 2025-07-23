@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 22 19:44:54 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 22 22:06:30 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="PDM_to_PCM" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -911,8 +911,8 @@
     <MODULE COREREVISION="1" FULLNAME="/round_and_saturate_0" HWVERSION="1.0" INSTANCE="round_and_saturate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="round_and_saturate" VLNV="xilinx.com:module_ref:round_and_saturate:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="M" VALUE="32"/>
-        <PARAMETER NAME="N" VALUE="48"/>
+        <PARAMETER NAME="INPUT_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="OUTPUT_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="PDM_to_PCM_round_and_saturate_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

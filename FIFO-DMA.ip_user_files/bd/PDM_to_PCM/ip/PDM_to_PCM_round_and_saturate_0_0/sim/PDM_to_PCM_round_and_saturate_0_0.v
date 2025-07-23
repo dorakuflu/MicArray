@@ -56,23 +56,23 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module PDM_to_PCM_round_and_saturate_0_0 (
   in_rise,
-  out_rise,
   in_fall,
+  out_rise,
   out_fall
 );
 
 input wire [47 : 0] in_rise;
-output wire [31 : 0] out_rise;
 input wire [47 : 0] in_fall;
+output wire [31 : 0] out_rise;
 output wire [31 : 0] out_fall;
 
   round_and_saturate #(
-    .N(48),
-    .M(32)
+    .INPUT_WIDTH(48),
+    .OUTPUT_WIDTH(32)
   ) inst (
     .in_rise(in_rise),
-    .out_rise(out_rise),
     .in_fall(in_fall),
+    .out_rise(out_rise),
     .out_fall(out_fall)
   );
 endmodule
