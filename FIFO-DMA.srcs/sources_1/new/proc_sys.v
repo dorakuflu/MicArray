@@ -37,7 +37,7 @@ module proc_sys #(
     input                               pdm_clk,
     
     input                               SW, // Onboard switch
-    input   [MIC_NUM-1:0]               mic_array,
+    input   [(MIC_NUM/2)-1:0]           mic_array,
     
     input                       m_axis_tready,
     output wire                 m_axis_tvalid,
@@ -58,8 +58,8 @@ module proc_sys #(
         valid = 1;
         
         for (j = 0; j < MIC_NUM; j=j+1) begin
-            ready = ready | proc_valid[i];  
-            valid = valid & proc_valid[i];  
+            ready = ready | proc_valid[j];  
+            valid = valid & proc_valid[j];  
         end
     end
     
@@ -76,7 +76,7 @@ module proc_sys #(
             
             PDM_to_PCM_wrapper input_pipeline (
                 .SW(SW),
-                .clk100Mhz(sys_clk),
+                .clk_100MHz(sys_clk),
                 .clk_pdm(pdm_clk),
                 .data_fall(data_fall),
                 .data_rise(data_rise),

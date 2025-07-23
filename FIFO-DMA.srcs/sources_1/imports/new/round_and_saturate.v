@@ -19,10 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// This module converts the bit width of two signed integers using the highest
-// accuracy method: saturation with "round half to even" rounding. This is ideal
-// for DSP applications where minimizing bias and cumulative error is critical.
-// The input width is expected to be greater than or equal to the output width.
+
 // This module converts the bit width of two signed integers using the highest
 // accuracy method: saturation with "round half to even" rounding. This is ideal
 // for DSP applications where minimizing bias and cumulative error is critical.

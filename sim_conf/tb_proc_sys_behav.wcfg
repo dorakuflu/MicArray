@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_proc_sys_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_proc_sys" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="6.250001 us"></ZoomEndTime>
+      <Cursor1Time time="0.745000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="209"></NameColumnWidth>
+      <ValueColumnWidth column_width="197"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/tb_proc_sys/clk_100MHz" type="logic">
+      <obj_property name="ElementShortName">clk_100MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/resetn" type="logic">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/SW" type="logic">
+      <obj_property name="ElementShortName">SW</obj_property>
+      <obj_property name="ObjectShortName">SW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/clk_pdm" type="logic">
+      <obj_property name="ElementShortName">clk_pdm</obj_property>
+      <obj_property name="ObjectShortName">clk_pdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/pdm_pin" type="logic">
+      <obj_property name="ElementShortName">pdm_pin</obj_property>
+      <obj_property name="ObjectShortName">pdm_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/m_axis_tready" type="logic">
+      <obj_property name="ElementShortName">m_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/m_axis_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/m_axis_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/m_axis_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/ready_mic_array" type="logic">
+      <obj_property name="ElementShortName">ready_mic_array</obj_property>
+      <obj_property name="ObjectShortName">ready_mic_array</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/valid_mic_array" type="logic">
+      <obj_property name="ElementShortName">valid_mic_array</obj_property>
+      <obj_property name="ObjectShortName">valid_mic_array</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/\mic_lines[0].input_pipeline /data_rise" type="array">
+      <obj_property name="ElementShortName">data_rise[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rise[31:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/\mic_lines[0].input_pipeline /valid_rise" type="logic">
+      <obj_property name="ElementShortName">valid_rise</obj_property>
+      <obj_property name="ObjectShortName">valid_rise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/\mic_lines[0].input_pipeline /data_fall" type="array">
+      <obj_property name="ElementShortName">data_fall[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_fall[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/\mic_lines[0].input_pipeline /valid_fall" type="logic">
+      <obj_property name="ElementShortName">valid_fall</obj_property>
+      <obj_property name="ObjectShortName">valid_fall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/\mic_lines[0].data_rise " type="array">
+      <obj_property name="ElementShortName">\mic_lines[0].data_rise [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\mic_lines[0].data_rise [31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/proc_mic_array" type="array">
+      <obj_property name="ElementShortName">proc_mic_array[63:0]</obj_property>
+      <obj_property name="ObjectShortName">proc_mic_array[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_proc_sys/dut/mic_packager/mic_data" type="array">
+      <obj_property name="ElementShortName">mic_data[3199:0]</obj_property>
+      <obj_property name="ObjectShortName">mic_data[3199:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -22,10 +22,10 @@
 
 
 module mic_sampler #(
-    parameter PACKET_SIZE   = 128, //Frames in transfer
+    parameter PACKET_SIZE   = 20, //Frames in transfer
     parameter DATA_WIDTH    = 32,
     parameter BUS_WIDTH     = 64,
-    parameter MIC_NUM       = 100
+    parameter MIC_NUM       = 2
 )(
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
     (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF m_axis, FREQ_HZ 100000000" *)
@@ -35,9 +35,9 @@ module mic_sampler #(
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input                       s_axis_aresetn,
     
-    input [(MIC_NUM*DATA_WIDTH)-1:0]    mic_data_in,
-    input                               mic_ready_in,
-    input                               mic_valid_in,
+    input wire  [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data_in,
+    input                                   mic_ready_in,
+    input                                   mic_valid_in,
     
     input                       m_axis_tready,
     output wire                 m_axis_tvalid,
@@ -59,7 +59,7 @@ module mic_sampler #(
     reg [DATA_WIDTH-1:0]            frame_cnt;
     wire [DATA_WIDTH-1:0]            frame_num;
     
-    assign frame_num = mic_valid_in ? frame_cnt : 32'hFFFF_FFFF;
+    assign frame_num = mic_valid ? frame_cnt : 32'hFFFF_FFFF;
     
     reg [$clog2(PACKET_SIZE)-1:0]   packet_cnt;
     

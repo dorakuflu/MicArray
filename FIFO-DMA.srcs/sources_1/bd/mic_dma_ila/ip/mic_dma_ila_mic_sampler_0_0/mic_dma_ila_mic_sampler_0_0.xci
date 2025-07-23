@@ -8,17 +8,17 @@
     "gen_directory": "../../../../../../FIFO-DMA.gen/sources_1/bd/mic_dma_ila/ip/mic_dma_ila_mic_sampler_0_0",
     "parameters": {
       "component_parameters": {
-        "PACKET_SIZE": [ { "value": "128", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "20", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "MIC_NUM": [ { "value": "100", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "MIC_NUM": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "mic_dma_ila_mic_sampler_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "PACKET_SIZE": [ { "value": "128", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "PACKET_SIZE": [ { "value": "20", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "BUS_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "MIC_NUM": [ { "value": "100", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "MIC_NUM": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -48,7 +48,7 @@
       "ports": {
         "s_axis_aclk": [ { "direction": "in" } ],
         "s_axis_aresetn": [ { "direction": "in" } ],
-        "mic_data_in": [ { "direction": "in", "size_left": "3199", "size_right": "0" } ],
+        "mic_data_in": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
         "mic_ready_in": [ { "direction": "in" } ],
         "mic_valid_in": [ { "direction": "in" } ],
         "m_axis_tready": [ { "direction": "in", "driver_value": "1" } ],

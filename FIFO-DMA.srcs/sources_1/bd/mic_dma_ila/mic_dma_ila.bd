@@ -2722,7 +2722,7 @@
           },
           "mic_data_in": {
             "direction": "I",
-            "left": "3199",
+            "left": "63",
             "right": "0"
           },
           "mic_ready_in": {
