@@ -56,15 +56,16 @@ module mic_sampler #(
     reg [1:0]                     state, next_state;
     reg [$clog2(MIC_NUM+1)-1:0]   cnt, next_cnt;
     
+    
+    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;  
+    reg                                 mic_valid;
+    
     reg [DATA_WIDTH-1:0]            frame_cnt;
     wire [DATA_WIDTH-1:0]            frame_num;
     
     assign frame_num = mic_valid ? frame_cnt : 32'hFFFF_FFFF;
     
     reg [$clog2(PACKET_SIZE)-1:0]   packet_cnt;
-    
-    reg     [(MIC_NUM*DATA_WIDTH)-1:0]  mic_data;  
-    reg                                 mic_valid;
     
     
     always @(*) begin

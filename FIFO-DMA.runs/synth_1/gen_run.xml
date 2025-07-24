@@ -52,14 +52,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/sim_mic_dma/sim_mic_dma.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PGENDIR/sources_1/bd/sim_mic_dma/hdl/sim_mic_dma_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -103,11 +95,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_dma_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_mic_sampler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_dma_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_mic_sampler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_system_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_ila_processing_system7_0_0"/>

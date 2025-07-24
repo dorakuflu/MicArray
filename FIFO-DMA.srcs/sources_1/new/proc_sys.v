@@ -37,16 +37,20 @@ module proc_sys #(
     input                               pdm_clk,
     
     input                               SW, // Onboard switch
-    input   [(MIC_NUM/2)-1:0]           mic_array,
+    input                               BTN, // Onboard button (btn[0])
+    output  [2:0]                       led_cnt, // Onboard LEDs
     
-    input                       m_axis_tready,
-    output wire                 m_axis_tvalid,
-    output wire [BUS_WIDTH-1:0] m_axis_tdata,
-    output wire                 m_axis_tlast
+    input       [(MIC_NUM/2)-1:0]           mic_array,
+    output wire [(MIC_NUM*DATA_WIDTH)-1:0]  proc_mic_array,
+    output wire                             ready_mic_array,
+    output wire                             valid_mic_array
+    
+    
+//    input                       m_axis_tready,
+//    output wire                 m_axis_tvalid,
+//    output wire [BUS_WIDTH-1:0] m_axis_tdata,
+//    output wire                 m_axis_tlast
 );
-    wire  [(MIC_NUM*DATA_WIDTH)-1:0]  proc_mic_array;
-    wire                              ready_mic_array;
-    wire                              valid_mic_array;
     
     wire [MIC_NUM-1:0] proc_valid;
     
@@ -75,11 +79,13 @@ module proc_sys #(
             assign proc_mic_array[(2*i+1)*DATA_WIDTH +: DATA_WIDTH] = data_fall;
             
             PDM_to_PCM_wrapper input_pipeline (
+                .BTN(BTN),
                 .SW(SW),
                 .clk_100MHz(sys_clk),
                 .clk_pdm(pdm_clk),
                 .data_fall(data_fall),
                 .data_rise(data_rise),
+                .led_cnt(led_cnt),
                 .pdm_pin(mic_array[i]),
                 .resetn(resetn),
                 .valid_fall(proc_valid[2*i]),
@@ -88,15 +94,15 @@ module proc_sys #(
         end
     endgenerate
     
-    mic_sampler mic_packager (
-        .s_axis_aclk(sys_clk),
-        .s_axis_aresetn(resetn),
-        .mic_data_in(proc_mic_array),
-        .mic_ready_in(ready_mic_array),
-        .mic_valid_in(valid_mic_array),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tvalid(m_axis_tvalid),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tlast(m_axis_tlast)
-    );
+//    mic_sampler mic_packager (
+//        .s_axis_aclk(sys_clk),
+//        .s_axis_aresetn(resetn),
+//        .mic_data_in(proc_mic_array),
+//        .mic_ready_in(ready_mic_array),
+//        .mic_valid_in(valid_mic_array),
+//        .m_axis_tready(m_axis_tready),
+//        .m_axis_tvalid(m_axis_tvalid),
+//        .m_axis_tdata(m_axis_tdata),
+//        .m_axis_tlast(m_axis_tlast)
+//    );
 endmodule
