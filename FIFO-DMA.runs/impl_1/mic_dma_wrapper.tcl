@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/impl_1/mic_dma_wrapper.tcl"
+  variable script "C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/impl_1/mic_dma_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,32 +104,30 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 2
   set_param general.usePosixSpawnForFork 1
-  set_param bd.open.in_stealth_mode 1
-  set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 16  }
+  set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.cache/wt [current_project]
-  set_property parent.project_path C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.xpr [current_project]
-  set_property ip_output_repo C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.cache/wt [current_project]
+  set_property parent.project_path C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.xpr [current_project]
+  set_property ip_output_repo C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.dcp
+  add_files -quiet C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/bd/mic_dma/mic_dma.bd
+  add_files C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/bd/PDM_to_PCM/PDM_to_PCM.bd
+  add_files C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/sources_1/bd/mic_dma/mic_dma.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc
+  read_xdc {{C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
@@ -289,35 +287,4 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
-OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
-OPTRACE "write_bitstream setup" START { }
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-OPTRACE "read constraints: write_bitstream" START { }
-OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force -no_partial_mmi mic_dma_wrapper.mmi }
-OPTRACE "write_bitstream setup" END { }
-OPTRACE "write_bitstream" START { }
-  write_bitstream -force mic_dma_wrapper.bit 
-OPTRACE "write_bitstream" END { }
-OPTRACE "write_bitstream misc" START { }
-OPTRACE "read constraints: write_bitstream_post" START { }
-OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force mic_dma_wrapper}
-  catch {file copy -force mic_dma_wrapper.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "write_bitstream misc" END { }
-OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

@@ -3,22 +3,22 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Jul  9 13:11:26 2025
-# Process ID         : 22400
-# Current directory  : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1
+# Start of session at: Thu Jul 24 19:17:26 2025
+# Process ID         : 19292
+# Current directory  : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1
 # Command line       : vivado.exe -log mic_dma_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mic_dma_wrapper.tcl
-# Log file           : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.vds
-# Journal file       : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1\vivado.jou
-# Running On         : eecs3007vr01
+# Log file           : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.vds
+# Journal file       : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1\vivado.jou
+# Running On         : DK-SLS
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
-# Processor Detail   : Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
-# CPU Frequency      : 3792 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 34079 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 36227 MB
-# Available Virtual  : 18571 MB
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz
+# CPU Frequency      : 3302 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17005 MB
+# Swap memory        : 6981 MB
+# Total Virtual      : 23987 MB
+# Available Virtual  : 6418 MB
 #-----------------------------------------------------------
 source mic_dma_wrapper.tcl -notrace

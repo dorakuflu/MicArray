@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command=".planAhead." Owner="dkuflu" Host="EECS3007VR01" Pid="4936">
-    </Process>
-</ProcessHandle>

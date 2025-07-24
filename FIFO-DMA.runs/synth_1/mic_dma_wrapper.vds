@@ -3,118 +3,127 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Jul  9 13:11:26 2025
-# Process ID         : 22400
-# Current directory  : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1
+# Start of session at: Thu Jul 24 19:17:26 2025
+# Process ID         : 19292
+# Current directory  : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1
 # Command line       : vivado.exe -log mic_dma_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mic_dma_wrapper.tcl
-# Log file           : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.vds
-# Journal file       : C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1\vivado.jou
-# Running On         : eecs3007vr01
+# Log file           : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.vds
+# Journal file       : C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1\vivado.jou
+# Running On         : DK-SLS
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
-# Processor Detail   : Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
-# CPU Frequency      : 3792 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 34079 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 36227 MB
-# Available Virtual  : 18571 MB
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz
+# CPU Frequency      : 3302 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17005 MB
+# Swap memory        : 6981 MB
+# Total Virtual      : 23987 MB
+# Available Virtual  : 6418 MB
 #-----------------------------------------------------------
 source mic_dma_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 483.867 ; gain = 211.941
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 497.996 ; gain = 211.746
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/utils_1/imports/synth_1/mic_dma_wrapper.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/utils_1/imports/synth_1/mic_dma_wrapper.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/utils_1/imports/synth_1/mic_dma_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/utils_1/imports/synth_1/mic_dma_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top mic_dma_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18020
+INFO: [Synth 8-7075] Helper process launched with PID 28008
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.949 ; gain = 492.387
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1265.949 ; gain = 494.188
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_wrapper' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/hdl/mic_dma_wrapper.v:13]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:13]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:561]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_15F4Y91' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:861]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_imp_auto_pc_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_imp_auto_pc_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_15F4Y91' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:861]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_0' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:561]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:699]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_KI4XS7' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:994]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_KI4XS7' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:994]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_0' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:699]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_smc_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_smc_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_axi_smc_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:286]
-WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:286]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:286]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'mic_dma_axi_smc_0' has 59 connections declared, but only 56 given [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:286]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_dma_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_dma_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_dma_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_dma_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tdata' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tvalid' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'm_axis_mm2s_tlast' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-WARNING: [Synth 8-7023] instance 'dma' of module 'mic_dma_dma_0' has 64 connections declared, but only 55 given [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:343]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_fifo_generator_0_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_fifo_generator_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_fifo_generator_0_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_fifo_generator_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'mic_dma_fifo_generator_0_0' is unconnected for instance 'fifo_generator_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:399]
-WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'mic_dma_fifo_generator_0_0' is unconnected for instance 'fifo_generator_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:399]
-WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'mic_dma_fifo_generator_0_0' is unconnected for instance 'fifo_generator_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:399]
-WARNING: [Synth 8-7023] instance 'fifo_generator_0' of module 'mic_dma_fifo_generator_0_0' has 14 connections declared, but only 11 given [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:399]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_mic_sampler_0_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_mic_sampler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_mic_sampler_0_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_mic_sampler_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_processing_system7_0_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_processing_system7_0_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RLAST' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RVALID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RRESP' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_BID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RDATA' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'mic_dma_processing_system7_0_0' has 155 connections declared, but only 132 given [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:419]
-INFO: [Synth 8-6157] synthesizing module 'mic_dma_rst_ps7_0_100M_0' [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_rst_ps7_0_100M_0' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-22400-eecs3007vr01/realtime/mic_dma_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:552]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:552]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:552]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:552]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'mic_dma_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:552]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma' (0#1) [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'mic_dma_wrapper' (0#1) [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/hdl/mic_dma_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_wrapper' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/hdl/mic_dma_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:13]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:599]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_15F4Y91' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:899]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_imp_auto_pc_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_imp_auto_pc_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_15F4Y91' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:899]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_0' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:599]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:737]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_KI4XS7' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:1032]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_imp_auto_pc_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_KI4XS7' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:1032]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_mem_intercon_1_0' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:737]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_axi_smc_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_axi_smc_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_axi_smc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:304]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:304]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'mic_dma_axi_smc_0' is unconnected for instance 'axi_smc' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:304]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'mic_dma_axi_smc_0' has 59 connections declared, but only 56 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:304]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_clk_div_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_clk_div_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_clk_div_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_clk_div_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_clk_wiz_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_clk_wiz_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'locked' of module 'mic_dma_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:365]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'mic_dma_clk_wiz_0_0' has 4 connections declared, but only 3 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:365]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_dma_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_dma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_dma_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_dma_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tdata' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tvalid' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tlast' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'mic_dma_dma_0' is unconnected for instance 'dma' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+WARNING: [Synth 8-7023] instance 'dma' of module 'mic_dma_dma_0' has 64 connections declared, but only 55 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:369]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_fifo_generator_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_fifo_generator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_fifo_generator_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_fifo_generator_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'mic_dma_fifo_generator_0_0' is unconnected for instance 'fifo_generator_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:425]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'mic_dma_fifo_generator_0_0' is unconnected for instance 'fifo_generator_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:425]
+WARNING: [Synth 8-7023] instance 'fifo_generator_0' of module 'mic_dma_fifo_generator_0_0' has 12 connections declared, but only 10 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:425]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_mic_sampler_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_mic_sampler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_mic_sampler_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_mic_sampler_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_proc_sys_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_proc_sys_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_proc_sys_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_proc_sys_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_processing_system7_0_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_processing_system7_0_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_AWREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BVALID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BRESP' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARREADY' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RLAST' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RVALID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RRESP' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RID' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RDATA' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'mic_dma_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'mic_dma_processing_system7_0_0' has 155 connections declared, but only 132 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:457]
+INFO: [Synth 8-6157] synthesizing module 'mic_dma_rst_ps7_0_100M_0' [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_rst_ps7_0_100M_0' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/.Xil/Vivado-19292-DK-SLS/realtime/mic_dma_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:590]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:590]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:590]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mic_dma_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:590]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'mic_dma_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:590]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma' (0#1) [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/synth/mic_dma.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'mic_dma_wrapper' (0#1) [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/hdl/mic_dma_wrapper.v:13]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_KI4XS7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_KI4XS7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module mic_dma_axi_mem_intercon_1_0 is either unconnected or has no load
@@ -124,90 +133,78 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_15F4Y91 is eit
 WARNING: [Synth 8-7129] Port ACLK in module mic_dma_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module mic_dma_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1362.883 ; gain = 608.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1362.883 ; gain = 608.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1362.883 ; gain = 608.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1366.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1382.809 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0_in_context.xdc] for cell 'mic_dma_i/processing_system7_0'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0_in_context.xdc] for cell 'mic_dma_i/processing_system7_0'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0/mic_dma_dma_0_in_context.xdc] for cell 'mic_dma_i/dma'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0/mic_dma_dma_0_in_context.xdc] for cell 'mic_dma_i/dma'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0/mic_dma_axi_smc_0_in_context.xdc] for cell 'mic_dma_i/axi_smc'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0/mic_dma_axi_smc_0_in_context.xdc] for cell 'mic_dma_i/axi_smc'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_in_context.xdc] for cell 'mic_dma_i/rst_ps7_0_100M'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_in_context.xdc] for cell 'mic_dma_i/rst_ps7_0_100M'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon_1/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon_1/s00_couplers/auto_pc'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_in_context.xdc] for cell 'mic_dma_i/mic_sampler_0'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_in_context.xdc] for cell 'mic_dma_i/mic_sampler_0'
-Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0_in_context.xdc] for cell 'mic_dma_i/fifo_generator_0'
-Finished Parsing XDC File [c:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0_in_context.xdc] for cell 'mic_dma_i/fifo_generator_0'
-Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mic_dma_wrapper_propImpl.xdc].
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0_in_context.xdc] for cell 'mic_dma_i/processing_system7_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0_in_context.xdc] for cell 'mic_dma_i/processing_system7_0'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0/mic_dma_dma_0_in_context.xdc] for cell 'mic_dma_i/dma'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_dma_0/mic_dma_dma_0/mic_dma_dma_0_in_context.xdc] for cell 'mic_dma_i/dma'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0/mic_dma_axi_smc_0_in_context.xdc] for cell 'mic_dma_i/axi_smc'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_smc_0/mic_dma_axi_smc_0/mic_dma_axi_smc_0_in_context.xdc] for cell 'mic_dma_i/axi_smc'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_in_context.xdc] for cell 'mic_dma_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0/mic_dma_rst_ps7_0_100M_0_in_context.xdc] for cell 'mic_dma_i/rst_ps7_0_100M'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0/mic_dma_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0/mic_dma_axi_mem_intercon_1_imp_auto_pc_0_in_context.xdc] for cell 'mic_dma_i/axi_mem_intercon_1/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0_in_context.xdc] for cell 'mic_dma_i/fifo_generator_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0_in_context.xdc] for cell 'mic_dma_i/fifo_generator_0'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_wiz_0_0/mic_dma_clk_wiz_0_0/mic_dma_clk_wiz_0_0_in_context.xdc] for cell 'mic_dma_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_wiz_0_0/mic_dma_clk_wiz_0_0/mic_dma_clk_wiz_0_0_in_context.xdc] for cell 'mic_dma_i/clk_wiz_0'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_div_0_0/mic_dma_clk_div_0_0/mic_dma_clk_div_0_0_in_context.xdc] for cell 'mic_dma_i/clk_div_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_clk_div_0_0/mic_dma_clk_div_0_0/mic_dma_clk_div_0_0_in_context.xdc] for cell 'mic_dma_i/clk_div_0'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0_in_context.xdc] for cell 'mic_dma_i/proc_sys_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0_in_context.xdc] for cell 'mic_dma_i/proc_sys_0'
+Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_in_context.xdc] for cell 'mic_dma_i/mic_sampler_0'
+Finished Parsing XDC File [c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0_in_context.xdc] for cell 'mic_dma_i/mic_sampler_0'
+Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc]
+Finished Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.srcs/constrs_1/imports/pynq-z2_v1.0.xdc/PYNQ-Z2 v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mic_dma_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mic_dma_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1388.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1382.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1388.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1382.809 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1388.863 ; gain = 634.301
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1388.863 ; gain = 634.301
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1388.863 ; gain = 634.301
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Preparing Guide Design
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1382.809 ; gain = 611.047
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.srcs/utils_1/imports/synth_1/mic_dma_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1388.863 ; gain = 634.301
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1388.863 ; gain = 634.301
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1388.863 ; gain = 634.301
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -237,25 +234,25 @@ WARNING: [Synth 8-7129] Port ARESETN in module mic_dma_axi_mem_intercon_0 is eit
 WARNING: [Synth 8-7129] Port M00_ACLK in module mic_dma_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module mic_dma_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1388.863 ; gain = 634.301
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1397.801 ; gain = 626.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1550.676 ; gain = 796.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.301 ; gain = 804.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1551.531 ; gain = 796.969
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1576.824 ; gain = 805.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1561.633 ; gain = 807.070
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1587.082 ; gain = 815.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -273,37 +270,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -316,11 +313,14 @@ Report BlackBoxes:
 |1     |mic_dma_axi_mem_intercon_imp_auto_pc_0   |         1|
 |2     |mic_dma_axi_mem_intercon_1_imp_auto_pc_0 |         1|
 |3     |mic_dma_axi_smc_0                        |         1|
-|4     |mic_dma_dma_0                            |         1|
-|5     |mic_dma_fifo_generator_0_0               |         1|
-|6     |mic_dma_mic_sampler_0_0                  |         1|
-|7     |mic_dma_processing_system7_0_0           |         1|
-|8     |mic_dma_rst_ps7_0_100M_0                 |         1|
+|4     |mic_dma_clk_div_0_0                      |         1|
+|5     |mic_dma_clk_wiz_0_0                      |         1|
+|6     |mic_dma_dma_0                            |         1|
+|7     |mic_dma_fifo_generator_0_0               |         1|
+|8     |mic_dma_mic_sampler_0_0                  |         1|
+|9     |mic_dma_proc_sys_0_0                     |         1|
+|10    |mic_dma_processing_system7_0_0           |         1|
+|11    |mic_dma_rst_ps7_0_100M_0                 |         1|
 +------+-----------------------------------------+----------+
 
 Report Cell Usage: 
@@ -330,34 +330,37 @@ Report Cell Usage:
 |1     |mic_dma_axi_mem_intercon_1_imp_auto_pc |     1|
 |2     |mic_dma_axi_mem_intercon_imp_auto_pc   |     1|
 |3     |mic_dma_axi_smc                        |     1|
-|4     |mic_dma_dma                            |     1|
-|5     |mic_dma_fifo_generator_0               |     1|
-|6     |mic_dma_mic_sampler_0                  |     1|
-|7     |mic_dma_processing_system7_0           |     1|
-|8     |mic_dma_rst_ps7_0_100M                 |     1|
-|9     |IBUF                                   |     1|
+|4     |mic_dma_clk_div_0                      |     1|
+|5     |mic_dma_clk_wiz_0                      |     1|
+|6     |mic_dma_dma                            |     1|
+|7     |mic_dma_fifo_generator_0               |     1|
+|8     |mic_dma_mic_sampler_0                  |     1|
+|9     |mic_dma_proc_sys_0                     |     1|
+|10    |mic_dma_processing_system7_0           |     1|
+|11    |mic_dma_rst_ps7_0_100M                 |     1|
+|12    |IBUF                                   |     3|
+|13    |OBUF                                   |     5|
 +------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 1796.059 ; gain = 1015.516
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1796.059 ; gain = 1041.496
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1821.133 ; gain = 1049.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1821.133 ; gain = 1049.371
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1805.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1825.598 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1808.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1828.176 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d9534298
+Synth Design complete | Checksum: 4aec7ade
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 64 Warnings, 1 Critical Warnings and 0 Errors encountered.
+56 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1808.809 ; gain = 1284.711
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1808.809 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/dkuflu/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1828.176 ; gain = 1287.215
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1828.176 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.runs/synth_1/mic_dma_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mic_dma_wrapper_utilization_synth.rpt -pb mic_dma_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul  9 13:12:15 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 24 19:18:18 2025...

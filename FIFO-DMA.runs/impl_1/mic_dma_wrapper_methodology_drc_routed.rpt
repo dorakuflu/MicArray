@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Wed Jul  9 13:14:41 2025
-| Host         : eecs3007vr01 running 64-bit major release  (build 9200)
+| Date         : Thu Jul 24 19:20:58 2025
+| Host         : DK-SLS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mic_dma_wrapper_methodology_drc_routed.rpt -pb mic_dma_wrapper_methodology_drc_routed.pb -rpx mic_dma_wrapper_methodology_drc_routed.rpx
 | Design       : mic_dma_wrapper
 | Device       : xc7z020clg400-1
@@ -23,16 +23,47 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 4
-+-----------+----------+-------------------------------+--------+
-| Rule      | Severity | Description                   | Checks |
-+-----------+----------+-------------------------------+--------+
-| LUTAR-1   | Warning  | LUT drives async reset alert  | 3      |
-| TIMING-18 | Warning  | Missing input or output delay | 1      |
-+-----------+----------+-------------------------------+--------+
+             Checks found: 19
++-----------+------------------+-----------------------------------------------------------+--------+
+| Rule      | Severity         | Description                                               | Checks |
++-----------+------------------+-----------------------------------------------------------+--------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree        | 1      |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 1      |
+| TIMING-7  | Critical Warning | No common node between related clocks                     | 1      |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                 | 1      |
+| TIMING-51 | Critical Warning | No common phase between related clocks from parallel CMBs | 1      |
+| LUTAR-1   | Warning          | LUT drives async reset alert                              | 3      |
+| TIMING-16 | Warning          | Large setup violation                                     | 6      |
+| TIMING-18 | Warning          | Missing input or output delay                             | 5      |
++-----------+------------------+-----------------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock mic_dma_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_mic_dma_clk_wiz_0_0 and clk_fpga_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mic_dma_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_mic_dma_clk_wiz_0_0 and clk_fpga_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mic_dma_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock mic_dma_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin mic_dma_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-51#1 Critical Warning
+No common phase between related clocks from parallel CMBs  
+The clocks clk_out1_mic_dma_clk_wiz_0_0 and clk_fpga_0 are timed together but have no phase relationship. The design could fail in hardware. The clocks originate from two parallel Clock Modifying Blocks and at least one of the MMCM or PLLs clock dividers is not set to 1. To be safely timed, all MMCMs or PLLs involved in parallel clocking must have the clock divider set to 1.
+Related violations: <none>
+
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mic_dma_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,
@@ -93,9 +124,59 @@ mic_dma_i/axi_mem_intercon_1/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_i
  (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.673 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/clk_pdm_d_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.793 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.793 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.793 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.793 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.793 ns between mic_dma_i/clk_div_0/inst/divclk_reg_replica/C (clocked by clk_out1_mic_dma_clk_wiz_0_0) and mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[4]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on SW relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on mic_array[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on led_cnt[0] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on led_cnt[1] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on led_cnt[2] relative to the rising and/or falling clock edge(s) of clk_fpga_0.
 Related violations: <none>
 
 

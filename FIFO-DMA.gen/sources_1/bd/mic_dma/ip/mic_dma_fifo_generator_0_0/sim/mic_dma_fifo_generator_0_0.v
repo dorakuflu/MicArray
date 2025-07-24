@@ -62,12 +62,10 @@ module mic_dma_fifo_generator_0_0 (
   s_axis_tready,
   s_axis_tdata,
   s_axis_tlast,
-  s_axis_tuser,
   m_axis_tvalid,
   m_axis_tready,
   m_axis_tdata,
-  m_axis_tlast,
-  m_axis_tuser
+  m_axis_tlast
 );
 
 output wire wr_rst_busy;
@@ -90,11 +88,9 @@ output wire s_axis_tready;
 input wire [63 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TLAST" *)
 input wire s_axis_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS TUSER" *)
-input wire [3 : 0] s_axis_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 4, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN mic_dma_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *)
 input wire m_axis_tready;
@@ -102,8 +98,6 @@ input wire m_axis_tready;
 output wire [63 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *)
 output wire m_axis_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TUSER" *)
-output wire [3 : 0] m_axis_tuser;
 
   fifo_generator_v13_2_13 #(
     .C_COMMON_CLOCK(1),
@@ -201,7 +195,7 @@ output wire [3 : 0] m_axis_tuser;
     .C_HAS_AXIS_TDATA(1),
     .C_HAS_AXIS_TID(0),
     .C_HAS_AXIS_TDEST(0),
-    .C_HAS_AXIS_TUSER(1),
+    .C_HAS_AXIS_TUSER(0),
     .C_HAS_AXIS_TREADY(1),
     .C_HAS_AXIS_TLAST(1),
     .C_HAS_AXIS_TSTRB(0),
@@ -209,7 +203,7 @@ output wire [3 : 0] m_axis_tuser;
     .C_AXIS_TDATA_WIDTH(64),
     .C_AXIS_TID_WIDTH(1),
     .C_AXIS_TDEST_WIDTH(1),
-    .C_AXIS_TUSER_WIDTH(4),
+    .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_TSTRB_WIDTH(8),
     .C_AXIS_TKEEP_WIDTH(8),
     .C_WACH_TYPE(0),
@@ -253,7 +247,7 @@ output wire [3 : 0] m_axis_tuser;
     .C_DIN_WIDTH_WRCH(2),
     .C_DIN_WIDTH_RACH(32),
     .C_DIN_WIDTH_RDCH(64),
-    .C_DIN_WIDTH_AXIS(69),
+    .C_DIN_WIDTH_AXIS(65),
     .C_WR_DEPTH_WACH(16),
     .C_WR_DEPTH_WDCH(1024),
     .C_WR_DEPTH_WRCH(16),
@@ -452,7 +446,7 @@ output wire [3 : 0] m_axis_tuser;
     .s_axis_tlast(s_axis_tlast),
     .s_axis_tid(1'B0),
     .s_axis_tdest(1'B0),
-    .s_axis_tuser(s_axis_tuser),
+    .s_axis_tuser(1'B0),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tready(m_axis_tready),
     .m_axis_tdata(m_axis_tdata),
@@ -461,7 +455,7 @@ output wire [3 : 0] m_axis_tuser;
     .m_axis_tlast(m_axis_tlast),
     .m_axis_tid(),
     .m_axis_tdest(),
-    .m_axis_tuser(m_axis_tuser),
+    .m_axis_tuser(),
     .axi_aw_injectsbiterr(1'D0),
     .axi_aw_injectdbiterr(1'D0),
     .axi_aw_prog_full_thresh(4'B0),

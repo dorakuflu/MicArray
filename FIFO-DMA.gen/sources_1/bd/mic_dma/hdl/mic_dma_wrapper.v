@@ -2,8 +2,8 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Thu Jul  3 15:20:26 2025
-//Host        : eecs3007vr01 running 64-bit major release  (build 9200)
+//Date        : Thu Jul 24 19:01:37 2025
+//Host        : DK-SLS running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma_wrapper.bd
 //Design      : mic_dma_wrapper
 //Purpose     : IP block netlist
@@ -11,7 +11,8 @@
 `timescale 1 ps / 1 ps
 
 module mic_dma_wrapper
-   (DDR_addr,
+   (BTN,
+    DDR_addr,
     DDR_ba,
     DDR_cas_n,
     DDR_ck_n,
@@ -32,7 +33,12 @@ module mic_dma_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    SW);
+    SW,
+    clk_3p84M,
+    clk_7p68M,
+    led_cnt,
+    mic_array);
+  input BTN;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,7 +61,12 @@ module mic_dma_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input SW;
+  output clk_3p84M;
+  output clk_7p68M;
+  output [2:0]led_cnt;
+  input [0:0]mic_array;
 
+  wire BTN;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -78,9 +89,14 @@ module mic_dma_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire SW;
+  wire clk_3p84M;
+  wire clk_7p68M;
+  wire [2:0]led_cnt;
+  wire [0:0]mic_array;
 
   mic_dma mic_dma_i
-       (.DDR_addr(DDR_addr),
+       (.BTN(BTN),
+        .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
         .DDR_ck_n(DDR_ck_n),
@@ -101,5 +117,9 @@ module mic_dma_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .SW(SW));
+        .SW(SW),
+        .clk_3p84M(clk_3p84M),
+        .clk_7p68M(clk_7p68M),
+        .led_cnt(led_cnt),
+        .mic_array(mic_array));
 endmodule

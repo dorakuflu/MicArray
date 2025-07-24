@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Wed Jul  9 13:12:15 2025
-| Host         : eecs3007vr01 running 64-bit major release  (build 9200)
+| Date         : Thu Jul 24 19:18:18 2025
+| Host         : DK-SLS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mic_dma_wrapper_utilization_synth.rpt -pb mic_dma_wrapper_utilization_synth.pb
 | Design       : mic_dma_wrapper
 | Device       : xc7z020clg400-1
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    1 |     0 |          0 |       125 |  0.80 |
+| Bonded IOB                  |    8 |     0 |          0 |       125 |  6.40 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,7 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    1 |                  IO |
+| OBUF     |    5 |                  IO |
+| IBUF     |    3 |                  IO |
 +----------+------+---------------------+
 
 
@@ -161,9 +162,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------------------------------------+------+
 | mic_dma_rst_ps7_0_100M_0                 |    1 |
 | mic_dma_processing_system7_0_0           |    1 |
+| mic_dma_proc_sys_0_0                     |    1 |
 | mic_dma_mic_sampler_0_0                  |    1 |
 | mic_dma_fifo_generator_0_0               |    1 |
 | mic_dma_dma_0                            |    1 |
+| mic_dma_clk_wiz_0_0                      |    1 |
+| mic_dma_clk_div_0_0                      |    1 |
 | mic_dma_axi_smc_0                        |    1 |
 | mic_dma_axi_mem_intercon_imp_auto_pc_0   |    1 |
 | mic_dma_axi_mem_intercon_1_imp_auto_pc_0 |    1 |

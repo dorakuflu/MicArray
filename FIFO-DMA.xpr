@@ -59,7 +59,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="48"/>
+    <Option Name="WTXSimLaunchSim" Val="54"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -128,6 +128,27 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_PDM_reader_0_0/PDM_to_PCM_PDM_reader_0_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_PDM_reader_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_amplify_0_0/PDM_to_PCM_amplify_0_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_amplify_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_cic_compiler_0_0/PDM_to_PCM_cic_compiler_0_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_cic_compiler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_cic_compiler_1_0/PDM_to_PCM_cic_compiler_1_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_cic_compiler_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_fir_compiler_0_0/PDM_to_PCM_fir_compiler_0_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_fir_compiler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_fir_compiler_1_0/PDM_to_PCM_fir_compiler_1_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_fir_compiler_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PDM_to_PCM.bd" FileRelPathName="ip/PDM_to_PCM_round_and_saturate_0_0/PDM_to_PCM_round_and_saturate_0_0.xci">
+          <Proxy FileSetName="PDM_to_PCM_round_and_saturate_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/PDM_to_PCM/hdl/PDM_to_PCM_wrapper.v">
         <FileInfo>
@@ -156,8 +177,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_clk_div_0_0/mic_dma_clk_div_0_0.xci">
+          <Proxy FileSetName="mic_dma_clk_div_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_clk_wiz_0_0/mic_dma_clk_wiz_0_0.xci">
+          <Proxy FileSetName="mic_dma_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_dma_0/mic_dma_dma_0.xci">
           <Proxy FileSetName="mic_dma_dma_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_fifo_generator_0_0/mic_dma_fifo_generator_0_0.xci">
+          <Proxy FileSetName="mic_dma_fifo_generator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_mic_sampler_0_0/mic_dma_mic_sampler_0_0.xci">
+          <Proxy FileSetName="mic_dma_mic_sampler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0.xci">
+          <Proxy FileSetName="mic_dma_proc_sys_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mic_dma.bd" FileRelPathName="ip/mic_dma_processing_system7_0_0/mic_dma_processing_system7_0_0.xci">
           <Proxy FileSetName="mic_dma_processing_system7_0_0"/>
@@ -247,17 +283,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/tb_mic_sampler_behav.wcfg">
+      <File Path="$PPRDIR/sim_conf/tb_mic_sampler_behav.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/PDM_to_PCM_testbench_behav.wcfg">
+      <File Path="$PPRDIR/sim_conf/PDM_to_PCM_testbench_behav.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/tb_proc_sys_behav.wcfg">
+      <File Path="$PPRDIR/sim_conf/tb_proc_sys_behav.wcfg">
         <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -339,6 +375,78 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="PDM_to_PCM_cic_compiler_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_cic_compiler_1_0" RelGenDir="$PGENDIR/PDM_to_PCM_cic_compiler_1_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_cic_compiler_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_PDM_reader_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_PDM_reader_0_0" RelGenDir="$PGENDIR/PDM_to_PCM_PDM_reader_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_PDM_reader_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_cic_compiler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_cic_compiler_0_0" RelGenDir="$PGENDIR/PDM_to_PCM_cic_compiler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_cic_compiler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_fir_compiler_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_fir_compiler_1_0" RelGenDir="$PGENDIR/PDM_to_PCM_fir_compiler_1_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_fir_compiler_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_fir_compiler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_fir_compiler_0_0" RelGenDir="$PGENDIR/PDM_to_PCM_fir_compiler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_fir_compiler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_round_and_saturate_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_round_and_saturate_0_0" RelGenDir="$PGENDIR/PDM_to_PCM_round_and_saturate_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_round_and_saturate_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="PDM_to_PCM_amplify_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PDM_to_PCM_amplify_0_0" RelGenDir="$PGENDIR/PDM_to_PCM_amplify_0_0">
+      <Config>
+        <Option Name="TopModule" Val="PDM_to_PCM_amplify_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="mic_dma_fifo_generator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mic_dma_fifo_generator_0_0" RelGenDir="$PGENDIR/mic_dma_fifo_generator_0_0">
+      <Config>
+        <Option Name="TopModule" Val="mic_dma_fifo_generator_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="mic_dma_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mic_dma_clk_wiz_0_0" RelGenDir="$PGENDIR/mic_dma_clk_wiz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="mic_dma_clk_wiz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="mic_dma_clk_div_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mic_dma_clk_div_0_0" RelGenDir="$PGENDIR/mic_dma_clk_div_0_0">
+      <Config>
+        <Option Name="TopModule" Val="mic_dma_clk_div_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="mic_dma_proc_sys_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mic_dma_proc_sys_0_0" RelGenDir="$PGENDIR/mic_dma_proc_sys_0_0">
+      <Config>
+        <Option Name="TopModule" Val="mic_dma_proc_sys_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="mic_dma_mic_sampler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mic_dma_mic_sampler_0_0" RelGenDir="$PGENDIR/mic_dma_mic_sampler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="mic_dma_mic_sampler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -361,9 +469,7 @@
   <Runs Version="1" Minor="22">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mic_dma_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -441,11 +547,129 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 16 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+    <Run Id="PDM_to_PCM_cic_compiler_1_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_cic_compiler_1_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_cic_compiler_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_cic_compiler_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_1_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_PDM_reader_0_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_PDM_reader_0_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_PDM_reader_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_PDM_reader_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_PDM_reader_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_PDM_reader_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_cic_compiler_0_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_cic_compiler_0_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_cic_compiler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_cic_compiler_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_fir_compiler_1_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_fir_compiler_1_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_fir_compiler_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_fir_compiler_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_1_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_fir_compiler_0_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_fir_compiler_0_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_fir_compiler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_fir_compiler_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_round_and_saturate_0_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_round_and_saturate_0_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_round_and_saturate_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_round_and_saturate_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_round_and_saturate_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_round_and_saturate_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_amplify_0_0_synth_1" Type="Ft3:Synth" SrcSet="PDM_to_PCM_amplify_0_0" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_amplify_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/PDM_to_PCM_amplify_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_amplify_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_amplify_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_fifo_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_fifo_generator_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_fifo_generator_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_fifo_generator_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_fifo_generator_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_fifo_generator_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_clk_wiz_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_clk_div_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_clk_div_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_clk_div_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_clk_div_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_clk_div_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_clk_div_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_proc_sys_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_proc_sys_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_proc_sys_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_proc_sys_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_proc_sys_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_proc_sys_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_mic_sampler_0_0_synth_1" Type="Ft3:Synth" SrcSet="mic_dma_mic_sampler_0_0" Part="xc7z020clg400-1" ConstrsSet="mic_dma_mic_sampler_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/mic_dma_mic_sampler_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_mic_sampler_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_mic_sampler_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -564,6 +788,210 @@
       <RQSFiles/>
     </Run>
     <Run Id="mic_dma_ila_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_ila_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_ila_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_ila_fifo_generator_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_cic_compiler_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_cic_compiler_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_cic_compiler_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_1_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_PDM_reader_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_PDM_reader_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_PDM_reader_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_PDM_reader_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_PDM_reader_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_cic_compiler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_cic_compiler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_cic_compiler_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_cic_compiler_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_fir_compiler_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_fir_compiler_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_fir_compiler_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_1_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_fir_compiler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_fir_compiler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_fir_compiler_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_fir_compiler_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_round_and_saturate_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_round_and_saturate_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_round_and_saturate_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_round_and_saturate_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_round_and_saturate_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="PDM_to_PCM_amplify_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="PDM_to_PCM_amplify_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="PDM_to_PCM_amplify_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_amplify_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/PDM_to_PCM_amplify_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_fifo_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_fifo_generator_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_fifo_generator_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_fifo_generator_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_fifo_generator_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_clk_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_clk_wiz_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_clk_wiz_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_clk_div_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_clk_div_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_clk_div_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_clk_div_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_clk_div_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_proc_sys_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_proc_sys_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_proc_sys_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_proc_sys_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_proc_sys_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="mic_dma_mic_sampler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="mic_dma_mic_sampler_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="mic_dma_mic_sampler_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/mic_dma_mic_sampler_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/mic_dma_mic_sampler_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>

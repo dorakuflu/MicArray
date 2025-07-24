@@ -1,0 +1,10 @@
++==============================+==============================+=================================================================================================================+
+| Launch Setup Clock           | Launch Hold Clock            | Pin                                                                                                             |
++==============================+==============================+=================================================================================================================+
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/clk_pdm_d_reg/D            |
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[3]/CE |
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[0]/CE |
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[4]/CE |
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[1]/CE |
+| clk_out1_mic_dma_clk_wiz_0_0 | clk_out1_mic_dma_clk_wiz_0_0 | mic_dma_i/proc_sys_0/inst/mic_lines[0].input_pipeline/PDM_to_PCM_i/PDM_reader_0/inst/FSM_onehot_state_reg[2]/CE |
++------------------------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+

@@ -28,13 +28,15 @@ module tb_proc_sys;
     reg clk_100MHz = 0;
     reg resetn = 0;
     reg SW = 0;
+    reg BTN = 0;
     reg clk_pdm = 0;
     reg pdm_pin;
 
 
-    wire        m_axis_tvalid;
-    wire [63:0] m_axis_tdata;
-    wire        m_axis_tlast;
+    wire        led_cnt;
+    wire [63:0] proc_mic_array;
+    wire        ready_mic_array;
+    wire        valid_mic_array;
 
 
     proc_sys #(
@@ -44,24 +46,14 @@ module tb_proc_sys;
         .resetn(resetn),
         .pdm_clk(clk_pdm),
         .SW(SW),
+        .BTN(BTN),
+        .led_cnt(led_cnt),
         .mic_array({pdm_pin, pdm_pin}),
-        .m_axis_tready(1),
-        .m_axis_tvalid(m_axis_tvalid),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tlast(m_axis_tlast)
+        .proc_mic_array(proc_mic_array),
+        .ready_mic_array(ready_mic_array),
+        .valid_mic_array(valid_mic_array)
     );
 
-//    PDM_to_PCM_wrapper dut (
-//        .SW(SW),
-//        .clk_100MHz(clk_100MHz),
-//        .clk_pdm(clk_pdm),
-//        .data_fall(data_fall),
-//        .data_rise(data_rise),
-//        .pdm_pin(pdm_pin),
-//        .resetn(resetn),
-//        .valid_fall(valid_fall),
-//        .valid_rise(valid_rise)
-//    );
 
     // Clock generation
     always #5 clk_100MHz = ~clk_100MHz;          // 100 MHz
@@ -95,7 +87,9 @@ module tb_proc_sys;
             @(posedge clk_100MHz);
         end
         resetn = 1;
+        
         SW = 1; // Enable valid data generation
+        
         
 //        #10000000; // 0.01s (length o finput file)
         #500000
