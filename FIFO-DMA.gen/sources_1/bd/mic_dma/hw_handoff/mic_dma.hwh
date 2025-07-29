@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jul 24 19:02:16 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 29 19:26:00 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="mic_dma" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -117,16 +117,6 @@
     <PORT DIR="I" NAME="SW" SIGIS="undef" SIGNAME="External_Ports_SW">
       <CONNECTIONS>
         <CONNECTION INSTANCE="proc_sys_0" PORT="SW"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="3840000" DIR="O" NAME="clk_3p84M" SIGIS="clk" SIGNAME="clk_div_0_divclk">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_div_0" PORT="divclk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="7680000" DIR="O" NAME="clk_7p68M" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="2" NAME="led_cnt" RIGHT="0" SIGIS="undef" SIGNAME="proc_sys_0_led_cnt">
@@ -1715,29 +1705,26 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/clk_div_0" HWVERSION="1.0" INSTANCE="clk_div_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_div" VLNV="xilinx.com:module_ref:clk_div:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/clk_div2_0" HWVERSION="1.0" INSTANCE="clk_div2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_div2" VLNV="xilinx.com:module_ref:clk_div2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="OUT_FREQ" VALUE="3840000"/>
-        <PARAMETER NAME="SYS_FREQ" VALUE="7680000"/>
-        <PARAMETER NAME="Component_Name" VALUE="mic_dma_clk_div_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="mic_dma_clk_div2_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" NAME="divclk" SIGIS="undef" SIGNAME="clk_div_0_divclk">
+        <PORT CLKFREQUENCY="7680000" DIR="I" NAME="in_clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_3p84M"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="out_clk" SIGIS="clk" SIGNAME="clk_div2_0_out_clk">
+          <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_0" PORT="pdm_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_RESET0_N"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="sysclk" SIGIS="undef" SIGNAME="clk_wiz_0_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2330,8 +2317,7 @@
         </PORT>
         <PORT CLKFREQUENCY="7680000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_7p68M"/>
-            <CONNECTION INSTANCE="clk_div_0" PORT="sysclk"/>
+            <CONNECTION INSTANCE="clk_div2_0" PORT="in_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -4291,9 +4277,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="mic_array"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="3840000" DIR="I" NAME="pdm_clk" SIGIS="clk" SIGNAME="clk_div_0_divclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="pdm_clk" SIGIS="clk" SIGNAME="clk_div2_0_out_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_div_0" PORT="divclk"/>
+            <CONNECTION INSTANCE="clk_div2_0" PORT="out_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="proc_mic_array" RIGHT="0" SIGIS="undef" SIGNAME="proc_sys_0_proc_mic_array">
@@ -5374,15 +5360,15 @@
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="s_aclk"/>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
-            <CONNECTION INSTANCE="proc_sys_0" PORT="sys_clk"/>
             <CONNECTION INSTANCE="mic_sampler_0" PORT="s_axis_aclk"/>
+            <CONNECTION INSTANCE="proc_sys_0" PORT="sys_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="clk_div_0" PORT="rstn"/>
+            <CONNECTION INSTANCE="clk_div2_0" PORT="rstn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="IO" LEFT="53" NAME="MIO" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
@@ -6089,8 +6075,8 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
             <CONNECTION INSTANCE="dma" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="fifo_generator_0" PORT="s_aresetn"/>
-            <CONNECTION INSTANCE="proc_sys_0" PORT="resetn"/>
             <CONNECTION INSTANCE="mic_sampler_0" PORT="s_axis_aresetn"/>
+            <CONNECTION INSTANCE="proc_sys_0" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

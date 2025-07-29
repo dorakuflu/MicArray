@@ -19,32 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module clk_div #(
-    parameter SYS_FREQ = 100_000_000,
-    parameter OUT_FREQ = 96_000
-)(
-  input  sysclk,        // sys clock
-  input  rstn,          // active-low reset
-  output reg divclk     // output clock
+// Only divides by 2 to meet timing
+module clk_div2 (
+    input  in_clk,        // sys clock
+    input  rstn,          // active-low reset
+    output reg out_clk    // output clock
 );
 
-  // toggle every N cycles → f_out ≈ f_in / (2·N)
-  localparam integer N = SYS_FREQ / (2*OUT_FREQ);  // default = 520
-
-  // counter needs enough bits to count up to N
-  reg [$clog2(N)-1:0] cnt;
-
-  always @(posedge sysclk) begin
-    if (!rstn) begin
-      cnt       <= 0;
-      divclk    <= 0;
-    end else if (cnt == N-1) begin
-      cnt       <= 0;
-      divclk    <= ~divclk;
-    end else begin
-      cnt       <= cnt + 1;
+    always @(posedge in_clk) begin // TODO: Not sure if this FF should have an async reset instead
+        if (!rstn) begin
+            out_clk <= 0;
+        end else begin
+            out_clk <= ~out_clk;
+        end
     end
-  end
 
 endmodule

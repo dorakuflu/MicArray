@@ -32,8 +32,6 @@ module proc_sys #(
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input                               resetn,
     
-    (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pdm_clk CLK" *)
-    (* X_INTERFACE_PARAMETER = "FREQ_HZ 3840000" *)
     input                               pdm_clk,
     
     input                               SW, // Onboard switch

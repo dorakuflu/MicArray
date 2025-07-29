@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Thu Jul 24 19:21:02 2025
+| Date             : Tue Jul 29 19:30:42 2025
 | Host             : DK-SLS running 64-bit major release  (build 9200)
 | Command          : report_power -file mic_dma_wrapper_power_routed.rpt -pb mic_dma_wrapper_power_summary_routed.pb -rpx mic_dma_wrapper_power_routed.rpx
 | Design           : mic_dma_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.581        |
+| Total On-Chip Power (W)  | 1.580        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.426        |
-| Device Static (W)        | 0.154        |
+| Dynamic (W)              | 1.427        |
+| Device Static (W)        | 0.153        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 66.8         |
 | Junction Temperature (C) | 43.2         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.021 |        6 |       --- |             --- |
-| Slice Logic              |     0.006 |    10217 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     3063 |     53200 |            5.76 |
+| Clocks                   |     0.022 |        6 |       --- |             --- |
+| Slice Logic              |     0.006 |    10212 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     3059 |     53200 |            5.75 |
 |   LUT as Shift Register  |    <0.001 |      331 |     17400 |            1.90 |
 |   CARRY4                 |    <0.001 |      155 |     13300 |            1.17 |
-|   Register               |    <0.001 |     4535 |    106400 |            4.26 |
+|   Register               |    <0.001 |     4532 |    106400 |            4.26 |
 |   LUT as Distributed RAM |    <0.001 |       20 |     17400 |            0.11 |
 |   Others                 |     0.000 |     1004 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      189 |     53200 |            0.36 |
-| Signals                  |     0.011 |     7882 |       --- |             --- |
+| Signals                  |     0.011 |     7875 |       --- |             --- |
 | Block RAM                |     0.004 |      119 |       140 |           85.00 |
 | MMCM                     |     0.110 |        1 |         4 |           25.00 |
 | DSPs                     |     0.007 |       10 |       220 |            4.55 |
-| I/O                      |     0.003 |        7 |       125 |            5.60 |
+| I/O                      |     0.003 |        5 |       125 |            4.00 |
 | PS7                      |     1.264 |        1 |       --- |             --- |
-| Static Power             |     0.154 |          |           |                 |
-| Total                    |     1.581 |          |           |                 |
+| Static Power             |     0.153 |          |           |                 |
+| Total                    |     1.580 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,11 +78,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.067 |       0.049 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.068 |       0.050 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.076 |       0.061 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -157,18 +157,18 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| mic_dma_wrapper          |     1.426 |
-|   mic_dma_i              |     1.423 |
+| mic_dma_wrapper          |     1.427 |
+|   mic_dma_i              |     1.425 |
 |     axi_mem_intercon_1   |     0.001 |
 |       s00_couplers       |     0.001 |
 |     axi_smc              |     0.005 |
 |       inst               |     0.005 |
 |     clk_wiz_0            |     0.110 |
 |       inst               |     0.110 |
-|     dma                  |     0.011 |
-|       U0                 |     0.011 |
-|     fifo_generator_0     |     0.008 |
-|       U0                 |     0.008 |
+|     dma                  |     0.012 |
+|       U0                 |     0.012 |
+|     fifo_generator_0     |     0.009 |
+|       U0                 |     0.009 |
 |     mic_sampler_0        |     0.002 |
 |       inst               |     0.002 |
 |     proc_sys_0           |     0.020 |

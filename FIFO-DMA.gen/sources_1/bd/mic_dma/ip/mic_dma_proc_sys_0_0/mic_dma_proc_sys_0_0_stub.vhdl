@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Jul 24 19:17:24 2025
+-- Date        : Tue Jul 29 19:26:59 2025
 -- Host        : DK-SLS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/kuflu/Vivado/Research/FIFO-DMA/FIFO-DMA.gen/sources_1/bd/mic_dma/ip/mic_dma_proc_sys_0_0/mic_dma_proc_sys_0_0_stub.vhdl
@@ -53,7 +53,7 @@ architecture stub of mic_dma_proc_sys_0_0 is
   attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pdm_clk : signal is "xilinx.com:signal:clock:1.0 pdm_clk CLK";
   attribute X_INTERFACE_MODE of pdm_clk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of pdm_clk : signal is "XIL_INTERFACENAME pdm_clk, FREQ_HZ 3840000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of pdm_clk : signal is "XIL_INTERFACENAME pdm_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mic_dma_clk_div2_0_0_out_clk, INSERT_VIP 0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of stub : architecture is "proc_sys,Vivado 2025.1";
 begin

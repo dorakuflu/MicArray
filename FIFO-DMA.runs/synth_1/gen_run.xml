@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1753398867" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mic_dma_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1753831569" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mic_dma_wrapper.dcp">
   <File Type="PA-TCL" Name="mic_dma_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="mic_dma_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="mic_dma_wrapper.vds"/>
@@ -11,13 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="mic_dma_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/clk_div.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/PDM_reader.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../PDM-to-PCM/PDM-to-PCM.srcs/sources_1/new/PDM_reader.v"/>
@@ -65,6 +58,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/mic_sampler.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -155,6 +155,6 @@
   <BlockFileSet Type="BlockSrcs" Name="PDM_to_PCM_amplify_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_fifo_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mic_dma_clk_div_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mic_dma_clk_div2_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mic_dma_proc_sys_0_0"/>
 </GenRun>

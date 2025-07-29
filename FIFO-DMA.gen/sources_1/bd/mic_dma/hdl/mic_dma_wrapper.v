@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Thu Jul 24 19:01:37 2025
+//Date        : Tue Jul 29 19:25:58 2025
 //Host        : DK-SLS running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma_wrapper.bd
 //Design      : mic_dma_wrapper
@@ -34,8 +34,6 @@ module mic_dma_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     SW,
-    clk_3p84M,
-    clk_7p68M,
     led_cnt,
     mic_array);
   input BTN;
@@ -61,8 +59,6 @@ module mic_dma_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input SW;
-  output clk_3p84M;
-  output clk_7p68M;
   output [2:0]led_cnt;
   input [0:0]mic_array;
 
@@ -89,8 +85,6 @@ module mic_dma_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire SW;
-  wire clk_3p84M;
-  wire clk_7p68M;
   wire [2:0]led_cnt;
   wire [0:0]mic_array;
 
@@ -118,8 +112,6 @@ module mic_dma_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .SW(SW),
-        .clk_3p84M(clk_3p84M),
-        .clk_7p68M(clk_7p68M),
         .led_cnt(led_cnt),
         .mic_array(mic_array));
 endmodule

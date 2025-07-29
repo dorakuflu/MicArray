@@ -77,7 +77,7 @@ input wire sys_clk;
 input wire resetn;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pdm_clk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pdm_clk, FREQ_HZ 3840000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pdm_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN mic_dma_clk_div2_0_0_out_clk, INSERT_VIP 0" *)
 input wire pdm_clk;
 input wire SW;
 input wire BTN;

@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-//Date        : Thu Jul 24 19:01:37 2025
+//Date        : Tue Jul 29 19:25:58 2025
 //Host        : DK-SLS running 64-bit major release  (build 9200)
 //Command     : generate_target mic_dma.bd
 //Design      : mic_dma
@@ -35,8 +35,6 @@ module mic_dma
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     SW,
-    clk_3p84M,
-    clk_7p68M,
     led_cnt,
     mic_array);
   input BTN;
@@ -62,8 +60,6 @@ module mic_dma
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   input SW;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_3P84M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_3P84M, FREQ_HZ 3840000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output clk_3p84M;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_7P68M CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_7P68M, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 7680000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output clk_7p68M;
   output [2:0]led_cnt;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.MIC_ARRAY DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.MIC_ARRAY, LAYERED_METADATA undef" *) input [0:0]mic_array;
 
@@ -139,8 +135,8 @@ module mic_dma
   wire [31:0]axi_smc_M00_AXI_WDATA;
   wire axi_smc_M00_AXI_WREADY;
   wire axi_smc_M00_AXI_WVALID;
-  wire clk_3p84M;
-  wire clk_7p68M;
+  wire clk_div_0_divclk;
+  wire clk_wiz_0_clk_out1;
   wire [31:0]dma_M_AXI_MM2S_ARADDR;
   wire [1:0]dma_M_AXI_MM2S_ARBURST;
   wire [3:0]dma_M_AXI_MM2S_ARCACHE;
@@ -358,13 +354,13 @@ module mic_dma
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
-  mic_dma_clk_div_0_0 clk_div_0
-       (.divclk(clk_3p84M),
-        .rstn(processing_system7_0_FCLK_RESET0_N),
-        .sysclk(clk_7p68M));
+  mic_dma_clk_div2_0_0 clk_div2_0
+       (.in_clk(clk_wiz_0_clk_out1),
+        .out_clk(clk_div_0_divclk),
+        .rstn(processing_system7_0_FCLK_RESET0_N));
   mic_dma_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
-        .clk_out1(clk_7p68M),
+        .clk_out1(clk_wiz_0_clk_out1),
         .resetn(processing_system7_0_FCLK_RESET0_N));
   mic_dma_dma_0 dma
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -448,7 +444,7 @@ module mic_dma
         .SW(SW),
         .led_cnt(led_cnt),
         .mic_array(mic_array),
-        .pdm_clk(clk_3p84M),
+        .pdm_clk(clk_div_0_divclk),
         .proc_mic_array(proc_sys_0_proc_mic_array),
         .ready_mic_array(proc_sys_0_ready_mic_array),
         .resetn(rst_ps7_0_100M_peripheral_aresetn),
